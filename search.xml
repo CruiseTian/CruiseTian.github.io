@@ -105,6 +105,9 @@
 <h3 id="安装-EasyBCD-2-3"><a href="#安装-EasyBCD-2-3" class="headerlink" title="安装 EasyBCD 2.3"></a><strong>安装 EasyBCD 2.3</strong></h3><p>这个软件是用于系统配置创建多重启动系统的引导文件，也就是新创建一个启动文件，可以让你的电脑在启动的时候，有进入何种系统的选择。<strong>添加新条目</strong> -&gt;<strong>Linux/BSD</strong>-&gt;类型 <strong>Grub (Legacy)</strong> 驱动器，选择<strong>驱动器</strong>-&gt;<strong>添加条目</strong>，保存后重启计算机。</p>
 <p>参考文章：<a href="https://www.cnblogs.com/masbay/p/10745170.html" target="_blank" rel="noopener">https://www.cnblogs.com/masbay/p/10745170.html</a></p>
 ]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
       <tags>
         <tag>Win,Ubuntu,双系统，Linux</tag>
       </tags>
