@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-10T09:02:29.815Z</updated>
+  <updated>2020-05-11T03:31:54.876Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -21,17 +21,13 @@
     <link href="https://www.cruisetian.tk/post/ce0e1ebb.html"/>
     <id>https://www.cruisetian.tk/post/ce0e1ebb.html</id>
     <published>2020-05-10T04:27:14.000Z</published>
-    <updated>2020-05-10T09:02:29.815Z</updated>
+    <updated>2020-05-11T03:31:54.876Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h2 id=&quot;Windows10安装Ubuntu双系统教程&quot;&gt;&lt;a href=&quot;#Windows10安装Ubuntu双系统教程&quot; class=&quot;headerlink&quot;
-        
-      
+      &lt;h2 id=&quot;windows10安装ubuntu双系统教程&quot;&gt;Windows10安装Ubuntu双系统教程&lt;/h2&gt;
+&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
+&lt;p&gt;之前一直用的Windows10系统，由于最近大作业要进行项目开发，而Linux系统对项目开发比较友好，所以准备学习一下Linux系统的基本操作。由于之前学习中接触过Ubuntu，而且Ubuntu生态较完善，出了问题网上比较好找解决办法，所以我选择在我原来电脑上再装一个Ubuntu。本人刚刚入门，也是个小白菜鸡，还望网上的各位大佬发现问题及时指出。&lt;/p&gt;
     
     </summary>
     
@@ -39,7 +35,7 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Win,Ubuntu,双系统，Linux" scheme="https://www.cruisetian.tk/tags/Win-Ubuntu-%E5%8F%8C%E7%B3%BB%E7%BB%9F%EF%BC%8CLinux/"/>
+      <category term="Win Ubuntu 双系统 Linux" scheme="https://www.cruisetian.tk/tags/Win-Ubuntu-%E5%8F%8C%E7%B3%BB%E7%BB%9F-Linux/"/>
     
   </entry>
   

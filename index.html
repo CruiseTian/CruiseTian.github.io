@@ -244,10 +244,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-05-10 12:27:14 / 修改时间：17:02:29" itemprop="dateCreated datePublished" datetime="2020-05-10T12:27:14+08:00">2020-05-10</time>
+              <time title="创建时间：2020-05-10 12:27:14" itemprop="dateCreated datePublished" datetime="2020-05-10T12:27:14+08:00">2020-05-10</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-05-11 11:31:54" itemprop="dateModified" datetime="2020-05-11T11:31:54+08:00">2020-05-11</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -283,108 +289,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h2 id="Windows10安装Ubuntu双系统教程"><a href="#Windows10安装Ubuntu双系统教程" class="headerlink" title="Windows10安装Ubuntu双系统教程"></a>Windows10安装Ubuntu双系统教程</h2><h3 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h3><p>之前一直用的Windows10系统，由于最近大作业要进行项目开发，而Linux系统对项目开发比较友好，所以准备学习一下Linux系统的基本操作。由于之前学习中接触过Ubuntu，而且Ubuntu生态较完善，出了问题网上比较好找解决办法，所以我选择在我原来电脑上再装一个Ubuntu。本人刚刚入门，也是个小白菜鸡，还望网上的各位大佬发现问题及时指出。</p>
-<h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><ol>
-<li><p>准备工具：</p>
-<ul>
-<li>一台Windows10电脑，</li>
-<li>一个U盘（不少于8GB），</li>
-<li>写盘工具（推荐RUFUS，轻量，简洁好用而且免费）</li>
-</ul>
-</li>
-<li><p>到Ubuntu官网下载系统镜像 <a href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">https://ubuntu.com/download/desktop</a></p>
-</li>
-<li><p>将镜像写入U盘（！！注意，本步骤会格式化U盘，请先做好数据备份）</p>
-<ul>
-<li>该过程可以到Ubuntu官网去找，这里给一个链接：<a href="https://ubuntu.com/tutorials/tutorial-create-a-usb-stick-on-windows#1-overview" target="_blank" rel="noopener">将系统镜像写入U盘</a></li>
-</ul>
-</li>
-</ol>
-<h3 id="在Windows下创建硬盘空白分区"><a href="#在Windows下创建硬盘空白分区" class="headerlink" title="在Windows下创建硬盘空白分区"></a>在Windows下创建硬盘空白分区</h3><p>可以使用以下两种方式：</p>
-<ul>
-<li>直接删除一个分区作为空白分区（不推荐）</li>
-<li>找一个有较大空间且平时不怎么用的分区进行压缩（推荐）</li>
-</ul>
-<p>具体步骤如下：</p>
-<ul>
-<li>进入<em>我的电脑–管理–磁盘管理</em>，</li>
-<li>选择一个有较大空间但平时用不了这么大的分区</li>
-<li>进行压缩，压缩的步骤为：右键单击你选择的分区，然后点击<strong>压缩卷</strong>，填入压缩卷的大小，压缩卷产生的分区是用来装Ubuntu系统的，推荐50G以上，硬盘较大的可以多分一些（我选择分80GB）</li>
-</ul>
-<h3 id="关闭win10系统的快速启动和安全启动"><a href="#关闭win10系统的快速启动和安全启动" class="headerlink" title="关闭win10系统的快速启动和安全启动"></a>关闭win10系统的快速启动和安全启动</h3><ol>
-<li><p>关闭快速启动</p>
-<ul>
-<li><p>进入Windows设置，点击“系统”，点击<strong>电源和睡眠</strong>，选择<strong>其他电源设置</strong></p>
-</li>
-<li><p>然后点击<strong>选择电源按钮的功能</strong></p>
-</li>
-<li><p>然后点击<strong>更改当前不可用的设置</strong></p>
-</li>
-<li><p>然后将<strong>启用快速启动（推荐）</strong>选项前的对号去掉，然后点击<strong>保存修改</strong></p>
-</li>
-</ul>
-</li>
-<li><p>关闭安全启动</p>
-<ul>
-<li>我的电脑是联想拯救者ISK-15，在开机的过程中，狂按F2键，进入BIOS模式，选择Security选项，将下面的Secure Boot设置成disabled。（补充：联想拯救者开机过程狂按F12会进入启动项的选择中）</li>
-<li>可以在Boot选项查看快速启动是否关闭</li>
-</ul>
-</li>
-</ol>
-<h3 id="查看系统的启动模式"><a href="#查看系统的启动模式" class="headerlink" title="查看系统的启动模式"></a>查看系统的启动模式</h3><p>使用快捷键<strong>Win+R</strong>，然后在跳出来的框中输入msinfo32，回车，在BIOS模式中如果显示<strong>传统</strong>，表示系统启动方式为Legacy BIOS；如果为<strong>UEFI</strong>，则显示UEFI(<strong>！！！记住，如果为传统的话后面有/boot分区，如果为UEFI，则为efi文件</strong>)</p>
-<h3 id="安装过程"><a href="#安装过程" class="headerlink" title="安装过程"></a>安装过程</h3><p>插上U盘启动盘，在开机的过程中不断按F12（注意，不同的电脑按键各不相同，需要根据自己的电脑型号改变），然后选择U盘启动方式<br>接下来就按照正常的U盘安装步骤进行就好了，其中有一个关键步骤，就是在安装图形界面的下一步，系统会提示你是否与windows 10 共存，我们不要点击那个，我们选择其他选项，这样自己方便管理一些。</p>
-<p><strong>！！！注意:如果系统没提示你之前安装过windows 那么你的启动方式就错误了，你得回到BIOS页面下更改启动方式再次启动</strong></p>
-<p>接下来就是对Ubuntu进行分区，其中显示<strong>空闲</strong>的那一项，就是你刚才在win系统上分出的区，看看后面的空间大小，也和你分的空间大小一致。 选中<strong>空闲</strong>那一行，点击<strong>+</strong>，这是要将整个<strong>空闲</strong>分区继续分区，以用来装Ubuntu系统。</p>
-<p>我推荐的分区：</p>
-<table>
-<thead>
-<tr>
-<th align="center">大小</th>
-<th align="center">分区类型</th>
-<th align="center">分区位置</th>
-<th align="center">用于</th>
-<th align="center">挂载点</th>
-<th align="center">用途</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">20G</td>
-<td align="center">主分区</td>
-<td align="center">空间起始位置</td>
-<td align="center">Ext4日志文件系统</td>
-<td align="center">/</td>
-<td align="center">存放系统，相当于C盘</td>
-</tr>
-<tr>
-<td align="center">4G/8G</td>
-<td align="center">逻辑分区</td>
-<td align="center">空间起始位置</td>
-<td align="center">交换空间</td>
-<td align="center">/swap</td>
-<td align="center">虚拟内存</td>
-</tr>
-<tr>
-<td align="center">200MB</td>
-<td align="center">逻辑分区</td>
-<td align="center">空间起始位置</td>
-<td align="center">Ext4日志文件系统</td>
-<td align="center">/boot or efi</td>
-<td align="center">引导分区</td>
-</tr>
-<tr>
-<td align="center">剩余</td>
-<td align="center">逻辑/主分区</td>
-<td align="center">空间起始位置</td>
-<td align="center">Ext4日志文件系统</td>
-<td align="center">/home</td>
-<td align="center">储存数据用</td>
-</tr>
-</tbody></table>
-<p><strong>第四次分区完成后请不要马上点 “安装”！！！<br>第四次分区完成后请不要马上点 “安装”！！！<br>第四次分区完成后请不要马上点 “安装”！！！</strong></p>
-<p>记得在 <strong>安装启动引导器的设备：</strong> 选项中选择 <strong>/boot or efi</strong> 所在盘符，至此，点击 <strong>安装</strong>，一直等到出现安装完成重启的提示，重启就好了，然后你会发现，重启之后仍然是 Windows，还有最后一步。</p>
-<h3 id="安装-EasyBCD-2-3"><a href="#安装-EasyBCD-2-3" class="headerlink" title="安装 EasyBCD 2.3"></a><strong>安装 EasyBCD 2.3</strong></h3><p>这个软件是用于系统配置创建多重启动系统的引导文件，也就是新创建一个启动文件，可以让你的电脑在启动的时候，有进入何种系统的选择。<strong>添加新条目</strong> -&gt;<strong>Linux/BSD</strong>-&gt;类型 <strong>Grub (Legacy)</strong> 驱动器，选择<strong>驱动器</strong>-&gt;<strong>添加条目</strong>，保存后重启计算机。</p>
-<p>参考文章：<a href="https://www.cnblogs.com/masbay/p/10745170.html" target="_blank" rel="noopener">https://www.cnblogs.com/masbay/p/10745170.html</a></p>
-
+          <h2 id="windows10安装ubuntu双系统教程">Windows10安装Ubuntu双系统教程</h2>
+<h3 id="写在前面">写在前面</h3>
+<p>之前一直用的Windows10系统，由于最近大作业要进行项目开发，而Linux系统对项目开发比较友好，所以准备学习一下Linux系统的基本操作。由于之前学习中接触过Ubuntu，而且Ubuntu生态较完善，出了问题网上比较好找解决办法，所以我选择在我原来电脑上再装一个Ubuntu。本人刚刚入门，也是个小白菜鸡，还望网上的各位大佬发现问题及时指出。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/post/ce0e1ebb.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -457,17 +372,18 @@
 
       
           <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
 
       
@@ -697,6 +613,8 @@
 
 
 
+
+  
 
   
 
