@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>CruiseTian&#39;s Blog</title>
+  <icon>https://www.cruisetian.tk/icon.png</icon>
+  <subtitle>Life is real, life is earnest.</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://www.cruisetian.tk/"/>
+  <updated>2020-05-10T09:02:29.815Z</updated>
+  <id>https://www.cruisetian.tk/</id>
+  
+  <author>
+    <name>CruiseTian</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows10安装Ubuntu双系统</title>
+    <link href="https://www.cruisetian.tk/post/ce0e1ebb.html"/>
+    <id>https://www.cruisetian.tk/post/ce0e1ebb.html</id>
+    <published>2020-05-10T04:27:14.000Z</published>
+    <updated>2020-05-10T09:02:29.815Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h2 id=&quot;Windows10安装Ubuntu双系统教程&quot;&gt;&lt;a href=&quot;#Windows10安装Ubuntu双系统教程&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Win,Ubuntu,双系统，Linux" scheme="https://www.cruisetian.tk/tags/Win-Ubuntu-%E5%8F%8C%E7%B3%BB%E7%BB%9F%EF%BC%8CLinux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://www.cruisetian.tk/post/4a17b156.html"/>
+    <id>https://www.cruisetian.tk/post/4a17b156.html</id>
+    <published>2020-05-10T04:14:52.838Z</published>
+    <updated>2020-05-10T09:02:29.828Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+</feed>
