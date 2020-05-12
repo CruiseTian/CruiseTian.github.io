@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-11T04:47:34.713Z</updated>
+  <updated>2020-05-12T05:32:10.191Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为git配置代理</title>
+    <link href="https://www.cruisetian.tk/post/30b83ef0.html"/>
+    <id>https://www.cruisetian.tk/post/30b83ef0.html</id>
+    <published>2020-05-12T05:30:20.000Z</published>
+    <updated>2020-05-12T05:32:10.191Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快&lt;/p&gt;
+&lt;p&gt;通常我们 clone 代码时可以选择两种方式&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//方式一：HTTP&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://github.com/git/git.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//方式二：SSH&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git@github.com:git/git.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;两种方式设置代理的方法是不同的，下面一一介绍。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
+    
+      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="github" scheme="https://www.cruisetian.tk/tags/github/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows10安装Ubuntu双系统</title>
