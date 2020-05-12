@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-12T05:32:10.191Z</updated>
+  <updated>2020-05-12T08:26:35.850Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>为npm设置代理</title>
+    <link href="https://www.cruisetian.tk/post/603b46.html"/>
+    <id>https://www.cruisetian.tk/post/603b46.html</id>
+    <published>2020-05-12T08:23:22.000Z</published>
+    <updated>2020-05-12T08:26:35.850Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;npm&lt;/strong&gt;（全称 Node Package Manager，即“node包管理器”）是&lt;a href=&quot;https://zh.wikipedia.org/wiki/Node.js&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Node.js&lt;/a&gt;默认的、用&lt;a href=&quot;https://zh.wikipedia.org/wiki/JavaScript&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;JavaScript&lt;/a&gt;编写的&lt;a href=&quot;https://zh.wikipedia.org/wiki/軟體套件管理系統&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;软件包管理系统&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。&lt;/p&gt;
+&lt;p&gt;下面简要介绍下npm的配置以及如何设置代理。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>为git配置代理</title>
     <link href="https://www.cruisetian.tk/post/30b83ef0.html"/>
     <id>https://www.cruisetian.tk/post/30b83ef0.html</id>
     <published>2020-05-12T05:30:20.000Z</published>
-    <updated>2020-05-12T05:32:10.191Z</updated>
+    <updated>2020-05-12T05:32:32.775Z</updated>
     
     <summary type="html">
     

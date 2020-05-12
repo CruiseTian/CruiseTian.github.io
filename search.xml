@@ -118,6 +118,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/post/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>为git配置代理</title>
     <url>/post/30b83ef0.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -149,22 +168,35 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/post/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+    <title>为npm设置代理</title>
+    <url>/post/603b46.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
+<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
+<p>下面简要介绍下npm的配置以及如何设置代理。</p>
+<a id="more"></a>
+<h2 id="为npm设置代理">为npm设置代理</h2>
+<h3 id="设置http代理">设置http代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>如果代理需要认证的话可以这样来设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="查看代理">查看代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+<h3 id="socks5-代理">socks5 代理</h3>
+<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>相当于又加了一个中间层，将 http 转成 socks。</p>
+<h2 id="取消代理">取消代理</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+<h2 id="后记">后记</h2>
+<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
 ]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>proxy</tag>
+        <tag>npm</tag>
+      </tags>
   </entry>
 </search>
