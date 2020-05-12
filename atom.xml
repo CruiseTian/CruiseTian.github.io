@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-12T08:26:35.850Z</updated>
+  <updated>2020-05-12T08:50:14.211Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>给你的hexo博客绑定域名</title>
+    <link href="https://www.cruisetian.tk/post/26a7e178.html"/>
+    <id>https://www.cruisetian.tk/post/26a7e178.html</id>
+    <published>2020-05-12T08:48:32.000Z</published>
+    <updated>2020-05-12T08:50:14.211Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更&lt;del&gt;有个人特色&lt;/del&gt;有逼格。&lt;/p&gt;
+&lt;h2 id=&quot;搭建hexo博客并推送到github页面&quot;&gt;搭建Hexo博客并推送到github页面&lt;/h2&gt;
+&lt;p&gt;这一步就不再多讲，大家可以自己去网上找相关教程，有很多。&lt;/p&gt;
+&lt;p&gt;这里给几个推荐链接：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/26625249&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub+Hexo 搭建个人网站详细教程&lt;/a&gt;, &lt;a href=&quot;https://zhuanlan.zhihu.com/p/60578464&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;使用 Hexo+GitHub 搭建个人免费博客教程（小白向）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;差不多够用了。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="hexo" scheme="https://www.cruisetian.tk/tags/hexo/"/>
+    
+      <category term="博客" scheme="https://www.cruisetian.tk/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+      <category term="域名绑定" scheme="https://www.cruisetian.tk/tags/%E5%9F%9F%E5%90%8D%E7%BB%91%E5%AE%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>为npm设置代理</title>
@@ -36,9 +66,9 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
-    
       <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
+    
+      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
     
   </entry>
   
@@ -63,9 +93,9 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
-    
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
     
       <category term="github" scheme="https://www.cruisetian.tk/tags/github/"/>
     
