@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-12T08:50:14.211Z</updated>
+  <updated>2020-05-13T02:55:02.795Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ClashR使用，让你的chrome起飞</title>
+    <link href="https://www.cruisetian.tk/post/f5257d2a.html"/>
+    <id>https://www.cruisetian.tk/post/f5257d2a.html</id>
+    <published>2020-05-13T01:53:11.000Z</published>
+    <updated>2020-05-13T02:55:02.795Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;获得代理节点&quot;&gt;获得代理节点&lt;/h2&gt;
+&lt;p&gt;首先找到一个机场，这里可以用这个（&lt;a href=&quot;https://youyun666.com/auth/register?code=g4oY&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;优云666&lt;/a&gt;），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量&lt;/p&gt;
+&lt;figure&gt;
+&lt;img data-src=&quot;http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png&quot; alt=&quot;Snipaste_2020-05-11_19-53-01&quot; /&gt;&lt;figcaption&gt;Snipaste_2020-05-11_19-53-01&lt;/figcaption&gt;
+&lt;/figure&gt;
+&lt;p&gt;然后下拉，到下面这个页面，点击&lt;strong&gt;复制ClashR订阅&lt;/strong&gt;，留着一会备用。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="软件分享" scheme="https://www.cruisetian.tk/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="clash" scheme="https://www.cruisetian.tk/tags/clash/"/>
+    
+      <category term="clashR" scheme="https://www.cruisetian.tk/tags/clashR/"/>
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="机场" scheme="https://www.cruisetian.tk/tags/%E6%9C%BA%E5%9C%BA/"/>
+    
+      <category term="SwicthyOmega" scheme="https://www.cruisetian.tk/tags/SwicthyOmega/"/>
+    
+  </entry>
+  
+  <entry>
     <title>给你的hexo博客绑定域名</title>
     <link href="https://www.cruisetian.tk/post/26a7e178.html"/>
     <id>https://www.cruisetian.tk/post/26a7e178.html</id>
     <published>2020-05-12T08:48:32.000Z</published>
-    <updated>2020-05-12T08:50:14.211Z</updated>
+    <updated>2020-05-12T08:54:06.202Z</updated>
     
     <summary type="html">
     

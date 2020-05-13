@@ -1,6 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ClashR使用，让你的chrome起飞</title>
+    <url>/post/f5257d2a.html</url>
+    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
+<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" alt="Snipaste_2020-05-11_19-53-01" /><figcaption>Snipaste_2020-05-11_19-53-01</figcaption>
+</figure>
+<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
+<a id="more"></a>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/198274-91.png" alt="198274-91" /><figcaption>198274-91</figcaption>
+</figure>
+<h2 id="配置clashr">配置ClashR</h2>
+<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" alt="Snipaste_2020-05-11_20-03-04" /><figcaption>Snipaste_2020-05-11_20-03-04</figcaption>
+</figure>
+<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" alt="Snipaste_2020-05-11_20-09-12" /><figcaption>Snipaste_2020-05-11_20-09-12</figcaption>
+</figure>
+<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" alt="Snipaste_2020-05-11_20-13-22" /><figcaption>Snipaste_2020-05-11_20-13-22</figcaption>
+</figure>
+<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" alt="Snipaste_2020-05-11_20-14-58" /><figcaption>Snipaste_2020-05-11_20-14-58</figcaption>
+</figure>
+<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
+<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
+<h3 id="配置代理服务器">配置代理服务器</h3>
+<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" alt="Snipaste_2020-05-11_20-20-46" /><figcaption>Snipaste_2020-05-11_20-20-46</figcaption>
+</figure>
+<p>然后点击<strong>应用选项</strong></p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" alt="Snipaste_2020-05-11_20-22-01" /><figcaption>Snipaste_2020-05-11_20-22-01</figcaption>
+</figure>
+<h3 id="配置自动切换规则">配置自动切换规则</h3>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" alt="Snipaste_2020-05-11_20-24-04" /><figcaption>Snipaste_2020-05-11_20-24-04</figcaption>
+</figure>
+<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
+<p>然后再点击<strong>应用选项</strong>即可</p>
+<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
+<h2 id="相关链接">相关链接</h2>
+<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
+<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>clash</tag>
+        <tag>clashR</tag>
+        <tag>代理</tag>
+        <tag>机场</tag>
+        <tag>SwicthyOmega</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows10安装Ubuntu双系统</title>
     <url>/post/ce0e1ebb.html</url>
     <content><![CDATA[<h2 id="windows10安装ubuntu双系统教程">Windows10安装Ubuntu双系统教程</h2>
@@ -118,25 +181,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/post/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>为npm设置代理</title>
     <url>/post/603b46.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -169,47 +213,6 @@
       </tags>
   </entry>
   <entry>
-    <title>给你的hexo博客绑定域名</title>
-    <url>/post/26a7e178.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更<del>有个人特色</del>有逼格。</p>
-<h2 id="搭建hexo博客并推送到github页面">搭建Hexo博客并推送到github页面</h2>
-<p>这一步就不再多讲，大家可以自己去网上找相关教程，有很多。</p>
-<p>这里给几个推荐链接：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>, <a href="https://zhuanlan.zhihu.com/p/60578464" target="_blank" rel="noopener">使用 Hexo+GitHub 搭建个人免费博客教程（小白向）</a></p>
-<p>差不多够用了。</p>
-<a id="more"></a>
-<h2 id="注册域名">注册域名</h2>
-<p>可以去阿里云，腾讯云，狗爹，namesilo去购买一个域名，也可以到 <a href="%5Bhttps://www.freenom.com%5D(https://www.freenom.com/zh/index.html?lang=zh)">Freenom</a> 去申请一个免费的域名。</p>
-<h2 id="解析域名">解析域名</h2>
-<p>到你注册域名的地方，增加给你的域名做DNS解析，增加一条CNAME解析，指向你的博客，这里我以cloudflare为例：</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/6.png" alt="6" /><figcaption>6</figcaption>
-</figure>
-<h2 id="创建cname文件">创建CNAME文件</h2>
-<p>在hexo项目下 source 文件下创建CNAME 文件（没有后缀名的），在里面写上购买的域名，如</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/3.png" alt="3" /><figcaption>3</figcaption>
-</figure>
-<h2 id="到github中填入自己的域名">到GitHub中填入自己的域名</h2>
-<p>到你创建的页面repo中，找到setting→options，往下翻，找到Custom domain，然后在其中填入你解析的域名，点击Save保存。如，</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/4.png" alt="4" /><figcaption>4</figcaption>
-</figure>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/5.png" alt="5" /><figcaption>5</figcaption>
-</figure>
-<p>然后在浏览器的地址栏输入自己的域名，就可以访问啦。</p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客</tag>
-        <tag>域名绑定</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为git配置代理</title>
     <url>/post/30b83ef0.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -239,5 +242,57 @@
         <tag>git</tag>
         <tag>github</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>给你的hexo博客绑定域名</title>
+    <url>/post/26a7e178.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更<del>有个人特色</del>有逼格。</p>
+<h2 id="搭建hexo博客并推送到github页面">搭建Hexo博客并推送到github页面</h2>
+<p>这一步就不再多讲，大家可以自己去网上找相关教程，有很多。</p>
+<p>这里给几个推荐链接：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>, <a href="https://zhuanlan.zhihu.com/p/60578464" target="_blank" rel="noopener">使用 Hexo+GitHub 搭建个人免费博客教程（小白向）</a></p>
+<p>差不多够用了。</p>
+<a id="more"></a>
+<h2 id="注册域名">注册域名</h2>
+<p>可以去阿里云，腾讯云，狗爹，namesilo去购买一个域名，也可以到 <a href="%5Bhttps://www.freenom.com%5D(https://www.freenom.com/zh/index.html?lang=zh)">Freenom</a> 去申请一个免费的域名。</p>
+<h2 id="解析域名">解析域名</h2>
+<p>到你注册域名的地方，增加给你的域名做DNS解析，增加一条CNAME解析，指向你的博客，这里我以cloudflare为例：</p>
+<p><img data-src="http://figure.cruisetian.top/img/6.png" /></p>
+<h2 id="创建cname文件">创建CNAME文件</h2>
+<p>在hexo项目下 source 文件下创建CNAME 文件（没有后缀名的），在里面写上购买的域名，如</p>
+<p><img data-src="http://figure.cruisetian.top/img/3.png" /></p>
+<h2 id="到github中填入自己的域名">到GitHub中填入自己的域名</h2>
+<p>到你创建的页面repo中，找到setting→options，往下翻，找到Custom domain，然后在其中填入你解析的域名，点击Save保存。如，</p>
+<p><img data-src="http://figure.cruisetian.top/img/4.png" /></p>
+<p><img data-src="http://figure.cruisetian.top/img/5.png" /></p>
+<p>然后在浏览器的地址栏输入自己的域名，就可以访问啦。</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>域名绑定</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/post/4a17b156.html</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="create-a-new-post">Create a new post</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="run-server">Run server</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="generate-static-files">Generate static files</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+]]></content>
   </entry>
 </search>
