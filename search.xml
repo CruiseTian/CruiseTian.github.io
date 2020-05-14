@@ -64,6 +64,37 @@
       </tags>
   </entry>
   <entry>
+    <title>为git配置代理</title>
+    <url>/post/30b83ef0.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快</p>
+<p>通常我们 clone 代码时可以选择两种方式</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">//方式一：HTTP</span></span><br><span class="line">https://github.com/git/git.git</span><br><span class="line"><span class="comment">//方式二：SSH</span></span><br><span class="line">git@github.com:git/git.git</span><br></pre></td></tr></table></figure>
+<p>两种方式设置代理的方法是不同的，下面一一介绍。</p>
+<a id="more"></a>
+<h2 id="设置git-http代理">设置Git HTTP代理</h2>
+<p>如果你手上的代理是 socks5 代理，如各平台的 Shadowsocks 客户端，trojan，v2ray等都提供一个本地的 socks5 代理，那么你可以这样设置，让 Git 通过 HTTP 链接 clone 代码时走 socks5 代理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
+<p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
+<p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+<p>如果端口有变动也可以直接在这里修改。</p>
+<h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
+<p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这里必须是 github.com，因为这个跟我们 clone 代码时的链接有关</span><br><span class="line">Host github.com</span><br><span class="line">   # 如果用默认端口，这里是 github.com，如果想用443端口，这里就是 ssh.github.com 详见 https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;using-ssh-over-the-https-port&#x2F;</span><br><span class="line">   HostName github.com</span><br><span class="line">   User git</span><br><span class="line">   # 如果是 HTTP 代理，把下面这行取消注释，并把 proxyport 改成自己的 http 代理的端口</span><br><span class="line">   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport&#x3D;1080</span><br><span class="line">   # 如果是 socks5 代理，则把下面这行取消注释，并把 6666 改成自己 socks5 代理的端口</span><br><span class="line">   # ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+<p>根据代码中的注释，设置自己的代理。</p>
+<p>经过上面的设置，现在不管是用什么方式 clone 代码，都会走代理了，这里还是强调一下，代理要速度快才会有加速效果，如果代理一般或者很慢，可能还不如不走代理。</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>proxy</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows10安装Ubuntu双系统</title>
     <url>/post/ce0e1ebb.html</url>
     <content><![CDATA[<h2 id="windows10安装ubuntu双系统教程">Windows10安装Ubuntu双系统教程</h2>
@@ -208,39 +239,8 @@
         <category>日常学习</category>
       </categories>
       <tags>
+        <tag>proxy</tag>
         <tag>npm</tag>
-        <tag>proxy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为git配置代理</title>
-    <url>/post/30b83ef0.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快</p>
-<p>通常我们 clone 代码时可以选择两种方式</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line"><span class="comment">//方式一：HTTP</span></span><br><span class="line">https://github.com/git/git.git</span><br><span class="line"><span class="comment">//方式二：SSH</span></span><br><span class="line">git@github.com:git/git.git</span><br></pre></td></tr></table></figure>
-<p>两种方式设置代理的方法是不同的，下面一一介绍。</p>
-<a id="more"></a>
-<h2 id="设置git-http代理">设置Git HTTP代理</h2>
-<p>如果你手上的代理是 socks5 代理，如各平台的 Shadowsocks 客户端，trojan，v2ray等都提供一个本地的 socks5 代理，那么你可以这样设置，让 Git 通过 HTTP 链接 clone 代码时走 socks5 代理</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
-<p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
-<p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-<p>如果端口有变动也可以直接在这里修改。</p>
-<h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
-<p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这里必须是 github.com，因为这个跟我们 clone 代码时的链接有关</span><br><span class="line">Host github.com</span><br><span class="line">   # 如果用默认端口，这里是 github.com，如果想用443端口，这里就是 ssh.github.com 详见 https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;using-ssh-over-the-https-port&#x2F;</span><br><span class="line">   HostName github.com</span><br><span class="line">   User git</span><br><span class="line">   # 如果是 HTTP 代理，把下面这行取消注释，并把 proxyport 改成自己的 http 代理的端口</span><br><span class="line">   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport&#x3D;1080</span><br><span class="line">   # 如果是 socks5 代理，则把下面这行取消注释，并把 6666 改成自己 socks5 代理的端口</span><br><span class="line">   # ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
-<p>根据代码中的注释，设置自己的代理。</p>
-<p>经过上面的设置，现在不管是用什么方式 clone 代码，都会走代理了，这里还是强调一下，代理要速度快才会有加速效果，如果代理一般或者很慢，可能还不如不走代理。</p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>proxy</tag>
-        <tag>git</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -275,24 +275,5 @@
         <tag>博客</tag>
         <tag>域名绑定</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/post/4a17b156.html</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="quick-start">Quick Start</h2>
-<h3 id="create-a-new-post">Create a new post</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="run-server">Run server</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="generate-static-files">Generate static files</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="deploy-to-remote-sites">Deploy to remote sites</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-]]></content>
   </entry>
 </search>

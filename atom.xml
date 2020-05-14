@@ -100,9 +100,9 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
-    
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
     
   </entry>
   
@@ -127,9 +127,9 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
-    
       <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
+    
+      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
     
       <category term="github" scheme="https://www.cruisetian.tk/tags/github/"/>
     
@@ -161,29 +161,6 @@
       <category term="双系统" scheme="https://www.cruisetian.tk/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
     
       <category term="Linux" scheme="https://www.cruisetian.tk/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://www.cruisetian.tk/post/4a17b156.html"/>
-    <id>https://www.cruisetian.tk/post/4a17b156.html</id>
-    <published>2020-05-10T04:14:52.838Z</published>
-    <updated>2020-05-10T09:02:29.828Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
-        
-      
-    
-    </summary>
-    
-    
     
   </entry>
   
