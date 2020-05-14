@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-14T07:16:46.298Z</updated>
+  <updated>2020-05-14T16:12:41.170Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Docker设置HTTP/HTTPS代理</title>
+    <link href="https://www.cruisetian.tk/post/4315e63f.html"/>
+    <id>https://www.cruisetian.tk/post/4315e63f.html</id>
+    <published>2020-05-14T16:10:34.000Z</published>
+    <updated>2020-05-14T16:12:41.170Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;最近刚刚开始学习docker，抽了两天的空余时间了解了一下docker，今天正式在我的电脑上安装并使用docker，因为众所周知的原因，Docker在国内的使用比较艰难，虽然很多组织在国内提供了&lt;code&gt;mirror&lt;/code&gt;，可以拉取各种官方镜像,但是大量的组织或个人的镜像都在docker hub，这一部分并没有被镜像同步。所以就需要给docker设置代理，帮助我们更好的使用docker。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="代理设置" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
+    
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="Docker" scheme="https://www.cruisetian.tk/tags/Docker/"/>
+    
+      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+  </entry>
+  
+  <entry>
     <title>ClashR使用，让你的chrome起飞</title>
     <link href="https://www.cruisetian.tk/post/f5257d2a.html"/>
     <id>https://www.cruisetian.tk/post/f5257d2a.html</id>
     <published>2020-05-13T01:53:11.000Z</published>
-    <updated>2020-05-14T07:16:46.298Z</updated>
+    <updated>2020-05-14T16:16:06.493Z</updated>
     
     <summary type="html">
     
@@ -85,7 +113,7 @@
     <link href="https://www.cruisetian.tk/post/603b46.html"/>
     <id>https://www.cruisetian.tk/post/603b46.html</id>
     <published>2020-05-12T08:23:22.000Z</published>
-    <updated>2020-05-12T08:26:35.850Z</updated>
+    <updated>2020-05-14T16:17:24.838Z</updated>
     
     <summary type="html">
     
@@ -97,8 +125,10 @@
     </summary>
     
     
-      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
     
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
     
@@ -111,25 +141,25 @@
     <link href="https://www.cruisetian.tk/post/30b83ef0.html"/>
     <id>https://www.cruisetian.tk/post/30b83ef0.html</id>
     <published>2020-05-12T05:30:20.000Z</published>
-    <updated>2020-05-12T05:32:32.775Z</updated>
+    <updated>2020-05-14T16:16:48.980Z</updated>
     
     <summary type="html">
     
       &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
 &lt;p&gt;在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快&lt;/p&gt;
 &lt;p&gt;通常我们 clone 代码时可以选择两种方式&lt;/p&gt;
-&lt;figure class=&quot;highlight&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//方式一：HTTP&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://github.com/git/git.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//方式二：SSH&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git@github.com:git/git.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;//方式一：HTTP&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://github.com/git/git.git&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;//方式二：SSH&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;git@github.com:git/git.git&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;两种方式设置代理的方法是不同的，下面一一介绍。&lt;/p&gt;
     
     </summary>
     
     
-      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+      <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
     
-    
-      <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
     
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
     
       <category term="github" scheme="https://www.cruisetian.tk/tags/github/"/>
     
