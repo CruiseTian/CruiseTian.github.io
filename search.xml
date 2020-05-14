@@ -5,14 +5,10 @@
     <url>/post/f5257d2a.html</url>
     <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
 <p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" alt="Snipaste_2020-05-11_19-53-01" /><figcaption>Snipaste_2020-05-11_19-53-01</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
 <p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
 <a id="more"></a>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/198274-91.png" alt="198274-91" /><figcaption>198274-91</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
 <h2 id="配置clashr">配置ClashR</h2>
 <p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
 <p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
