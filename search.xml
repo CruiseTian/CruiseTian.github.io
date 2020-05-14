@@ -15,36 +15,22 @@
 </figure>
 <h2 id="配置clashr">配置ClashR</h2>
 <p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" alt="Snipaste_2020-05-11_20-03-04" /><figcaption>Snipaste_2020-05-11_20-03-04</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
 <p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" alt="Snipaste_2020-05-11_20-09-12" /><figcaption>Snipaste_2020-05-11_20-09-12</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
 <p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" alt="Snipaste_2020-05-11_20-13-22" /><figcaption>Snipaste_2020-05-11_20-13-22</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
 <p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" alt="Snipaste_2020-05-11_20-14-58" /><figcaption>Snipaste_2020-05-11_20-14-58</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
 <h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
 <p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
 <h3 id="配置代理服务器">配置代理服务器</h3>
 <p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" alt="Snipaste_2020-05-11_20-20-46" /><figcaption>Snipaste_2020-05-11_20-20-46</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
 <p>然后点击<strong>应用选项</strong></p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" alt="Snipaste_2020-05-11_20-22-01" /><figcaption>Snipaste_2020-05-11_20-22-01</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
 <h3 id="配置自动切换规则">配置自动切换规则</h3>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" alt="Snipaste_2020-05-11_20-24-04" /><figcaption>Snipaste_2020-05-11_20-24-04</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
 <p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
 <p>然后再点击<strong>应用选项</strong>即可</p>
 <p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
@@ -92,71 +78,6 @@
         <tag>git</tag>
         <tag>proxy</tag>
         <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为npm设置代理</title>
-    <url>/post/603b46.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
-<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
-<p>下面简要介绍下npm的配置以及如何设置代理。</p>
-<a id="more"></a>
-<h2 id="为npm设置代理">为npm设置代理</h2>
-<h3 id="设置http代理">设置http代理</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<p>如果代理需要认证的话可以这样来设置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="查看代理">查看代理</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
-<h3 id="socks5-代理">socks5 代理</h3>
-<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<p>相当于又加了一个中间层，将 http 转成 socks。</p>
-<h2 id="取消代理">取消代理</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
-<h2 id="后记">后记</h2>
-<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>proxy</tag>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给你的hexo博客绑定域名</title>
-    <url>/post/26a7e178.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更<del>有个人特色</del>有逼格。</p>
-<h2 id="搭建hexo博客并推送到github页面">搭建Hexo博客并推送到github页面</h2>
-<p>这一步就不再多讲，大家可以自己去网上找相关教程，有很多。</p>
-<p>这里给几个推荐链接：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>, <a href="https://zhuanlan.zhihu.com/p/60578464" target="_blank" rel="noopener">使用 Hexo+GitHub 搭建个人免费博客教程（小白向）</a></p>
-<p>差不多够用了。</p>
-<a id="more"></a>
-<h2 id="注册域名">注册域名</h2>
-<p>可以去阿里云，腾讯云，狗爹，namesilo去购买一个域名，也可以到 <a href="%5Bhttps://www.freenom.com%5D(https://www.freenom.com/zh/index.html?lang=zh)">Freenom</a> 去申请一个免费的域名。</p>
-<h2 id="解析域名">解析域名</h2>
-<p>到你注册域名的地方，增加给你的域名做DNS解析，增加一条CNAME解析，指向你的博客，这里我以cloudflare为例：</p>
-<p><img data-src="http://figure.cruisetian.top/img/6.png" /></p>
-<h2 id="创建cname文件">创建CNAME文件</h2>
-<p>在hexo项目下 source 文件下创建CNAME 文件（没有后缀名的），在里面写上购买的域名，如</p>
-<p><img data-src="http://figure.cruisetian.top/img/3.png" /></p>
-<h2 id="到github中填入自己的域名">到GitHub中填入自己的域名</h2>
-<p>到你创建的页面repo中，找到setting→options，往下翻，找到Custom domain，然后在其中填入你解析的域名，点击Save保存。如，</p>
-<p><img data-src="http://figure.cruisetian.top/img/4.png" /></p>
-<p><img data-src="http://figure.cruisetian.top/img/5.png" /></p>
-<p>然后在浏览器的地址栏输入自己的域名，就可以访问啦。</p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客</tag>
-        <tag>域名绑定</tag>
       </tags>
   </entry>
   <entry>
@@ -274,6 +195,71 @@
         <tag>Ubuntu</tag>
         <tag>双系统</tag>
         <tag>Linux</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给你的hexo博客绑定域名</title>
+    <url>/post/26a7e178.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更<del>有个人特色</del>有逼格。</p>
+<h2 id="搭建hexo博客并推送到github页面">搭建Hexo博客并推送到github页面</h2>
+<p>这一步就不再多讲，大家可以自己去网上找相关教程，有很多。</p>
+<p>这里给几个推荐链接：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>, <a href="https://zhuanlan.zhihu.com/p/60578464" target="_blank" rel="noopener">使用 Hexo+GitHub 搭建个人免费博客教程（小白向）</a></p>
+<p>差不多够用了。</p>
+<a id="more"></a>
+<h2 id="注册域名">注册域名</h2>
+<p>可以去阿里云，腾讯云，狗爹，namesilo去购买一个域名，也可以到 <a href="%5Bhttps://www.freenom.com%5D(https://www.freenom.com/zh/index.html?lang=zh)">Freenom</a> 去申请一个免费的域名。</p>
+<h2 id="解析域名">解析域名</h2>
+<p>到你注册域名的地方，增加给你的域名做DNS解析，增加一条CNAME解析，指向你的博客，这里我以cloudflare为例：</p>
+<p><img data-src="http://figure.cruisetian.top/img/6.png" /></p>
+<h2 id="创建cname文件">创建CNAME文件</h2>
+<p>在hexo项目下 source 文件下创建CNAME 文件（没有后缀名的），在里面写上购买的域名，如</p>
+<p><img data-src="http://figure.cruisetian.top/img/3.png" /></p>
+<h2 id="到github中填入自己的域名">到GitHub中填入自己的域名</h2>
+<p>到你创建的页面repo中，找到setting→options，往下翻，找到Custom domain，然后在其中填入你解析的域名，点击Save保存。如，</p>
+<p><img data-src="http://figure.cruisetian.top/img/4.png" /></p>
+<p><img data-src="http://figure.cruisetian.top/img/5.png" /></p>
+<p>然后在浏览器的地址栏输入自己的域名，就可以访问啦。</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>域名绑定</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为npm设置代理</title>
+    <url>/post/603b46.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
+<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
+<p>下面简要介绍下npm的配置以及如何设置代理。</p>
+<a id="more"></a>
+<h2 id="为npm设置代理">为npm设置代理</h2>
+<h3 id="设置http代理">设置http代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>如果代理需要认证的话可以这样来设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="查看代理">查看代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+<h3 id="socks5-代理">socks5 代理</h3>
+<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>相当于又加了一个中间层，将 http 转成 socks。</p>
+<h2 id="取消代理">取消代理</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+<h2 id="后记">后记</h2>
+<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>proxy</tag>
+        <tag>npm</tag>
       </tags>
   </entry>
 </search>
