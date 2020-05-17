@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-14T16:17:49.587Z</updated>
+  <updated>2020-05-17T06:44:57.909Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>proxifier-让你实现真正的全局代理</title>
+    <link href="https://www.cruisetian.tk/post/64808312.html"/>
+    <id>https://www.cruisetian.tk/post/64808312.html</id>
+    <published>2020-05-17T06:39:43.000Z</published>
+    <updated>2020-05-17T06:44:57.909Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;目前很多人都使用上了Shadowsocks，V2ray，Trojan这类的socks5代理来实现科学上网，虽然这些代理通常有所谓的&lt;em&gt;全局代理&lt;/em&gt;模式，但是我们在日常使用中就会发现，我们并不能利用这些代理来打游戏，从GitHub上clone项目依然慢的离谱，这是因为由于socks5代理模式原理的限制，使得这些socks5代理的&lt;em&gt;全局模式&lt;/em&gt;并不能真正意义上实现全局代理，只能使网页浏览器，邮件服务器，文件传输这些服务实现代理。下面通过OSI模型来解释原理。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="软件分享" scheme="https://www.cruisetian.tk/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="proxifier" scheme="https://www.cruisetian.tk/tags/proxifier/"/>
+    
+      <category term="全局代理" scheme="https://www.cruisetian.tk/tags/%E5%85%A8%E5%B1%80%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="游戏加速" scheme="https://www.cruisetian.tk/tags/%E6%B8%B8%E6%88%8F%E5%8A%A0%E9%80%9F/"/>
+    
+  </entry>
   
   <entry>
     <title>Docker设置HTTP/HTTPS代理</title>
@@ -36,11 +64,11 @@
       <category term="代理设置" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
     
     
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
-    
       <category term="Docker" scheme="https://www.cruisetian.tk/tags/Docker/"/>
     
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
@@ -64,11 +92,11 @@
       <category term="软件分享" scheme="https://www.cruisetian.tk/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
     
     
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
       <category term="clash" scheme="https://www.cruisetian.tk/tags/clash/"/>
     
       <category term="clashR" scheme="https://www.cruisetian.tk/tags/clashR/"/>
-    
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
       <category term="机场" scheme="https://www.cruisetian.tk/tags/%E6%9C%BA%E5%9C%BA/"/>
     
@@ -126,9 +154,9 @@
       <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
     
     
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
-    
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
       <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
     
