@@ -74,7 +74,7 @@
 <p>Proxifier是一款功能非常强大的代理客户端，支持Windows XP/Vista/Win7/Win10 和 MacOS，支持http/https、socks4/5、TCP、UDP等协议，可以指定端口，指定IP，指定域名、指定程序、指定用户名密码授权等运行模式，兼容性非常好，有点类似SOCKSCAP。</p>
 <h2 id="安装">安装</h2>
 <h3 id="proxifier下载">Proxifier下载</h3>
-<p>官网发布多个版本，需要付费使用，同时也提供了 31 天的免费试用，其中<a href="https://www.baidu.com/s?wd=便携版&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">便携版</a>不需要安装，直接双击运行，安装版则直接安装即可   <a href="https://www.baidu.com/s?wd=Windows&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">Windows</a>便携版：<a href="https://www.proxifier.com/distr/ProxifierPE.zip" target="_blank" rel="noopener">官网地址</a>   Windows安装版：<a href="https://www.proxifier.com/distr/ProxifierSetup.exe" target="_blank" rel="noopener">官网地址</a>   Mac版：<a href="https://www.proxifier.com/distr/ProxifierMac.zip" target="_blank" rel="noopener">官网地址</a></p>
+<p>官网发布多个版本，需要付费使用，同时也提供了 31 天的免费试用，其中<a href="https://www.baidu.com/s?wd=便携版&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">便携版</a>不需要安装，直接双击运行，安装版则直接安装即可。<br>   Windows便携版：<a href="https://www.proxifier.com/distr/ProxifierPE.zip" target="_blank" rel="noopener">官网地址</a><br>   Windows安装版：<a href="https://www.proxifier.com/distr/ProxifierSetup.exe" target="_blank" rel="noopener">官网地址</a><br>   Mac版：<a href="https://www.proxifier.com/distr/ProxifierMac.zip" target="_blank" rel="noopener">官网地址</a></p>
 <p>但由于Proxifier 官网下载地址国内无法访问，且是商业收费版，推荐下面的链接中下载汉化破解版 <a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener">Proxifier汉化注册版</a></p>
 <h3 id="proxifier安装">Proxifier安装</h3>
 <p>将下载下来的安装包解压以后，双击<strong>setup.exe</strong>，根据提示一步步安装，这里不再赘述。</p>
