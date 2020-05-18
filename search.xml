@@ -55,7 +55,6 @@
 ]]></content>
       <categories>
         <category>日常学习</category>
-        <category>代理设置</category>
       </categories>
       <tags>
         <tag>Docker</tag>
@@ -69,9 +68,7 @@
     <content><![CDATA[<h2 id="前言">前言</h2>
 <p>目前很多人都使用上了Shadowsocks，V2ray，Trojan这类的socks5代理来实现科学上网，虽然这些代理通常有所谓的<em>全局代理</em>模式，但是我们在日常使用中就会发现，我们并不能利用这些代理来打游戏，从GitHub上clone项目依然慢的离谱，这是因为由于socks5代理模式原理的限制，使得这些socks5代理的<em>全局模式</em>并不能真正意义上实现全局代理，只能使网页浏览器，邮件服务器，文件传输这些服务实现代理。下面通过OSI模型来解释原理。</p>
 <a id="more"></a>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/7541336-b87f3c6f5235b56d.png" alt="7541336-b87f3c6f5235b56d" /><figcaption>7541336-b87f3c6f5235b56d</figcaption>
-</figure>
+<p><img data-src="http://figure.cruisetian.top/img/7541336-b87f3c6f5235b56d.png" /></p>
 <p>因为上面提到的这些服务在网络层级中处于最上层应用层，上面提到的这些socks5类型的代理则处于第五层会话层，所以可以代理上边层级的数据，而游戏数据是直接通过传输层的协议TCP和UDP进行通讯的，所以不经过会话层也不需要表示层来解释，所以正常情况下你就算开了这些socks5代理的<em>全局模式</em>，也不能加速游戏因为代理不了跑在传输层的游戏通讯数据，而借助proxifier这类工具则可以实现真正意义上的全局代理。</p>
 <h2 id="proxifier介绍">Proxifier介绍</h2>
 <p>Proxifier是一款功能非常强大的代理客户端，支持Windows XP/Vista/Win7/Win10 和 MacOS，支持http/https、socks4/5、TCP、UDP等协议，可以指定端口，指定IP，指定域名、指定程序、指定用户名密码授权等运行模式，兼容性非常好，有点类似SOCKSCAP。</p>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-17T06:44:57.909Z</updated>
+  <updated>2020-05-18T01:58:28.296Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.cruisetian.tk/post/64808312.html"/>
     <id>https://www.cruisetian.tk/post/64808312.html</id>
     <published>2020-05-17T06:39:43.000Z</published>
-    <updated>2020-05-17T06:44:57.909Z</updated>
+    <updated>2020-05-18T01:58:28.296Z</updated>
     
     <summary type="html">
     
@@ -49,7 +49,7 @@
     <link href="https://www.cruisetian.tk/post/4315e63f.html"/>
     <id>https://www.cruisetian.tk/post/4315e63f.html</id>
     <published>2020-05-14T16:10:34.000Z</published>
-    <updated>2020-05-14T16:17:49.587Z</updated>
+    <updated>2020-05-17T06:47:40.007Z</updated>
     
     <summary type="html">
     
@@ -60,8 +60,6 @@
     
     
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="代理设置" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/%E4%BB%A3%E7%90%86%E8%AE%BE%E7%BD%AE/"/>
     
     
       <category term="Docker" scheme="https://www.cruisetian.tk/tags/Docker/"/>
