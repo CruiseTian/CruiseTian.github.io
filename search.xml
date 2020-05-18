@@ -1,6 +1,198 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>proxifier-让你实现真正的全局代理</title>
+    <url>/post/64808312.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>目前很多人都使用上了Shadowsocks，V2ray，Trojan这类的socks5代理来实现科学上网，虽然这些代理通常有所谓的<em>全局代理</em>模式，但是我们在日常使用中就会发现，我们并不能利用这些代理来打游戏，从GitHub上clone项目依然慢的离谱，这是因为由于socks5代理模式原理的限制，使得这些socks5代理的<em>全局模式</em>并不能真正意义上实现全局代理，只能使网页浏览器，邮件服务器，文件传输这些服务实现代理。下面通过OSI模型来解释原理。</p>
+<a id="more"></a>
+<p><img data-src="http://figure.cruisetian.top/img/7541336-b87f3c6f5235b56d.png" /></p>
+<p>因为上面提到的这些服务在网络层级中处于最上层应用层，上面提到的这些socks5类型的代理则处于第五层会话层，所以可以代理上边层级的数据，而游戏数据是直接通过传输层的协议TCP和UDP进行通讯的，所以不经过会话层也不需要表示层来解释，所以正常情况下你就算开了这些socks5代理的<em>全局模式</em>，也不能加速游戏因为代理不了跑在传输层的游戏通讯数据，而借助proxifier这类工具则可以实现真正意义上的全局代理。</p>
+<h2 id="proxifier介绍">Proxifier介绍</h2>
+<p>Proxifier是一款功能非常强大的代理客户端，支持Windows XP/Vista/Win7/Win10 和 MacOS，支持http/https、socks4/5、TCP、UDP等协议，可以指定端口，指定IP，指定域名、指定程序、指定用户名密码授权等运行模式，兼容性非常好，有点类似SOCKSCAP。</p>
+<h2 id="安装">安装</h2>
+<h3 id="proxifier下载">Proxifier下载</h3>
+<p>官网发布多个版本，需要付费使用，同时也提供了 31 天的免费试用，其中<a href="https://www.baidu.com/s?wd=便携版&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">便携版</a>不需要安装，直接双击运行，安装版则直接安装即可。<br>   Windows便携版：<a href="https://www.proxifier.com/distr/ProxifierPE.zip" target="_blank" rel="noopener">官网地址</a><br>   Windows安装版：<a href="https://www.proxifier.com/distr/ProxifierSetup.exe" target="_blank" rel="noopener">官网地址</a><br>   Mac版：<a href="https://www.proxifier.com/distr/ProxifierMac.zip" target="_blank" rel="noopener">官网地址</a></p>
+<p>但由于Proxifier 官网下载地址国内无法访问，且是商业收费版，推荐下面的链接中下载汉化破解版 <a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener">Proxifier汉化注册版</a></p>
+<h3 id="proxifier安装">Proxifier安装</h3>
+<p>将下载下来的安装包解压以后，双击<strong>setup.exe</strong>，根据提示一步步安装，这里不再赘述。</p>
+<h2 id="proxifier设置">Proxifier设置</h2>
+<h3 id="代理服务器配置">代理服务器配置</h3>
+<p>打开proxifier以后，点击菜单栏的<strong>配置文件-&gt;代理服务器</strong>,点击<strong>添加</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_13-59-07.png" /></p>
+<p>然后填入你的代理服务器地址和端口，如果本地有ss,v2ray,trojan服务的话可以在你对应的客户端的设置中找到本地监听地址和监听端口，填入即可，协议我选择socks5协议</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-00-56.png" /></p>
+<p>点击检查，查看是否可用，如果如下显示“代理可在proxifier中使用”则说明设置正确</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-05-51.png" /></p>
+<p>然后点击<strong>确定</strong>，返回到设置界面，点击<strong>确定</strong>即可，接着会弹出一个窗口，提示你是否要把这个代理服务器作为默认代理，点击<strong>是</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-07-35.png" /></p>
+<p>没什么问题的话，Proxifier 就可以正常使用了，它会将本机所有的联网全部通过配置的代理服务器发送和接收，此外你还会在程序主界面看到不少的日志信息</p>
+<h3 id="代理规则设置">代理规则设置</h3>
+<p>Proxifier 还可以自定义规则，进行个性化配置，点击菜单栏的<strong>配置文件-&gt;代理规则</strong>,点击添加即可增加新的规则<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-16-41.png" /></p>
+<p>名称随意，应用程序那一栏选择<strong>浏览</strong>即可选择你想要自定义设置的应用，在最后的动作那一栏选择直连或是走代理，根据个人情况进行选择，最后点击确定即可生效</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-18-00.png" /></p>
+<h2 id="后记">后记</h2>
+<p>proxifier更多的个性化配置就根据自己的情况进行配置就好，这里就不再演示，比较每个人的需求不同。</p>
+<p>文中示范所用的汉化破解版下载地址：<a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icpyx6f</a></p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>proxifier</tag>
+        <tag>代理</tag>
+        <tag>全局代理</tag>
+        <tag>游戏加速</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ClashR使用，让你的chrome起飞</title>
+    <url>/post/f5257d2a.html</url>
+    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
+<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
+<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
+<a id="more"></a>
+<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
+<h2 id="配置clashr">配置ClashR</h2>
+<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
+<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
+<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
+<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
+<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
+<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
+<h3 id="配置代理服务器">配置代理服务器</h3>
+<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
+<p>然后点击<strong>应用选项</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
+<h3 id="配置自动切换规则">配置自动切换规则</h3>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
+<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
+<p>然后再点击<strong>应用选项</strong>即可</p>
+<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
+<h2 id="相关链接">相关链接</h2>
+<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
+<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>代理</tag>
+        <tag>clash</tag>
+        <tag>clashR</tag>
+        <tag>机场</tag>
+        <tag>SwicthyOmega</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>亿寻-百度云极速下载神器</title>
+    <url>/post/2982de5b.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>百度网盘如今是国内使用者最多的网盘，但是百度网盘对普通用户甚至VIP用户限速，只有超级会员才可以享受到原本正常的下载速度的操作属实让人感觉到不爽，之前在pandownload还在的时候还好，可以快速地下载自己需要的文件，但是最近百度一波骚操作，把pandownload给搞没了，这可让众多百度网盘使用者十分难受，所以今天我就来分享一个pandownload的替代品以及它的使用方法。</p>
+<a id="more"></a>
+<h2 id="软件下载">软件下载</h2>
+<p>大家可以到它的官方网站下载，这里给出地址：<a href="https://yixun.writeas.com/yi-xun" target="_blank" rel="noopener" class="uri">https://yixun.writeas.com/yi-xun</a></p>
+<p>也可以从我这里的<a href="https://cruisetian.lanzous.com/b01bexope" target="_blank" rel="noopener">链接</a>(密码:1qq0)下载，都是一样的文件，大家如果不放心还请去上面的官方地址下载</p>
+<h2 id="如何使用">如何使用</h2>
+<h3 id="关于登录">关于登录</h3>
+<p>首先解压压缩包以后，点击<strong>Yixun.exe</strong>运行程序，进入主界面以后，可以选择登录，当然，不登陆也不影响使用，关于登录请自行查看<strong>README.txt</strong>,作者给的有教程，这里就不再赘述。</p>
+<h3 id="修改默认下载位置">修改默认下载位置</h3>
+<p>点击<strong>工具-&gt;选项</strong>，就可以看到默认下载位置了，可以点击<strong>浏览</strong>自行修改。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_00-53-16.png" /></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_00-55-54.png" /></p>
+<h3 id="下载文件">下载文件</h3>
+<p>复制百度网盘的分享链接（可以带提取码一起复制，软件会自动识别并帮你解析，就不用自己输入了），然后打开软件，点击<strong>文件-&gt;打开</strong>，</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-01-34.png" /></p>
+<p>在弹出的页面的<strong>地址：</strong>栏粘贴刚刚复制的链接，然后点击<strong>打开</strong>，</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-03-42.png" /></p>
+<p>就可以看到下面出现了一个文件，右键点击<strong>下载</strong>即可。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-04-37.png" /></p>
+<p>接着会弹出一个黑色的页面，是正常现象，因为该软件调用的是aria2下载。在这个命令页面你可以查看当前下载速度(DL)，下载预计时间(ETA)，文件大小以及下载了多少，下面是我随便下载了一个文件测试出来的速度，在9M/s左右，整体还可以，比较稳定，反正比百度云那10kb/s强太多了。另外，下载速度跟资源好坏，自身的网络环境也是有一定关系，可能这个资源慢一些，那个资源快一些，都不一定，大家可以多试一试。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-18_11-31-14.png" /></p>
+<h2 id="后记">后记</h2>
+<p>这个软件目前来说还是一个下载百度云的良方，大家如果觉得不错的话可以给作者一些鼓励和打赏，当然不排除以后会不太好用，所以我觉得最根本的方式还是换用其他网盘，目前来说国内的蓝奏云，天翼云，坚果云等都不错，如果大家有渠道的话可以尝试国外的谷歌云和Onedrive(onedrive国内也能用，就是速度不是很快，大概2~3M/s的样子，反正比百度云好多了，所以建议配合代理使用)，反正我在百度云上没存啥东西，确实依赖性不大，大家如果有大量资料在上面的话，还是建议开个会员，比较有保障。</p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>百度网盘</tag>
+        <tag>极速下载</tag>
+        <tag>亿寻</tag>
+        <tag>Pandownload</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为git配置代理</title>
+    <url>/post/30b83ef0.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快</p>
+<p>通常我们 clone 代码时可以选择两种方式</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方式一：HTTP</span><br><span class="line">https://github.com/git/git.git</span><br><span class="line">//方式二：SSH</span><br><span class="line">git@github.com:git/git.git</span><br></pre></td></tr></table></figure>
+<p>两种方式设置代理的方法是不同的，下面一一介绍。</p>
+<a id="more"></a>
+<h2 id="设置git-http代理">设置Git HTTP代理</h2>
+<p>如果你手上的代理是 socks5 代理，如各平台的 Shadowsocks 客户端，trojan，v2ray等都提供一个本地的 socks5 代理，那么你可以这样设置，让 Git 通过 HTTP 链接 clone 代码时走 socks5 代理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
+<p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
+<p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+<p>如果端口有变动也可以直接在这里修改。</p>
+<h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
+<p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这里必须是 github.com，因为这个跟我们 clone 代码时的链接有关</span><br><span class="line">Host github.com</span><br><span class="line">   # 如果用默认端口，这里是 github.com，如果想用443端口，这里就是 ssh.github.com 详见 https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;using-ssh-over-the-https-port&#x2F;</span><br><span class="line">   HostName github.com</span><br><span class="line">   User git</span><br><span class="line">   # 如果是 HTTP 代理，把下面这行取消注释，并把 proxyport 改成自己的 http 代理的端口</span><br><span class="line">   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport&#x3D;1080</span><br><span class="line">   # 如果是 socks5 代理，则把下面这行取消注释，并把 6666 改成自己 socks5 代理的端口</span><br><span class="line">   # ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+<p>根据代码中的注释，设置自己的代理。</p>
+<p>经过上面的设置，现在不管是用什么方式 clone 代码，都会走代理了，这里还是强调一下，代理要速度快才会有加速效果，如果代理一般或者很慢，可能还不如不走代理。</p>
+]]></content>
+      <categories>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+        <tag>proxy</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为npm设置代理</title>
+    <url>/post/603b46.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
+<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
+<p>下面简要介绍下npm的配置以及如何设置代理。</p>
+<a id="more"></a>
+<h2 id="为npm设置代理">为npm设置代理</h2>
+<h3 id="设置http代理">设置http代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>如果代理需要认证的话可以这样来设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="查看代理">查看代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+<h3 id="socks5-代理">socks5 代理</h3>
+<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>相当于又加了一个中间层，将 http 转成 socks。</p>
+<h2 id="取消代理">取消代理</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+<h2 id="后记">后记</h2>
+<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
+]]></content>
+      <categories>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>代理</tag>
+        <tag>proxy</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Docker设置HTTP/HTTPS代理</title>
     <url>/post/4315e63f.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -57,118 +249,9 @@
         <category>日常学习</category>
       </categories>
       <tags>
+        <tag>代理</tag>
+        <tag>proxy</tag>
         <tag>Docker</tag>
-        <tag>proxy</tag>
-        <tag>代理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>proxifier-让你实现真正的全局代理</title>
-    <url>/post/64808312.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>目前很多人都使用上了Shadowsocks，V2ray，Trojan这类的socks5代理来实现科学上网，虽然这些代理通常有所谓的<em>全局代理</em>模式，但是我们在日常使用中就会发现，我们并不能利用这些代理来打游戏，从GitHub上clone项目依然慢的离谱，这是因为由于socks5代理模式原理的限制，使得这些socks5代理的<em>全局模式</em>并不能真正意义上实现全局代理，只能使网页浏览器，邮件服务器，文件传输这些服务实现代理。下面通过OSI模型来解释原理。</p>
-<a id="more"></a>
-<p><img data-src="http://figure.cruisetian.top/img/7541336-b87f3c6f5235b56d.png" /></p>
-<p>因为上面提到的这些服务在网络层级中处于最上层应用层，上面提到的这些socks5类型的代理则处于第五层会话层，所以可以代理上边层级的数据，而游戏数据是直接通过传输层的协议TCP和UDP进行通讯的，所以不经过会话层也不需要表示层来解释，所以正常情况下你就算开了这些socks5代理的<em>全局模式</em>，也不能加速游戏因为代理不了跑在传输层的游戏通讯数据，而借助proxifier这类工具则可以实现真正意义上的全局代理。</p>
-<h2 id="proxifier介绍">Proxifier介绍</h2>
-<p>Proxifier是一款功能非常强大的代理客户端，支持Windows XP/Vista/Win7/Win10 和 MacOS，支持http/https、socks4/5、TCP、UDP等协议，可以指定端口，指定IP，指定域名、指定程序、指定用户名密码授权等运行模式，兼容性非常好，有点类似SOCKSCAP。</p>
-<h2 id="安装">安装</h2>
-<h3 id="proxifier下载">Proxifier下载</h3>
-<p>官网发布多个版本，需要付费使用，同时也提供了 31 天的免费试用，其中<a href="https://www.baidu.com/s?wd=便携版&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">便携版</a>不需要安装，直接双击运行，安装版则直接安装即可。<br>   Windows便携版：<a href="https://www.proxifier.com/distr/ProxifierPE.zip" target="_blank" rel="noopener">官网地址</a><br>   Windows安装版：<a href="https://www.proxifier.com/distr/ProxifierSetup.exe" target="_blank" rel="noopener">官网地址</a><br>   Mac版：<a href="https://www.proxifier.com/distr/ProxifierMac.zip" target="_blank" rel="noopener">官网地址</a></p>
-<p>但由于Proxifier 官网下载地址国内无法访问，且是商业收费版，推荐下面的链接中下载汉化破解版 <a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener">Proxifier汉化注册版</a></p>
-<h3 id="proxifier安装">Proxifier安装</h3>
-<p>将下载下来的安装包解压以后，双击<strong>setup.exe</strong>，根据提示一步步安装，这里不再赘述。</p>
-<h2 id="proxifier设置">Proxifier设置</h2>
-<h3 id="代理服务器配置">代理服务器配置</h3>
-<p>打开proxifier以后，点击菜单栏的<strong>配置文件-&gt;代理服务器</strong>,点击<strong>添加</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_13-59-07.png" /></p>
-<p>然后填入你的代理服务器地址和端口，如果本地有ss,v2ray,trojan服务的话可以在你对应的客户端的设置中找到本地监听地址和监听端口，填入即可，协议我选择socks5协议</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-00-56.png" /></p>
-<p>点击检查，查看是否可用，如果如下显示“代理可在proxifier中使用”则说明设置正确</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-05-51.png" /></p>
-<p>然后点击<strong>确定</strong>，返回到设置界面，点击<strong>确定</strong>即可，接着会弹出一个窗口，提示你是否要把这个代理服务器作为默认代理，点击<strong>是</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-07-35.png" /></p>
-<p>没什么问题的话，Proxifier 就可以正常使用了，它会将本机所有的联网全部通过配置的代理服务器发送和接收，此外你还会在程序主界面看到不少的日志信息</p>
-<h3 id="代理规则设置">代理规则设置</h3>
-<p>Proxifier 还可以自定义规则，进行个性化配置，点击菜单栏的<strong>配置文件-&gt;代理规则</strong>,点击添加即可增加新的规则<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-16-41.png" /></p>
-<p>名称随意，应用程序那一栏选择<strong>浏览</strong>即可选择你想要自定义设置的应用，在最后的动作那一栏选择直连或是走代理，根据个人情况进行选择，最后点击确定即可生效</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-18-00.png" /></p>
-<h2 id="后记">后记</h2>
-<p>proxifier更多的个性化配置就根据自己的情况进行配置就好，这里就不再演示，比较每个人的需求不同。</p>
-<p>文中示范所用的汉化破解版下载地址：<a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icpyx6f</a></p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>代理</tag>
-        <tag>proxifier</tag>
-        <tag>全局代理</tag>
-        <tag>游戏加速</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为git配置代理</title>
-    <url>/post/30b83ef0.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快</p>
-<p>通常我们 clone 代码时可以选择两种方式</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方式一：HTTP</span><br><span class="line">https://github.com/git/git.git</span><br><span class="line">//方式二：SSH</span><br><span class="line">git@github.com:git/git.git</span><br></pre></td></tr></table></figure>
-<p>两种方式设置代理的方法是不同的，下面一一介绍。</p>
-<a id="more"></a>
-<h2 id="设置git-http代理">设置Git HTTP代理</h2>
-<p>如果你手上的代理是 socks5 代理，如各平台的 Shadowsocks 客户端，trojan，v2ray等都提供一个本地的 socks5 代理，那么你可以这样设置，让 Git 通过 HTTP 链接 clone 代码时走 socks5 代理</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
-<p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
-<p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-<p>如果端口有变动也可以直接在这里修改。</p>
-<h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
-<p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这里必须是 github.com，因为这个跟我们 clone 代码时的链接有关</span><br><span class="line">Host github.com</span><br><span class="line">   # 如果用默认端口，这里是 github.com，如果想用443端口，这里就是 ssh.github.com 详见 https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;using-ssh-over-the-https-port&#x2F;</span><br><span class="line">   HostName github.com</span><br><span class="line">   User git</span><br><span class="line">   # 如果是 HTTP 代理，把下面这行取消注释，并把 proxyport 改成自己的 http 代理的端口</span><br><span class="line">   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport&#x3D;1080</span><br><span class="line">   # 如果是 socks5 代理，则把下面这行取消注释，并把 6666 改成自己 socks5 代理的端口</span><br><span class="line">   # ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
-<p>根据代码中的注释，设置自己的代理。</p>
-<p>经过上面的设置，现在不管是用什么方式 clone 代码，都会走代理了，这里还是强调一下，代理要速度快才会有加速效果，如果代理一般或者很慢，可能还不如不走代理。</p>
-]]></content>
-      <categories>
-        <category>系统设置</category>
-      </categories>
-      <tags>
-        <tag>proxy</tag>
-        <tag>git</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为npm设置代理</title>
-    <url>/post/603b46.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
-<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
-<p>下面简要介绍下npm的配置以及如何设置代理。</p>
-<a id="more"></a>
-<h2 id="为npm设置代理">为npm设置代理</h2>
-<h3 id="设置http代理">设置http代理</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<p>如果代理需要认证的话可以这样来设置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="查看代理">查看代理</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
-<h3 id="socks5-代理">socks5 代理</h3>
-<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<p>相当于又加了一个中间层，将 http 转成 socks。</p>
-<h2 id="取消代理">取消代理</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
-<h2 id="后记">后记</h2>
-<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
-]]></content>
-      <categories>
-        <category>系统设置</category>
-      </categories>
-      <tags>
-        <tag>proxy</tag>
-        <tag>代理</tag>
-        <tag>npm</tag>
       </tags>
   </entry>
   <entry>
@@ -286,51 +369,6 @@
         <tag>Ubuntu</tag>
         <tag>双系统</tag>
         <tag>Linux</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ClashR使用，让你的chrome起飞</title>
-    <url>/post/f5257d2a.html</url>
-    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
-<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
-<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
-<a id="more"></a>
-<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
-<h2 id="配置clashr">配置ClashR</h2>
-<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
-<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
-<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
-<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
-<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
-<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
-<h3 id="配置代理服务器">配置代理服务器</h3>
-<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
-<p>然后点击<strong>应用选项</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
-<h3 id="配置自动切换规则">配置自动切换规则</h3>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
-<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
-<p>然后再点击<strong>应用选项</strong>即可</p>
-<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
-<h2 id="相关链接">相关链接</h2>
-<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
-<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>代理</tag>
-        <tag>clash</tag>
-        <tag>clashR</tag>
-        <tag>机场</tag>
-        <tag>SwicthyOmega</tag>
       </tags>
   </entry>
   <entry>
