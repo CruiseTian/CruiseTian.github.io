@@ -1,6 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>ClashR使用，让你的chrome起飞</title>
+    <url>/post/f5257d2a.html</url>
+    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
+<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
+<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
+<a id="more"></a>
+<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
+<h2 id="配置clashr">配置ClashR</h2>
+<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
+<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
+<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
+<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
+<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
+<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
+<h3 id="配置代理服务器">配置代理服务器</h3>
+<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
+<p>然后点击<strong>应用选项</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
+<h3 id="配置自动切换规则">配置自动切换规则</h3>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
+<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
+<p>然后再点击<strong>应用选项</strong>即可</p>
+<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
+<h2 id="相关链接">相关链接</h2>
+<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
+<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>clash</tag>
+        <tag>clashR</tag>
+        <tag>代理</tag>
+        <tag>机场</tag>
+        <tag>SwicthyOmega</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Windows terminal安装使用及美化(1)</title>
     <url>/post/c0de6c42.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -46,51 +91,6 @@
         <tag>windows terminal</tag>
         <tag>设置</tag>
         <tag>终端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ClashR使用，让你的chrome起飞</title>
-    <url>/post/f5257d2a.html</url>
-    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
-<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
-<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
-<a id="more"></a>
-<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
-<h2 id="配置clashr">配置ClashR</h2>
-<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
-<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
-<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
-<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
-<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
-<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
-<h3 id="配置代理服务器">配置代理服务器</h3>
-<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
-<p>然后点击<strong>应用选项</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
-<h3 id="配置自动切换规则">配置自动切换规则</h3>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
-<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
-<p>然后再点击<strong>应用选项</strong>即可</p>
-<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
-<h2 id="相关链接">相关链接</h2>
-<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
-<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>clash</tag>
-        <tag>clashR</tag>
-        <tag>代理</tag>
-        <tag>机场</tag>
-        <tag>SwicthyOmega</tag>
       </tags>
   </entry>
   <entry>
@@ -153,37 +153,6 @@
         <tag>代理</tag>
         <tag>Docker</tag>
         <tag>proxy</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为git配置代理</title>
-    <url>/post/30b83ef0.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快</p>
-<p>通常我们 clone 代码时可以选择两种方式</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方式一：HTTP</span><br><span class="line">https://github.com/git/git.git</span><br><span class="line">//方式二：SSH</span><br><span class="line">git@github.com:git/git.git</span><br></pre></td></tr></table></figure>
-<p>两种方式设置代理的方法是不同的，下面一一介绍。</p>
-<a id="more"></a>
-<h2 id="设置git-http代理">设置Git HTTP代理</h2>
-<p>如果你手上的代理是 socks5 代理，如各平台的 Shadowsocks 客户端，trojan，v2ray等都提供一个本地的 socks5 代理，那么你可以这样设置，让 Git 通过 HTTP 链接 clone 代码时走 socks5 代理</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
-<p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
-<p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-<p>如果端口有变动也可以直接在这里修改。</p>
-<h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
-<p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这里必须是 github.com，因为这个跟我们 clone 代码时的链接有关</span><br><span class="line">Host github.com</span><br><span class="line">   # 如果用默认端口，这里是 github.com，如果想用443端口，这里就是 ssh.github.com 详见 https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;using-ssh-over-the-https-port&#x2F;</span><br><span class="line">   HostName github.com</span><br><span class="line">   User git</span><br><span class="line">   # 如果是 HTTP 代理，把下面这行取消注释，并把 proxyport 改成自己的 http 代理的端口</span><br><span class="line">   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport&#x3D;1080</span><br><span class="line">   # 如果是 socks5 代理，则把下面这行取消注释，并把 6666 改成自己 socks5 代理的端口</span><br><span class="line">   # ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
-<p>根据代码中的注释，设置自己的代理。</p>
-<p>经过上面的设置，现在不管是用什么方式 clone 代码，都会走代理了，这里还是强调一下，代理要速度快才会有加速效果，如果代理一般或者很慢，可能还不如不走代理。</p>
-]]></content>
-      <categories>
-        <category>系统设置</category>
-      </categories>
-      <tags>
-        <tag>proxy</tag>
-        <tag>git</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -304,44 +273,6 @@
       </tags>
   </entry>
   <entry>
-    <title>亿寻-百度云极速下载神器</title>
-    <url>/post/2982de5b.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>百度网盘如今是国内使用者最多的网盘，但是百度网盘对普通用户甚至VIP用户限速，只有超级会员才可以享受到原本正常的下载速度的操作属实让人感觉到不爽，之前在pandownload还在的时候还好，可以快速地下载自己需要的文件，但是最近百度一波骚操作，把pandownload给搞没了，这可让众多百度网盘使用者十分难受，所以今天我就来分享一个pandownload的替代品以及它的使用方法。</p>
-<a id="more"></a>
-<h2 id="软件下载">软件下载</h2>
-<p>大家可以到它的官方网站下载，这里给出地址：<a href="https://yixun.writeas.com/yi-xun" target="_blank" rel="noopener" class="uri">https://yixun.writeas.com/yi-xun</a></p>
-<p>也可以从我这里的<a href="https://cruisetian.lanzous.com/b01bexope" target="_blank" rel="noopener">链接</a>(密码:1qq0)下载，都是一样的文件，大家如果不放心还请去上面的官方地址下载</p>
-<h2 id="如何使用">如何使用</h2>
-<h3 id="关于登录">关于登录</h3>
-<p>首先解压压缩包以后，点击<strong>Yixun.exe</strong>运行程序，进入主界面以后，可以选择登录，当然，不登陆也不影响使用，关于登录请自行查看<strong>README.txt</strong>,作者给的有教程，这里就不再赘述。</p>
-<h3 id="修改默认下载位置">修改默认下载位置</h3>
-<p>点击<strong>工具-&gt;选项</strong>，就可以看到默认下载位置了，可以点击<strong>浏览</strong>自行修改。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_00-53-16.png" /></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_00-55-54.png" /></p>
-<h3 id="下载文件">下载文件</h3>
-<p>复制百度网盘的分享链接（可以带提取码一起复制，软件会自动识别并帮你解析，就不用自己输入了），然后打开软件，点击<strong>文件-&gt;打开</strong>，</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-01-34.png" /></p>
-<p>在弹出的页面的<strong>地址：</strong>栏粘贴刚刚复制的链接，然后点击<strong>打开</strong>，</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-03-42.png" /></p>
-<p>就可以看到下面出现了一个文件，右键点击<strong>下载</strong>即可。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-04-37.png" /></p>
-<p>接着会弹出一个黑色的页面，是正常现象，因为该软件调用的是aria2下载。在这个命令页面你可以查看当前下载速度(DL)，下载预计时间(ETA)，文件大小以及下载了多少，下面是我随便下载了一个文件测试出来的速度，在9M/s左右，整体还可以，比较稳定，反正比百度云那10kb/s强太多了。另外，下载速度跟资源好坏，自身的网络环境也是有一定关系，可能这个资源慢一些，那个资源快一些，都不一定，大家可以多试一试。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-18_11-31-14.png" /></p>
-<h2 id="后记">后记</h2>
-<p>这个软件目前来说还是一个下载百度云的良方，大家如果觉得不错的话可以给作者一些鼓励和打赏，当然不排除以后会不太好用，所以我觉得最根本的方式还是换用其他网盘，目前来说国内的蓝奏云，天翼云，坚果云等都不错，如果大家有渠道的话可以尝试国外的谷歌云和Onedrive(onedrive国内也能用，就是速度不是很快，大概2~3M/s的样子，反正比百度云好多了，所以建议配合代理使用)，反正我在百度云上没存啥东西，确实依赖性不大，大家如果有大量资料在上面的话，还是建议开个会员，比较有保障。</p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>百度网盘</tag>
-        <tag>极速下载</tag>
-        <tag>亿寻</tag>
-        <tag>Pandownload</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>proxifier-让你实现真正的全局代理</title>
     <url>/post/64808312.html</url>
     <content><![CDATA[<h2 id="前言">前言</h2>
@@ -384,6 +315,75 @@
         <tag>proxifier</tag>
         <tag>全局代理</tag>
         <tag>游戏加速</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>亿寻-百度云极速下载神器</title>
+    <url>/post/2982de5b.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>百度网盘如今是国内使用者最多的网盘，但是百度网盘对普通用户甚至VIP用户限速，只有超级会员才可以享受到原本正常的下载速度的操作属实让人感觉到不爽，之前在pandownload还在的时候还好，可以快速地下载自己需要的文件，但是最近百度一波骚操作，把pandownload给搞没了，这可让众多百度网盘使用者十分难受，所以今天我就来分享一个pandownload的替代品以及它的使用方法。</p>
+<a id="more"></a>
+<h2 id="软件下载">软件下载</h2>
+<p>大家可以到它的官方网站下载，这里给出地址：<a href="https://yixun.writeas.com/yi-xun" target="_blank" rel="noopener" class="uri">https://yixun.writeas.com/yi-xun</a></p>
+<p>也可以从我这里的<a href="https://cruisetian.lanzous.com/b01bexope" target="_blank" rel="noopener">链接</a>(密码:1qq0)下载，都是一样的文件，大家如果不放心还请去上面的官方地址下载</p>
+<h2 id="如何使用">如何使用</h2>
+<h3 id="关于登录">关于登录</h3>
+<p>首先解压压缩包以后，点击<strong>Yixun.exe</strong>运行程序，进入主界面以后，可以选择登录，当然，不登陆也不影响使用，关于登录请自行查看<strong>README.txt</strong>,作者给的有教程，这里就不再赘述。</p>
+<h3 id="修改默认下载位置">修改默认下载位置</h3>
+<p>点击<strong>工具-&gt;选项</strong>，就可以看到默认下载位置了，可以点击<strong>浏览</strong>自行修改。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_00-53-16.png" /></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_00-55-54.png" /></p>
+<h3 id="下载文件">下载文件</h3>
+<p>复制百度网盘的分享链接（可以带提取码一起复制，软件会自动识别并帮你解析，就不用自己输入了），然后打开软件，点击<strong>文件-&gt;打开</strong>，</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-01-34.png" /></p>
+<p>在弹出的页面的<strong>地址：</strong>栏粘贴刚刚复制的链接，然后点击<strong>打开</strong>，</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-03-42.png" /></p>
+<p>就可以看到下面出现了一个文件，右键点击<strong>下载</strong>即可。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-04-37.png" /></p>
+<p>接着会弹出一个黑色的页面，是正常现象，因为该软件调用的是aria2下载。在这个命令页面你可以查看当前下载速度(DL)，下载预计时间(ETA)，文件大小以及下载了多少，下面是我随便下载了一个文件测试出来的速度，在9M/s左右，整体还可以，比较稳定，反正比百度云那10kb/s强太多了。另外，下载速度跟资源好坏，自身的网络环境也是有一定关系，可能这个资源慢一些，那个资源快一些，都不一定，大家可以多试一试。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-18_11-31-14.png" /></p>
+<h2 id="后记">后记</h2>
+<p>这个软件目前来说还是一个下载百度云的良方，大家如果觉得不错的话可以给作者一些鼓励和打赏，当然不排除以后会不太好用，所以我觉得最根本的方式还是换用其他网盘，目前来说国内的蓝奏云，天翼云，坚果云等都不错，如果大家有渠道的话可以尝试国外的谷歌云和Onedrive(onedrive国内也能用，就是速度不是很快，大概2~3M/s的样子，反正比百度云好多了，所以建议配合代理使用)，反正我在百度云上没存啥东西，确实依赖性不大，大家如果有大量资料在上面的话，还是建议开个会员，比较有保障。</p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>百度网盘</tag>
+        <tag>极速下载</tag>
+        <tag>亿寻</tag>
+        <tag>Pandownload</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>为git配置代理</title>
+    <url>/post/30b83ef0.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快</p>
+<p>通常我们 clone 代码时可以选择两种方式</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">//方式一：HTTP</span><br><span class="line">https://github.com/git/git.git</span><br><span class="line">//方式二：SSH</span><br><span class="line">git@github.com:git/git.git</span><br></pre></td></tr></table></figure>
+<p>两种方式设置代理的方法是不同的，下面一一介绍。</p>
+<a id="more"></a>
+<h2 id="设置git-http代理">设置Git HTTP代理</h2>
+<p>如果你手上的代理是 socks5 代理，如各平台的 Shadowsocks 客户端，trojan，v2ray等都提供一个本地的 socks5 代理，那么你可以这样设置，让 Git 通过 HTTP 链接 clone 代码时走 socks5 代理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
+<p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
+<p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+<p>如果端口有变动也可以直接在这里修改。</p>
+<h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
+<p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 这里必须是 github.com，因为这个跟我们 clone 代码时的链接有关</span><br><span class="line">Host github.com</span><br><span class="line">   # 如果用默认端口，这里是 github.com，如果想用443端口，这里就是 ssh.github.com 详见 https:&#x2F;&#x2F;help.github.com&#x2F;articles&#x2F;using-ssh-over-the-https-port&#x2F;</span><br><span class="line">   HostName github.com</span><br><span class="line">   User git</span><br><span class="line">   # 如果是 HTTP 代理，把下面这行取消注释，并把 proxyport 改成自己的 http 代理的端口</span><br><span class="line">   # ProxyCommand socat - PROXY:127.0.0.1:%h:%p,proxyport&#x3D;1080</span><br><span class="line">   # 如果是 socks5 代理，则把下面这行取消注释，并把 6666 改成自己 socks5 代理的端口</span><br><span class="line">   # ProxyCommand nc -v -x 127.0.0.1:1080 %h %p</span><br></pre></td></tr></table></figure>
+<p>根据代码中的注释，设置自己的代理。</p>
+<p>经过上面的设置，现在不管是用什么方式 clone 代码，都会走代理了，这里还是强调一下，代理要速度快才会有加速效果，如果代理一般或者很慢，可能还不如不走代理。</p>
+]]></content>
+      <categories>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>proxy</tag>
+        <tag>git</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
