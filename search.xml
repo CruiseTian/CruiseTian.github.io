@@ -369,7 +369,7 @@
 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
 <p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
 <p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
 <p>如果端口有变动也可以直接在这里修改。</p>
 <h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
 <p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>

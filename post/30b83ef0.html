@@ -31,7 +31,7 @@
 <meta property="og:description" content="写在前面 在国内，github虽然没有被墙，但是速度极慢，有时候想要clone一份代码要花很长时间，所以就考虑给git设置一个代理，这样能使连接的速度更快 通常我们 clone 代码时可以选择两种方式 1234&#x2F;&#x2F;方式一：HTTPhttps:&#x2F;&#x2F;github.com&#x2F;git&#x2F;git.git&#x2F;&#x2F;方式二：SSHgit@github.com:git&#x2F;git.git 两种方式设置代理的方法是不同的">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-05-12T05:30:20.000Z">
-<meta property="article:modified_time" content="2020-05-14T16:16:48.980Z">
+<meta property="article:modified_time" content="2020-05-23T14:28:33.203Z">
 <meta property="article:author" content="CruiseTian">
 <meta property="article:tag" content="proxy">
 <meta property="article:tag" content="git">
@@ -256,7 +256,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-15 00:16:48" itemprop="dateModified" datetime="2020-05-15T00:16:48+08:00">2020-05-15</time>
+                <time title="修改时间：2020-05-23 22:28:33" itemprop="dateModified" datetime="2020-05-23T22:28:33+08:00">2020-05-23</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -325,7 +325,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;&#x2F;通过 http 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global http.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br><span class="line">&#x2F;&#x2F;通过 https 链接 clone 代码时走 http 代理</span><br><span class="line">git config --global https.proxy &quot;socks5:&#x2F;&#x2F;127.0.0.1:1080&quot;</span><br></pre></td></tr></table></figure>
 <p>设置完成后，可以 clone 一份代码试一下有没有效果。如果没有设置错误的话，代码clone的速度应该会提高很多。</p>
 <p>这些设置最终会保存在用户目录下的 <code>.gitconfig</code> 文件中，打开这个文件可以看到类似的几行配置</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; http:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[http]</span><br><span class="line">    proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:1080</span><br><span class="line">[https]</span><br><span class="line">    proxy &#x3D; socks5:&#x2F;&#x2F;127.0.0.1:1080</span><br></pre></td></tr></table></figure>
 <p>如果端口有变动也可以直接在这里修改。</p>
 <h2 id="设置-git-ssh-代理">设置 Git SSH 代理</h2>
 <p>还有一种情况，我们通过 SSH 方法 clone 代码，提交代码，因为这样不用输入密码，通常我们会在自己的常用电脑上这么做。上面设置的 HTTP 代理对这种方式 clone 代码是没有影响的，也就是并不会加速，SSH 的代理需要单独设置，其实这个跟 Git 的关系已经不是很大，我们需要改的，是SSH 的配置。在用户目录下建立如下文件 ~/.ssh/config，对 GitHub 的域名做单独的处理</p>
