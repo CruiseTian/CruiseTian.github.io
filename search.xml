@@ -49,7 +49,7 @@
     <title>Windows terminal安装使用及美化(1)</title>
     <url>/post/c0de6c42.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>最近在做课程大作业，因为我用的是Windows10，所以需要频繁使用<code>cmd</code>和<code>power shell</code>，但是原本的窗口实在是，太丑了不管是<code>cmd</code>的傻大黑粗和难看的字体，还是<code>power shell</code>那奇异的蓝色背景，都是一言难尽，正好最近微软发布了<code>Windows terminal 1.0</code>,所以我就折腾了一下，搞出了一个稍微好看一点的终端，在这里记录一下。（其实还是为了折腾)</p>
+<p>最近在做课程大作业，因为我用的是Windows10，所以需要频繁使用<code>cmd</code>和<code>power shell</code>，但是原本的窗口实在是，太丑了不管是<code>cmd</code>的傻大黑粗和难看的字体，还是<code>power shell</code>那奇异的蓝色背景，都是一言难尽，正好最近微软发布了<code>Windows terminal 1.0</code>,所以我就折腾了一下，搞出了一个稍微好看一点的终端，在这里记录一下。（其实还是为了折腾2333)</p>
 <a id="more"></a>
 <h2 id="安装">安装</h2>
 <ol type="1">
