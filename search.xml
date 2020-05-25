@@ -117,7 +117,9 @@
 <p>上一个part只写了一些基础配置，这个part就写一写进阶的配置。主要包括power shell的美化，以及添加新的terminal，比如<code>git-bash</code>等。</p>
 <h2 id="美化power-shell">美化Power shell</h2>
 <p>本文我们用 <code>oh-my-posh</code> 在 PowerShell 中实现Linux中<code>oh-my-zsh</code> 的样子，部分效果如下：</p>
-<p><img data-src="http://figure.cruisetian.top/img/indications.png" /></p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/indications.png" alt="来自oh-my-posh官方主页" /><figcaption>来自oh-my-posh官方主页</figcaption>
+</figure>
 <blockquote>
 <p>上一次失败命令（×）、管理员权限指示（⚡）、显示所登录的用户名和域名、所在工作目录指示（蓝色领带）、posh-git模块提供的Git状态指示器（黄色领带）</p>
 </blockquote>

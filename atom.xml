@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-25T18:07:50.967Z</updated>
+  <updated>2020-05-25T18:10:39.834Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.cruisetian.tk/post/ebf33f81.html"/>
     <id>https://www.cruisetian.tk/post/ebf33f81.html</id>
     <published>2020-05-25T17:58:10.000Z</published>
-    <updated>2020-05-25T18:07:50.967Z</updated>
+    <updated>2020-05-25T18:10:39.834Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,9 @@
 &lt;p&gt;上一个part只写了一些基础配置，这个part就写一写进阶的配置。主要包括power shell的美化，以及添加新的terminal，比如&lt;code&gt;git-bash&lt;/code&gt;等。&lt;/p&gt;
 &lt;h2 id=&quot;美化power-shell&quot;&gt;美化Power shell&lt;/h2&gt;
 &lt;p&gt;本文我们用 &lt;code&gt;oh-my-posh&lt;/code&gt; 在 PowerShell 中实现Linux中&lt;code&gt;oh-my-zsh&lt;/code&gt; 的样子，部分效果如下：&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;http://figure.cruisetian.top/img/indications.png&quot; /&gt;&lt;/p&gt;
+&lt;figure&gt;
+&lt;img data-src=&quot;http://figure.cruisetian.top/img/indications.png&quot; alt=&quot;来自oh-my-posh官方主页&quot; /&gt;&lt;figcaption&gt;来自oh-my-posh官方主页&lt;/figcaption&gt;
+&lt;/figure&gt;
 &lt;blockquote&gt;
 &lt;p&gt;上一次失败命令（×）、管理员权限指示（⚡）、显示所登录的用户名和域名、所在工作目录指示（蓝色领带）、posh-git模块提供的Git状态指示器（黄色领带）&lt;/p&gt;
 &lt;/blockquote&gt;
