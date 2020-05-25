@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-23T14:35:21.149Z</updated>
+  <updated>2020-05-25T18:07:50.967Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Windows terminal安装使用及美化(2)</title>
+    <link href="https://www.cruisetian.tk/post/ebf33f81.html"/>
+    <id>https://www.cruisetian.tk/post/ebf33f81.html</id>
+    <published>2020-05-25T17:58:10.000Z</published>
+    <updated>2020-05-25T18:07:50.967Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;上一个part只写了一些基础配置，这个part就写一写进阶的配置。主要包括power shell的美化，以及添加新的terminal，比如&lt;code&gt;git-bash&lt;/code&gt;等。&lt;/p&gt;
+&lt;h2 id=&quot;美化power-shell&quot;&gt;美化Power shell&lt;/h2&gt;
+&lt;p&gt;本文我们用 &lt;code&gt;oh-my-posh&lt;/code&gt; 在 PowerShell 中实现Linux中&lt;code&gt;oh-my-zsh&lt;/code&gt; 的样子，部分效果如下：&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;http://figure.cruisetian.top/img/indications.png&quot; /&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;上一次失败命令（×）、管理员权限指示（⚡）、显示所登录的用户名和域名、所在工作目录指示（蓝色领带）、posh-git模块提供的Git状态指示器（黄色领带）&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="软件分享" scheme="https://www.cruisetian.tk/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="windows terminal" scheme="https://www.cruisetian.tk/tags/windows-terminal/"/>
+    
+      <category term="设置" scheme="https://www.cruisetian.tk/tags/%E8%AE%BE%E7%BD%AE/"/>
+    
+      <category term="终端" scheme="https://www.cruisetian.tk/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Windows terminal安装使用及美化(1)</title>
     <link href="https://www.cruisetian.tk/post/c0de6c42.html"/>
     <id>https://www.cruisetian.tk/post/c0de6c42.html</id>
     <published>2020-05-23T14:13:56.000Z</published>
-    <updated>2020-05-23T14:35:21.149Z</updated>
+    <updated>2020-05-23T14:47:51.836Z</updated>
     
     <summary type="html">
     
@@ -116,11 +148,11 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
-    
       <category term="Docker" scheme="https://www.cruisetian.tk/tags/Docker/"/>
     
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
@@ -144,11 +176,11 @@
       <category term="软件分享" scheme="https://www.cruisetian.tk/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
     
     
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
       <category term="clash" scheme="https://www.cruisetian.tk/tags/clash/"/>
     
       <category term="clashR" scheme="https://www.cruisetian.tk/tags/clashR/"/>
-    
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
       <category term="机场" scheme="https://www.cruisetian.tk/tags/%E6%9C%BA%E5%9C%BA/"/>
     
@@ -206,9 +238,9 @@
       <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
     
     
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
-    
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
       <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
     
