@@ -457,7 +457,8 @@
 <p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-19_01-04-37.png" /></p>
 <p>接着会弹出一个黑色的页面，是正常现象，因为该软件调用的是aria2下载。在这个命令页面你可以查看当前下载速度(DL)，下载预计时间(ETA)，文件大小以及下载了多少，下面是我随便下载了一个文件测试出来的速度，在9M/s左右，整体还可以，比较稳定，反正比百度云那10kb/s强太多了。另外，下载速度跟资源好坏，自身的网络环境也是有一定关系，可能这个资源慢一些，那个资源快一些，都不一定，大家可以多试一试。</p>
 <p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-18_11-31-14.png" /></p>
-<h2 id="后记">后记</h2>
+<p><strong>后续</strong>：之后有用这个软件下载了一些大文件，整体速度喜人，我家200M的带宽都跑满了，而且比较稳定，下载六个G的文件不到十分钟就能完成，下面是下载过程中我截的一张图，这速度可以说是可怕了。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-27_01-37-44.png" /> ## 后记</p>
 <p>这个软件目前来说还是一个下载百度云的良方，大家如果觉得不错的话可以给作者一些鼓励和打赏，当然不排除以后会不太好用，所以我觉得最根本的方式还是换用其他网盘，目前来说国内的蓝奏云，天翼云，坚果云等都不错，如果大家有渠道的话可以尝试国外的谷歌云和Onedrive(onedrive国内也能用，就是速度不是很快，大概2~3M/s的样子，反正比百度云好多了，所以建议配合代理使用)，反正我在百度云上没存啥东西，确实依赖性不大，大家如果有大量资料在上面的话，还是建议开个会员，比较有保障。</p>
 ]]></content>
       <categories>
@@ -532,6 +533,43 @@
         <tag>proxy</tag>
         <tag>git</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows terminal安装使用及美化(3)</title>
+    <url>/post/f2e80ec0.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>之前两个part写了一些关于Windows terminal的基础和进阶配置，配置好以后用了两天感觉不错，所以就准备把它作为Windows下主要使用的命令行工具，所以决定把它加到右键菜单里去，在这里记录一下过程，也算是有关Windows terminal的高阶分享吧。</p>
+<a id="more"></a>
+<h2 id="添加过程">添加过程</h2>
+<h3 id="测试变量">测试变量</h3>
+<p>下面的两个变量后面的操作需要使用到。所以，先测试下是否正常。用 <code>cmd</code> 分别输入这 2 句命令(使用<code>gitbash</code>无效的)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> %USERPROFILE%</span><br><span class="line"><span class="built_in">echo</span> %LOCALAPPDATA%</span><br></pre></td></tr></table></figure>
+<p>如果有报错，接下来的操作，请把对应的部分进行替换。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%USERPROFILE% =&gt; C:\Users\&#123;username&#125;</span><br><span class="line">%LOCALAPPDATA% =&gt; C:\Users\&#123;userName&#125;\AppData\Local</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong> <code>{userName}</code>为自己的用户名</p>
+<h3 id="获取图标">获取图标</h3>
+<p>创建 Terminal 文件夹，用来存放图标。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir <span class="string">"%USERPROFILE%\AppData\Local\Terminal"</span></span><br></pre></td></tr></table></figure>
+<p>从微软的Github上下载Windows Terminal的图标，地址如下:<a href="https://github.com/microsoft/terminal/blob/master/res/terminal.ico" target="_blank" rel="noopener" class="uri">https://github.com/microsoft/terminal/blob/master/res/terminal.ico</a> 然后将图标保存到<code>%USERPROFILE%\AppData\Local\Terminal</code>目录中。</p>
+<h3 id="添加注册表文件">添加注册表文件</h3>
+<p>新建一个文件，文件名随意 比如<code>wt.reg</code>。记得保存为<code>.reg</code>文件(名称随意，后缀名不可以错)，并添加以下内容然后保存。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[<span class="meta">HKEY_CLASSES_ROOT\Directory\Background\shell\wt</span>]</span><br><span class="line">@=<span class="string">"Windows Terminal Here"</span></span><br><span class="line"><span class="string">"Icon"</span>=<span class="string">"%USERPROFILE%\\AppData\\Local\\Terminal\\terminal.ico"</span></span><br><span class="line"></span><br><span class="line">[<span class="meta">HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command</span>]</span><br><span class="line">@=<span class="string">"C:\\Users\\&#123;username&#125;\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong> 上面的<code>{userName}</code>为自己的用户名</p>
+<p>然后双击执行这个<code>.reg</code>文件就可以了。这时候就会发现右键菜单里面有了Windows Terminal Here选项。</p>
+<h3 id="真正的windows-terminal-here">真正的Windows terminal &quot;Here&quot;</h3>
+<p>执行完上面的操作你会发现虽然右键可以打开Windows terminal，但是在任何文件夹打开的 Windows terminal 都不是当前的目录，这还怎么叫做<code>here</code>呢。继续配置</p>
+<p>打开Windows terminal的配置文件（在Windows terminal向下箭头的设置中），找到 <code>startingDirectory</code>改为：<code>./</code> 即：<code>&quot;startingDirectory&quot;: &quot;./&quot;</code>，就可以做到在当前目录打开啦。</p>
+<h2 id="后记">后记</h2>
+<p>到这里，Windows terminal的配置就基本结束啦，如果想要更多其它的效果，大家可以自己折腾，有什么不理解的或者更好的想法也可以在评论区里说出来，大家一起交流。</p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>windows terminal</tag>
+        <tag>设置</tag>
+        <tag>终端</tag>
       </tags>
   </entry>
 </search>
