@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-26T17:43:50.763Z</updated>
+  <updated>2020-05-27T11:15:01.324Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos7安装python3.8.1</title>
+    <link href="https://www.cruisetian.tk/post/2f518ecf.html"/>
+    <id>https://www.cruisetian.tk/post/2f518ecf.html</id>
+    <published>2020-05-27T11:08:26.000Z</published>
+    <updated>2020-05-27T11:15:01.324Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;最近又在学习CentOS，需要安装一下python，但是CentOS7上默认自带了Python 2，没有Python 3。所以就决定安装一个，这里记录一下。&lt;/p&gt;
+&lt;h2 id=&quot;查看-python-版本号&quot;&gt;查看 Python 版本号&lt;/h2&gt;
+&lt;p&gt;如果Linux 上安装有 Python （一般为默认安装），只需要输入简单的命令，就可以查看 Python 的版本号：&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="centos7" scheme="https://www.cruisetian.tk/tags/centos7/"/>
+    
+      <category term="linux" scheme="https://www.cruisetian.tk/tags/linux/"/>
+    
+      <category term="python" scheme="https://www.cruisetian.tk/tags/python/"/>
+    
+      <category term="环境配置" scheme="https://www.cruisetian.tk/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
   
   <entry>
     <title>Windows terminal安装使用及美化(3)</title>
