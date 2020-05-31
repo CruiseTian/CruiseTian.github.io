@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-27T11:15:01.324Z</updated>
+  <updated>2020-05-31T03:24:56.778Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Centos7安装OpenJDK14</title>
+    <link href="https://www.cruisetian.tk/post/584b409a.html"/>
+    <id>https://www.cruisetian.tk/post/584b409a.html</id>
+    <published>2020-05-31T03:23:29.000Z</published>
+    <updated>2020-05-31T03:24:56.778Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;检查并卸载原本有的java版本&quot;&gt;检查并卸载原本有的java版本&lt;/h2&gt;
+&lt;h3 id=&quot;查看centos7自带的jdk是否已安装&quot;&gt;查看Centos7自带的JDK是否已安装&lt;/h3&gt;
+&lt;p&gt;在命令行输入：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;java -version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果出现以下结果，则说明已安装，需要先卸载，否则的话直接跳过这一步。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;openjdk version &lt;span class=&quot;string&quot;&gt;&quot;1.8.0 102&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OpenJDK Runtime Environment (build 1.8.0_102-b14)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OpenJDK 64-Bit Server VM(build 25.102-bi4, mixed mode)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="java" scheme="https://www.cruisetian.tk/tags/java/"/>
+    
+      <category term="openJDK" scheme="https://www.cruisetian.tk/tags/openJDK/"/>
+    
+      <category term="centos7" scheme="https://www.cruisetian.tk/tags/centos7/"/>
+    
+  </entry>
   
   <entry>
     <title>Centos7安装python3.8.1</title>
