@@ -739,4 +739,59 @@
         <tag>域名绑定</tag>
       </tags>
   </entry>
+  <entry>
+    <title>goindex-在国内使用你的谷歌网盘</title>
+    <url>/post/1d96ecd4.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>谷歌云盘是一款极其好用的网盘，使用体验吊打百度网盘，不限速，而且甚至还可以获得无限空间，至于如何获得无限空间，这里就不说明了，有兴趣的可以自行谷歌。但是这么好用的一款网盘，由于大家都知道的原因，在国内并不能使用，只能科学上网使用，有时候需要下载文件时就需要浪费宝贵的代理流量，毕竟都是钱啊，所以今天就在这里分享一下通过Cloudflare来实现在国内访问并下载你谷歌网盘中的文件，不用消耗代理流量。</p>
+<a id="more"></a>
+<h2 id="注册cloudflare账户">注册Cloudflare账户</h2>
+<p>Cloudflare是一个知名的提供免费的CDN服务和域名解析服务的服务商</p>
+<p>首先注册一个Cloudflare账户，到下面这个地址：<a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener">Cloudflare注册</a>.</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-34-42.png" /></p>
+<p>注册完以后登录，可能会提示你添加站点，点击右上角你的账户标识然后点击<strong>账户主页</strong>就好了，在这个页面可以验证一下邮箱</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-38-30.png" /></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-40-56.png" /></p>
+<p>验证完以后重新回到主页，点击右边的<strong>Workers</strong>,然后定义一个自己的名字，后来会显示在你的访问你的goindex服务的域名中，然后点击<strong>Set Up</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-44-52.png" /></p>
+<p>进入到下一个界面，点击<strong>Continue with Free</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-48-11.png" /></p>
+<p>然后接下来可以开始创建Workers，先做一些准备工作</p>
+<h2 id="获取workers代码">获取Workers代码</h2>
+<p>首先进入下面这个网址：<a href="https://gdindex-code-builder.glitch.me/" target="_blank" rel="noopener">goindex code builder</a>,(进入可能有点慢，稍微等一会)</p>
+<p>进入以后按照步骤进行即可，点击<strong>Click me</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-57-18.png" /></p>
+<p>之后会跳转到登录谷歌账号的页面，选择你注册Cloudflare账户的账号登录，之后的一些权限点<strong>允许</strong>即可，这时候会得到一行代码，点击右边复制按钮复制代码</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_19-59-45.png" /></p>
+<p>然后返回刚刚的网址将复制的代码粘贴进入<strong>Authorization Code</strong>框，然后接下来登录谷歌云盘，选择你想要部署的文件夹，点进去，此时浏览器的地址栏应该是这个样子的</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-04-35.png" /></p>
+<p>然后将浏览器的地址栏<strong>folders</strong>后面的部分复制下来，粘贴进<strong>Default Root ID</strong>框内</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-06-46.png" /></p>
+<p>然后接下来的配置就自己选择配置一下就好了，填完以后点击<strong>Get Code</strong>按钮</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-07-51.png" /></p>
+<p>这时候你会得到一堆代码，点击<strong>Copy the code to clipboard</strong>即可。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-10-54.png" /></p>
+<h2 id="创建workers">创建Workers</h2>
+<p>回到Cloudflare页面，点击<strong>Create a Worker</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-12-52.png" /></p>
+<p>将原来<strong>Script</strong>框内的代码删除，然后把刚刚复制的代码粘贴进去，其中代码最开头的<code>self.props</code>中的内容可以修改，根据自己的需求进行修改即可</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-16-39.png" /></p>
+<p>然后可以修改一下workers的名字，一般默认的比较长，不太好记</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-18-06.png" /></p>
+<p>然后点击右侧的<strong>Preview</strong>预览一下生成的界面，下面展示的网址就是你之后要不翻墙访问你的谷歌云盘要输入的网址，可以复制一下</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-23-40.png" /></p>
+<p>如果预览没有问题就点击底部的<strong>Save and Deploy</strong>部署Workers即可</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-12_20-20-51.png" /></p>
+<p>之后就可以在浏览器输入刚刚复制的地址进行访问了。</p>
+]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>goindex</tag>
+        <tag>谷歌云盘</tag>
+        <tag>Google Drive</tag>
+        <tag>国内使用</tag>
+      </tags>
+  </entry>
 </search>
