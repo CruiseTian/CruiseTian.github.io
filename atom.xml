@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-05-31T03:24:56.778Z</updated>
+  <updated>2020-06-13T05:55:44.372Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,43 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Gmail邮箱注册，谷歌账号注册</title>
+    <link href="https://www.cruisetian.tk/post/b02ca219.html"/>
+    <id>https://www.cruisetian.tk/post/b02ca219.html</id>
+    <published>2020-06-13T05:53:56.000Z</published>
+    <updated>2020-06-13T05:55:44.372Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;由于谷歌的政策原因，如今注册一个谷歌账户可以说是难上加难了，但是有时候又会有用谷歌服务的需求，所以这里就来分享一下如何快速地注册一个谷歌账户。&lt;/p&gt;
+&lt;h2 id=&quot;说明&quot;&gt;说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一定要用【手机】注册（亲测电脑注册不上）&lt;/li&gt;
+&lt;li&gt;该方法不需要科学上网&lt;/li&gt;
+&lt;li&gt;在这篇文章发布时是可以注册的，但是也有可能以后谷歌政策的修改导致注册不上的情况，所以该方法有效期不定，但是目前看来还是很稳定的&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="技术分享" scheme="https://www.cruisetian.tk/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="Gmail" scheme="https://www.cruisetian.tk/tags/Gmail/"/>
+    
+      <category term="谷歌账户" scheme="https://www.cruisetian.tk/tags/%E8%B0%B7%E6%AD%8C%E8%B4%A6%E6%88%B7/"/>
+    
+      <category term="国内注册" scheme="https://www.cruisetian.tk/tags/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Centos7安装OpenJDK14</title>
     <link href="https://www.cruisetian.tk/post/584b409a.html"/>
     <id>https://www.cruisetian.tk/post/584b409a.html</id>
     <published>2020-05-31T03:23:29.000Z</published>
-    <updated>2020-05-31T03:24:56.778Z</updated>
+    <updated>2020-05-31T03:25:29.110Z</updated>
     
     <summary type="html">
     
