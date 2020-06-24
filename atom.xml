@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-06-13T06:04:00.356Z</updated>
+  <updated>2020-06-24T07:55:01.198Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>rclone挂载谷歌云盘-为你的VPS扩容</title>
+    <link href="https://www.cruisetian.tk/post/c3c257f2.html"/>
+    <id>https://www.cruisetian.tk/post/c3c257f2.html</id>
+    <published>2020-06-24T07:48:04.000Z</published>
+    <updated>2020-06-24T07:55:01.198Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Rclone&lt;/code&gt;是一个 &lt;code&gt;Github&lt;/code&gt; 上面的一个开源项目，专门开发用来在 Linux 上面同步文件/文件夹，上传的一个命令行工具，利用&lt;code&gt;rclone&lt;/code&gt;能将全世界多个热门的网盘挂载为系统本地磁盘，实现方便快捷的云盘文件管理效果。搭配无限空间的Google Drive网盘，相当于在电脑上或服务器上安装了一个无比巨大的磁盘，以此来实现扩容。&lt;/p&gt;
+&lt;p&gt;最近我就在我自己的服务器上试了一下，果然可以，所以就来记录一下，方便以后查看。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="技术分享" scheme="https://www.cruisetian.tk/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="Google Drive" scheme="https://www.cruisetian.tk/tags/Google-Drive/"/>
+    
+      <category term="rclone" scheme="https://www.cruisetian.tk/tags/rclone/"/>
+    
+      <category term="VPS扩容" scheme="https://www.cruisetian.tk/tags/VPS%E6%89%A9%E5%AE%B9/"/>
+    
+      <category term="云盘挂载" scheme="https://www.cruisetian.tk/tags/%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
     <title>goindex-在国内使用你的谷歌网盘</title>
     <link href="https://www.cruisetian.tk/post/1d96ecd4.html"/>
     <id>https://www.cruisetian.tk/post/1d96ecd4.html</id>
     <published>2020-06-13T06:01:06.000Z</published>
-    <updated>2020-06-13T06:04:00.356Z</updated>
+    <updated>2020-06-13T06:04:13.087Z</updated>
     
     <summary type="html">
     
@@ -98,11 +127,11 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
+      <category term="centos7" scheme="https://www.cruisetian.tk/tags/centos7/"/>
+    
       <category term="java" scheme="https://www.cruisetian.tk/tags/java/"/>
     
       <category term="openJDK" scheme="https://www.cruisetian.tk/tags/openJDK/"/>
-    
-      <category term="centos7" scheme="https://www.cruisetian.tk/tags/centos7/"/>
     
   </entry>
   
