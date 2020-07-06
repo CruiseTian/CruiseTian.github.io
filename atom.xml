@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-06-24T07:55:01.198Z</updated>
+  <updated>2020-07-06T17:03:20.533Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Debian&amp;Ubuntu设置静态ip</title>
+    <link href="https://www.cruisetian.tk/post/8c930c05.html"/>
+    <id>https://www.cruisetian.tk/post/8c930c05.html</id>
+    <published>2020-07-06T17:00:36.000Z</published>
+    <updated>2020-07-06T17:03:20.533Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;最近开了几个虚拟机做实验，通过&lt;code&gt;ssh&lt;/code&gt;连接上去，为了避免IP更换带来麻烦，所以设置一下静态IP,这里记录一下，方便查阅。&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian10系统&lt;/li&gt;
+&lt;li&gt;NAT模式&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
+    
+    
+      <category term="Ubuntu" scheme="https://www.cruisetian.tk/tags/Ubuntu/"/>
+    
+      <category term="Linux" scheme="https://www.cruisetian.tk/tags/Linux/"/>
+    
+      <category term="Debian" scheme="https://www.cruisetian.tk/tags/Debian/"/>
+    
+      <category term="静态IP" scheme="https://www.cruisetian.tk/tags/%E9%9D%99%E6%80%81IP/"/>
+    
+  </entry>
   
   <entry>
     <title>rclone挂载谷歌云盘-为你的VPS扩容</title>

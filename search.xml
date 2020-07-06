@@ -841,4 +841,40 @@
         <tag>域名绑定</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Debian&amp;Ubuntu设置静态ip</title>
+    <url>/post/8c930c05.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>最近开了几个虚拟机做实验，通过<code>ssh</code>连接上去，为了避免IP更换带来麻烦，所以设置一下静态IP,这里记录一下，方便查阅。</p>
+<h2 id="环境">环境</h2>
+<ul>
+<li>Debian10系统</li>
+<li>NAT模式</li>
+</ul>
+<a id="more"></a>
+<h2 id="配置静态ip">配置静态IP</h2>
+<h3 id="备份原有配置文件">备份原有配置文件</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp /etc/network/interfaces /etc/network/interfacesbak <span class="comment">#备份原有配置文件</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置静态ip-1">配置静态IP</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim  /etc/network/interfaces <span class="comment">#编辑网卡配置文件</span></span><br></pre></td></tr></table></figure>
+<p>将内容修改为以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line"><span class="comment">#iface lo inet loopback</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">allow-hotplug ens33</span><br><span class="line"><span class="comment">#iface ens33 inet dhcp</span></span><br><span class="line"></span><br><span class="line">auto ens33</span><br><span class="line">iface ens33 inet static</span><br><span class="line">address 192.168.162.136</span><br><span class="line">gateway 192.168.162.2</span><br><span class="line">netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+<h2 id="配置dns服务">配置DNS服务</h2>
+<p>Debian的DNS配置保存在文件<code>/etc/resolv.conf</code>里面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<p>将以下内容填入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br><span class="line">nameserver 114.114.114.114</span><br></pre></td></tr></table></figure>
+<h2 id="重启网络">重启网络</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
+        <tag>Debian</tag>
+        <tag>静态IP</tag>
+      </tags>
+  </entry>
 </search>
