@@ -877,4 +877,39 @@
         <tag>静态IP</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Anaconda设置镜像源</title>
+    <url>/post/c3fd64c3.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>在使用安装<code>conda</code> 安装某些包会出现慢或安装失败问题，所以可以修改镜像源为国内镜像源来解决这个问题，这里记录一下。主要有两个方面的内容：</p>
+<ul>
+<li>显示所有channel</li>
+<li>更换channel</li>
+<li>移除镜像源</li>
+</ul>
+<a id="more"></a>
+<h2 id="显示所有channel">显示所有channel</h2>
+<p>首先，<code>conda config --show</code>能够显示出所有<code>conda</code>的config信息。 如果我们只想看channels的信息，输入<code>conda config --show channels</code>即可</p>
+<h2 id="添加镜像源">添加镜像源</h2>
+<p>这里添加的是清华源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<p>其中<code>conda config --set show_channel_urls yes</code>的意思是从channel中安装包时显示channel的url，这样就可以知道包的安装来源了。</p>
+<p>执行<code>conda config --show channels</code>，得到的结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - defaults</span><br></pre></td></tr></table></figure>
+<h2 id="移除镜像源">移除镜像源</h2>
+<p>使用<code>conda config --remove channels url地址</code>可以删除对应的镜像，如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
+<p>就可以删除刚刚添加的清华镜像源，这时执行<code>conda config --show channels</code>，得到的结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br></pre></td></tr></table></figure>
+<h2 id="一些其他的conda指令">一些其他的conda指令</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install &lt;包名&gt; <span class="comment">#安装指定包</span></span><br><span class="line">conda remove &lt;包名&gt;  <span class="comment">#移除指定包</span></span><br><span class="line">conda update &lt;包名&gt;  <span class="comment">#更新指定包</span></span><br><span class="line"></span><br><span class="line">conda update conda <span class="comment">#更新conda,当提示你确认更新时，键入y继续。</span></span><br><span class="line"><span class="comment">#更新conda后，继续进行Anaconda更新</span></span><br><span class="line">conda update anaconda <span class="comment">#出现提示时，键入y继续。</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>Anaconda</tag>
+        <tag>镜像源</tag>
+      </tags>
+  </entry>
 </search>
