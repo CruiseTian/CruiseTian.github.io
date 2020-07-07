@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-07-07T04:58:09.876Z</updated>
+  <updated>2020-07-07T05:43:18.673Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,36 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>conda安装虚拟环境</title>
+    <link href="https://www.cruisetian.tk/post/7615c371.html"/>
+    <id>https://www.cruisetian.tk/post/7615c371.html</id>
+    <published>2020-07-07T05:40:55.000Z</published>
+    <updated>2020-07-07T05:43:18.673Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;不同的代码往往需要特定的运行环境。比如说有些代码需要在python3.6的环境下运行，有些代码需要在python2.7的环境下运行。这时就可以通过创建虚拟环境来营造代码运行适合的环境，而不会影响到自己本来的生产环境，所以就记录以下&lt;code&gt;conda&lt;/code&gt;安装虚拟环境的命令，方便查阅。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;conda&lt;/code&gt;的安装就不在这里详述，自行安装。&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Anaconda" scheme="https://www.cruisetian.tk/tags/Anaconda/"/>
+    
+      <category term="虚拟环境" scheme="https://www.cruisetian.tk/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Anaconda设置镜像源</title>
     <link href="https://www.cruisetian.tk/post/c3fd64c3.html"/>
     <id>https://www.cruisetian.tk/post/c3fd64c3.html</id>
     <published>2020-07-07T04:56:58.000Z</published>
-    <updated>2020-07-07T04:58:09.876Z</updated>
+    <updated>2020-07-07T04:58:19.652Z</updated>
     
     <summary type="html">
     
@@ -68,11 +93,11 @@
       <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
     
     
+      <category term="Debian" scheme="https://www.cruisetian.tk/tags/Debian/"/>
+    
       <category term="Ubuntu" scheme="https://www.cruisetian.tk/tags/Ubuntu/"/>
     
       <category term="Linux" scheme="https://www.cruisetian.tk/tags/Linux/"/>
-    
-      <category term="Debian" scheme="https://www.cruisetian.tk/tags/Debian/"/>
     
       <category term="静态IP" scheme="https://www.cruisetian.tk/tags/%E9%9D%99%E6%80%81IP/"/>
     
@@ -189,11 +214,11 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="centos7" scheme="https://www.cruisetian.tk/tags/centos7/"/>
-    
       <category term="java" scheme="https://www.cruisetian.tk/tags/java/"/>
     
       <category term="openJDK" scheme="https://www.cruisetian.tk/tags/openJDK/"/>
+    
+      <category term="centos7" scheme="https://www.cruisetian.tk/tags/centos7/"/>
     
   </entry>
   
@@ -387,11 +412,11 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
       <category term="Docker" scheme="https://www.cruisetian.tk/tags/Docker/"/>
     
       <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
-    
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
@@ -415,11 +440,11 @@
       <category term="软件分享" scheme="https://www.cruisetian.tk/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
     
     
-      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
-    
       <category term="clash" scheme="https://www.cruisetian.tk/tags/clash/"/>
     
       <category term="clashR" scheme="https://www.cruisetian.tk/tags/clashR/"/>
+    
+      <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
     
       <category term="机场" scheme="https://www.cruisetian.tk/tags/%E6%9C%BA%E5%9C%BA/"/>
     
@@ -477,9 +502,9 @@
       <category term="系统设置" scheme="https://www.cruisetian.tk/categories/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/"/>
     
     
-      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
-    
       <category term="代理" scheme="https://www.cruisetian.tk/tags/%E4%BB%A3%E7%90%86/"/>
+    
+      <category term="proxy" scheme="https://www.cruisetian.tk/tags/proxy/"/>
     
       <category term="npm" scheme="https://www.cruisetian.tk/tags/npm/"/>
     
@@ -533,13 +558,13 @@
       <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Win" scheme="https://www.cruisetian.tk/tags/Win/"/>
-    
       <category term="Ubuntu" scheme="https://www.cruisetian.tk/tags/Ubuntu/"/>
     
-      <category term="双系统" scheme="https://www.cruisetian.tk/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
-    
       <category term="Linux" scheme="https://www.cruisetian.tk/tags/Linux/"/>
+    
+      <category term="Win" scheme="https://www.cruisetian.tk/tags/Win/"/>
+    
+      <category term="双系统" scheme="https://www.cruisetian.tk/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   

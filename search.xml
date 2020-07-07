@@ -1,6 +1,183 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Anaconda设置镜像源</title>
+    <url>/post/c3fd64c3.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>在使用安装<code>conda</code> 安装某些包会出现慢或安装失败问题，所以可以修改镜像源为国内镜像源来解决这个问题，这里记录一下。主要有两个方面的内容：</p>
+<ul>
+<li>显示所有channel</li>
+<li>更换channel</li>
+<li>移除镜像源</li>
+</ul>
+<a id="more"></a>
+<h2 id="显示所有channel">显示所有channel</h2>
+<p>首先，<code>conda config --show</code>能够显示出所有<code>conda</code>的config信息。 如果我们只想看channels的信息，输入<code>conda config --show channels</code>即可</p>
+<h2 id="添加镜像源">添加镜像源</h2>
+<p>这里添加的是清华源</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
+<p>其中<code>conda config --set show_channel_urls yes</code>的意思是从channel中安装包时显示channel的url，这样就可以知道包的安装来源了。</p>
+<p>执行<code>conda config --show channels</code>，得到的结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - defaults</span><br></pre></td></tr></table></figure>
+<h2 id="移除镜像源">移除镜像源</h2>
+<p>使用<code>conda config --remove channels url地址</code>可以删除对应的镜像，如</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
+<p>就可以删除刚刚添加的清华镜像源，这时执行<code>conda config --show channels</code>，得到的结果如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br></pre></td></tr></table></figure>
+<h2 id="一些其他的conda指令">一些其他的conda指令</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install &lt;包名&gt; <span class="comment">#安装指定包</span></span><br><span class="line">conda remove &lt;包名&gt;  <span class="comment">#移除指定包</span></span><br><span class="line">conda update &lt;包名&gt;  <span class="comment">#更新指定包</span></span><br><span class="line"></span><br><span class="line">conda update conda <span class="comment">#更新conda,当提示你确认更新时，键入y继续。</span></span><br><span class="line"><span class="comment">#更新conda后，继续进行Anaconda更新</span></span><br><span class="line">conda update anaconda <span class="comment">#出现提示时，键入y继续。</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>Anaconda</tag>
+        <tag>镜像源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>ClashR使用，让你的chrome起飞</title>
+    <url>/post/f5257d2a.html</url>
+    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
+<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
+<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
+<a id="more"></a>
+<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
+<h2 id="配置clashr">配置ClashR</h2>
+<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
+<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
+<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
+<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
+<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
+<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
+<h3 id="配置代理服务器">配置代理服务器</h3>
+<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
+<p>然后点击<strong>应用选项</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
+<h3 id="配置自动切换规则">配置自动切换规则</h3>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
+<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
+<p>然后再点击<strong>应用选项</strong>即可</p>
+<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
+<h2 id="相关链接">相关链接</h2>
+<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
+<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>clash</tag>
+        <tag>clashR</tag>
+        <tag>代理</tag>
+        <tag>机场</tag>
+        <tag>SwicthyOmega</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Debian&amp;Ubuntu设置静态ip</title>
+    <url>/post/8c930c05.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>最近开了几个虚拟机做实验，通过<code>ssh</code>连接上去，为了避免IP更换带来麻烦，所以设置一下静态IP,这里记录一下，方便查阅。</p>
+<h2 id="环境">环境</h2>
+<ul>
+<li>Debian10系统</li>
+<li>NAT模式</li>
+</ul>
+<a id="more"></a>
+<h2 id="配置静态ip">配置静态IP</h2>
+<h3 id="备份原有配置文件">备份原有配置文件</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp /etc/network/interfaces /etc/network/interfacesbak <span class="comment">#备份原有配置文件</span></span><br></pre></td></tr></table></figure>
+<h3 id="配置静态ip-1">配置静态IP</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim  /etc/network/interfaces <span class="comment">#编辑网卡配置文件</span></span><br></pre></td></tr></table></figure>
+<p>将内容修改为以下内容：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line"><span class="comment">#iface lo inet loopback</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">allow-hotplug ens33</span><br><span class="line"><span class="comment">#iface ens33 inet dhcp</span></span><br><span class="line"></span><br><span class="line">auto ens33</span><br><span class="line">iface ens33 inet static</span><br><span class="line">address 192.168.162.136</span><br><span class="line">gateway 192.168.162.2</span><br><span class="line">netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
+<h2 id="配置dns服务">配置DNS服务</h2>
+<p>Debian的DNS配置保存在文件<code>/etc/resolv.conf</code>里面。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
+<p>将以下内容填入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br><span class="line">nameserver 114.114.114.114</span><br></pre></td></tr></table></figure>
+<h2 id="重启网络">重启网络</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>Debian</tag>
+        <tag>Ubuntu</tag>
+        <tag>Linux</tag>
+        <tag>静态IP</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Centos7安装OpenJDK14</title>
+    <url>/post/584b409a.html</url>
+    <content><![CDATA[<h2 id="检查并卸载原本有的java版本">检查并卸载原本有的java版本</h2>
+<h3 id="查看centos7自带的jdk是否已安装">查看Centos7自带的JDK是否已安装</h3>
+<p>在命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
+<p>如果出现以下结果，则说明已安装，需要先卸载，否则的话直接跳过这一步。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openjdk version <span class="string">"1.8.0 102"</span></span><br><span class="line">OpenJDK Runtime Environment (build 1.8.0_102-b14)</span><br><span class="line">OpenJDK 64-Bit Server VM(build 25.102-bi4, mixed mode)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="查看已安装文件">查看已安装文件</h3>
+<p>首先查看文件，在命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
+<p>会出现如下信息：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java-1.7.0-openjdk-1.7.0.I11-2.6.7.8.el7.x86_64</span><br><span class="line">python-javapackages-3.4.1-11.el7.noarch</span><br><span class="line">tzdata-java-2016g-2.el7.noarch</span><br><span class="line">javapackages-tools-3.4.1-11.el7.noarch</span><br><span class="line">java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64</span><br><span class="line">java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64</span><br><span class="line">java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.8.el7.x86_64</span><br></pre></td></tr></table></figure>
+<h3 id="删除相关的文件">删除相关的文件</h3>
+<p>在命令行输入（把上面出现的全部删除，把命令中的 * 替换成文件名）：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y remove java-*.*.*</span><br></pre></td></tr></table></figure>
+<h3 id="判断是否全部删除">判断是否全部删除</h3>
+<p>在命令行输入：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
+<p>无文件，表示删除成功！</p>
+<h2 id="安装openjdk-14">安装OpenJDK 14</h2>
+<h3 id="下载解压">下载解压</h3>
+<p>安装相关软件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum -y install curl</span><br></pre></td></tr></table></figure>
+<p>下载二进制包:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -O https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
+<p>使用tar命令解压缩下载的OpenJDK 14归档文件。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar xvf openjdk-14_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
+<p>将结果文件夹移动到<em>/ opt</em>目录。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv jdk-14 /opt/</span><br></pre></td></tr></table></figure>
+<h3 id="环境配置">环境配置</h3>
+<p>配置Java环境：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo tee /etc/profile.d/jdk14.sh &lt;&lt;EOF</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk-14</span><br><span class="line"><span class="built_in">export</span> PATH=\<span class="variable">$PATH</span>:\<span class="variable">$JAVA_HOME</span>/bin</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
+<p>获取您的配置文件并检查 <code>java</code> 命令</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile.d/jdk14.sh</span><br></pre></td></tr></table></figure>
+<p>确认Java版本：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="variable">$JAVA_HOME</span></span><br><span class="line">/opt/jdk-14</span><br><span class="line"></span><br><span class="line">$ java -version</span><br><span class="line">openjdk version <span class="string">"14"</span> 2020-03-17</span><br><span class="line">OpenJDK Runtime Environment (build 14+36-1461)</span><br><span class="line">OpenJDK 64-Bit Server VM (build 14+36-1461, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
+<h2 id="测试java安装">测试Java安装</h2>
+<p>顺便来编写第一个Java程序。</p>
+<p>打开文本编辑器，输入以下代码：</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, world!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>把代码保存为文件，文件名必须是<code>Hello.java</code>，而且文件名也要注意大小写，因为要和定义的类名<code>Hello</code>完全保持一致。</p>
+<p>编译Java代码:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ javac Hello.java</span><br></pre></td></tr></table></figure>
+<p>如果源代码无误，上述命令不会有任何输出，而当前目录下会产生一个<code>Hello.class</code>文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ls</span><br><span class="line">Hello.class	Hello.java</span><br></pre></td></tr></table></figure>
+<p>执行<code>Hello.class</code>:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java Hello</span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure>
+<p>测试成功，环境配置完成。</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>java</tag>
+        <tag>openJDK</tag>
+        <tag>centos7</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Centos7安装python3.8.1</title>
     <url>/post/2f518ecf.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -45,113 +222,6 @@
         <tag>linux</tag>
         <tag>python</tag>
         <tag>环境配置</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Docker设置HTTP/HTTPS代理</title>
-    <url>/post/4315e63f.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>最近刚刚开始学习docker，抽了两天的空余时间了解了一下docker，今天正式在我的电脑上安装并使用docker，因为众所周知的原因，Docker在国内的使用比较艰难，虽然很多组织在国内提供了<code>mirror</code>，可以拉取各种官方镜像,但是大量的组织或个人的镜像都在docker hub，这一部分并没有被镜像同步。所以就需要给docker设置代理，帮助我们更好的使用docker。</p>
-<a id="more"></a>
-<h2 id="docker简介">Docker简介</h2>
-<p>Docker容器与虚拟机类似，但原理上，容器是将操作系统层虚拟化，虚拟机则是虚拟化硬件，因此容器更具有便携性、高效地利用服务器。 容器更多的用于表示 软件的一个标准化单元。由于容器的标准化，因此它可以无视基础设施（Infrastructure）的差异，部署到任何一个地方。另外，Docker也为容器提供更强的业界的隔离兼容。</p>
-<h2 id="前提条件">前提条件</h2>
-<ul>
-<li>拥有一个HTTP代理</li>
-<li>Linux发行版的服务管理器使用的是systemd</li>
-<li>我的系统是Ubuntu18.04，docker版本是19.03，能够正常设置</li>
-</ul>
-<h2 id="httphttps-proxy">HTTP/HTTPS proxy</h2>
-<p>好了从这里开始就开始配置代理了。</p>
-<h3 id="为docker服务创建docker.service.d-目录">为docker服务创建docker.service.d 目录：</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/systemd/system/docker.service.d</span><br></pre></td></tr></table></figure>
-<h3 id="创建http-或者https-代理文件并修改">创建HTTP 或者HTTPS 代理文件并修改:</h3>
-<ul>
-<li>HTTP:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/docker.service.d/http-proxy.conf</span><br></pre></td></tr></table></figure>
-<p>然后按 'i'切换到输入模式，将以下配置填入，其中代理IP和端口根据你自己的情况来定。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTP_PROXY=http://proxy.example.com:80/"</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>HTTPS:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/docker.service.d/https-proxy.conf</span><br></pre></td></tr></table></figure>
-<p>同样的，按 'i'切换到输入模式，将以下配置填入，其中代理IP和端口根据你自己的情况来定。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTPS_PROXY=https://proxy.example.com:443/"</span></span><br></pre></td></tr></table></figure>
-<h3 id="局域网或者国内的registry不使用代理">局域网或者国内的registry不使用代理</h3>
-<p>如果有局域网或者国内的registry，我们还需要使用 NO_PROXY 变量声明一下，比如你可以能国内的daocloud.io放有镜像:</p>
-<ul>
-<li>HTTP:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTP_PROXY=http://proxy.example.com:80/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1,daocloud.io"</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>HTTPS:</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTPS_PROXY=https://proxy.example.com:443/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1,daocloud.io"</span></span><br></pre></td></tr></table></figure>
-<h3 id="完成修改后刷新systemd配置">完成修改后刷新systemd配置</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br></pre></td></tr></table></figure>
-<h3 id="重启docker">重启Docker</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
-<h3 id="验证配置是否已加载">验证配置是否已加载</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl show --property=Environment docker</span><br></pre></td></tr></table></figure>
-<p>输出应类似于以下语句：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Environment=HTTP_PROXY=http://proxy.example.com:80/</span><br><span class="line">or</span><br><span class="line">Environment=HTTPS_PROXY=https://proxy.example.com:443/</span><br></pre></td></tr></table></figure>
-<p>好了，现在就可以愉快的使用Docker了。</p>
-<h2 id="参考文档">参考文档：</h2>
-<p><a href="https://docs.docker.com/config/daemon/systemd/" target="_blank" rel="noopener" class="uri">https://docs.docker.com/config/daemon/systemd/</a></p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>Docker</tag>
-        <tag>proxy</tag>
-        <tag>代理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>ClashR使用，让你的chrome起飞</title>
-    <url>/post/f5257d2a.html</url>
-    <content><![CDATA[<h2 id="获得代理节点">获得代理节点</h2>
-<p>首先找到一个机场，这里可以用这个（<a href="https://youyun666.com/auth/register?code=g4oY" target="_blank" rel="noopener">优云666</a>），可以白嫖几个月，流量基本够用。注册账号，登录以后可以先点每日签到，可以随机得到1~5G流量</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_19-53-01.png" /></p>
-<p>然后下拉，到下面这个页面，点击<strong>复制ClashR订阅</strong>，留着一会备用。</p>
-<a id="more"></a>
-<p><img data-src="http://figure.cruisetian.top/img/198274-91.png" /></p>
-<h2 id="配置clashr">配置ClashR</h2>
-<p>先到它的<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener">Github</a>下载所需的版本的软件，但是GitHub下载可能比较慢，所以我这里也提供了快速下载链接，可以到文末找到并下载压缩包。解压压缩包，然后运行<strong>Clash for Windows.exe</strong>,选择<strong>Profiles</strong>.</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-03-04.png" /></p>
-<p>在<strong>Download</strong>左边的框里粘贴刚刚复制的链接，然后点击<strong>Download</strong>, 等待它下载。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-09-12.png" /></p>
-<p>然后在<strong>Proxies</strong>界面选择上边的<strong>Global</strong>或者<strong>Rule</strong>(Global是全局代理，Rule是国外网站走代理，国内直接连接)</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-13-22.png" /></p>
-<p>然后在<strong>General</strong>中把<strong>System Proxy</strong>打开</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-14-58.png" /></p>
-<h2 id="配置浏览器端的switchy-omega插件">配置浏览器端的Switchy Omega插件</h2>
-<p>先在Chrome浏览器里安装<a href="https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?utm_source=chrome-ntp-icon" target="_blank" rel="noopener">Switchy Omega插件</a>,然后进入设置界面，进行配置</p>
-<h3 id="配置代理服务器">配置代理服务器</h3>
-<p>选择<strong>Proxy</strong>,按照下图中的红框中的内容填进去</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-20-46.png" /></p>
-<p>然后点击<strong>应用选项</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-22-01.png" /></p>
-<h3 id="配置自动切换规则">配置自动切换规则</h3>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-11_20-24-04.png" /></p>
-<p>规则列表网址是这个：https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt</p>
-<p>然后再点击<strong>应用选项</strong>即可</p>
-<p>最后记得把这个插件启用，并选中<strong>AutoProxy</strong>或者<strong>Proxy</strong></p>
-<h2 id="相关链接">相关链接</h2>
-<p>ClashR的GitHub链接：<a href="https://github.com/frainzy1477/clashrdev/releases" target="_blank" rel="noopener" class="uri">https://github.com/frainzy1477/clashrdev/releases</a></p>
-<p>我给的ClashR快速下载链接：<a href="https://cruisetian.lanzous.com/icih0he" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icih0he</a></p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>代理</tag>
-        <tag>clash</tag>
-        <tag>clashR</tag>
-        <tag>机场</tag>
-        <tag>SwicthyOmega</tag>
       </tags>
   </entry>
   <entry>
@@ -203,62 +273,85 @@
       </tags>
   </entry>
   <entry>
-    <title>Gmail邮箱注册，谷歌账号注册</title>
-    <url>/post/b02ca219.html</url>
+    <title>Windows terminal安装使用及美化(2)</title>
+    <url>/post/ebf33f81.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>由于谷歌的政策原因，如今注册一个谷歌账户可以说是难上加难了，但是有时候又会有用谷歌服务的需求，所以这里就来分享一下如何快速地注册一个谷歌账户。</p>
-<h2 id="说明">说明</h2>
-<ul>
-<li>一定要用【手机】注册（亲测电脑注册不上）</li>
-<li>该方法不需要科学上网</li>
-<li>在这篇文章发布时是可以注册的，但是也有可能以后谷歌政策的修改导致注册不上的情况，所以该方法有效期不定，但是目前看来还是很稳定的</li>
-</ul>
+<p>上一个part只写了一些基础配置，这个part就写一写进阶的配置。主要包括power shell的美化，以及添加新的terminal，比如<code>git-bash</code>等。</p>
+<h2 id="美化power-shell">美化Power shell</h2>
+<p>本文我们用 <code>oh-my-posh</code> 在 PowerShell 中实现Linux中<code>oh-my-zsh</code> 的样子，部分效果如下：</p>
+<figure>
+<img data-src="http://figure.cruisetian.top/img/indications.png" alt="来自oh-my-posh官方主页" /><figcaption>来自oh-my-posh官方主页</figcaption>
+</figure>
+<blockquote>
+<p>上一次失败命令（×）、管理员权限指示（⚡）、显示所登录的用户名和域名、所在工作目录指示（蓝色领带）、posh-git模块提供的Git状态指示器（黄色领带）</p>
+</blockquote>
 <a id="more"></a>
-<h2 id="注册过程">注册过程</h2>
-<h3 id="下载手机版qq邮箱或者网易邮箱大师">下载手机版QQ邮箱或者网易邮箱大师</h3>
-<p>这两款软件都可以在各大应用商店找到，二者选其一下载即可，因为这两款邮箱工具都自带谷歌邮箱服务加速，无需我们自己准备梯子！本文使用<strong>QQ邮箱</strong>演示。</p>
-<h2 id="开始注册">开始注册</h2>
+<h3 id="安装oh-my-posh和posh-git">安装oh-my-posh（和posh-git）</h3>
+<p>首先需要以管理员权限启动 PowerShell，以便执行安装操作。(windows10快捷键为<code>Windows+X</code>,然后按A，选择管理员运行power shell)</p>
+<p>首先安装Chocolatey</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Bypass <span class="literal">-Scope</span> <span class="keyword">Process</span> <span class="literal">-Force</span>; iex ((<span class="built_in">New-Object</span> System.Net.WebClient).DownloadString(<span class="string">'https://chocolatey.org/install.ps1'</span>))</span><br></pre></td></tr></table></figure>
+<p>用 Chocolatey安装 ConEmu</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">choco install ConEmu</span><br></pre></td></tr></table></figure>
+<p>然后，运行命令以安装 posh-git，这是 oh-my-posh 的依赖</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
+<p>接下来，运行命令以安装 oh-my-posh 本身</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> oh<span class="literal">-my</span><span class="literal">-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
+<h3 id="基本设置">基本设置</h3>
+<p>安装完成后，输入</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> oh<span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"><span class="built_in">Set-Theme</span> PowerLine</span><br></pre></td></tr></table></figure>
+<p><strong>如果你的电脑里没有安装Git，在输入<code>Import-Module posh-git</code>会报错，解决方法是<a href="https://git-scm.com/" target="_blank" rel="noopener">安装Git</a>或者把这一行去掉，相应的下面的配置文件也要删除这一句</strong></p>
+<p>但是这次使用<code>Import-Module</code>的指令，再次启动PowerShell就会发现没有效果，这是因为这些指令仅限于本次会话的PowerShell有效，因此，若要使这一效果在每次启动的时候都有效，那就要将其添加到启动脚本中。</p>
+<p>使用记事本打开PS配置文件（如无则创建该文件）</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(<span class="built_in">Test-Path</span> <span class="literal">-Path</span> <span class="variable">$PROFILE</span> )) &#123; <span class="built_in">New-Item</span> <span class="literal">-Type</span> File <span class="literal">-Path</span> <span class="variable">$PROFILE</span> <span class="literal">-Force</span> &#125;</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
+<p>随后，在打开的记事本窗口里，在文末加入下面内容，以让Powershell在启动之时应用主题，然后保存。（仅对当前用户生效）</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme Paradox</span><br></pre></td></tr></table></figure>
+<p>关闭脚本禁用：允许Powershell运行脚本</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set-executionpolicy</span> remotesigned</span><br></pre></td></tr></table></figure>
+<p>再度打开Powershell之时，你就会发现power shell变成了下面这副样子</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-23_21-21-05.png" /></p>
+<p>还是很丑，所以我们使用Windows terminal进行配置</p>
+<h3 id="windows-terminal配置">Windows terminal配置</h3>
+<p>打开Windows terminal，然后在下箭头处展开列表，选中设置打开JSON配置文件（也可使用默认的“Ctrl+,”组合键）后定位到profiles区域，可单独对不同终端进行配置。</p>
+<p>其中各个参数的注释如下，可以选择自行修改</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">"profiles" :</span><br><span class="line">    [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"acrylicOpacity"</span> : <span class="number">0.70</span>, <span class="comment">//亚克力背景透明度（需启用useAcrylic）</span></span><br><span class="line">            <span class="attr">"background"</span> : <span class="string">"#012456"</span>, <span class="comment">//背景颜色，PS默认为蓝色</span></span><br><span class="line">            <span class="attr">"closeOnExit"</span> : <span class="literal">true</span>, <span class="comment">//关闭窗口的时候退出所有挂载的程序</span></span><br><span class="line">            <span class="attr">"colorScheme"</span> : <span class="string">"Dracula"</span>, <span class="comment">//配色方案（Dracula需导入）</span></span><br><span class="line">            <span class="attr">"commandline"</span> : <span class="string">"powershell.exe"</span>, <span class="comment">//此处终端打开PS</span></span><br><span class="line">            <span class="attr">"cursorColor"</span> : <span class="string">"#FFFFFF"</span>, <span class="comment">//光标颜色</span></span><br><span class="line">            <span class="attr">"cursorShape"</span> : <span class="string">"bar"</span>, <span class="comment">//光标形状（默认为bar，即条状）</span></span><br><span class="line">            <span class="attr">"fontFace"</span> : <span class="string">"Consolas"</span>, <span class="comment">//所用字体</span></span><br><span class="line">            <span class="attr">"fontSize"</span> : <span class="number">14</span>, <span class="comment">//字体大小</span></span><br><span class="line">            <span class="attr">"guid"</span> : <span class="string">"&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;"</span>, <span class="comment">//唯一标识符，随机生成</span></span><br><span class="line">            <span class="attr">"historySize"</span> : <span class="number">9001</span>, <span class="comment">//缓存大小</span></span><br><span class="line">            <span class="attr">"icon"</span> : <span class="string">"ms-appx:///ProfileIcons/&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;.png"</span>, <span class="comment">//图标</span></span><br><span class="line">            <span class="attr">"name"</span> : <span class="string">"Windows PowerShell"</span>, <span class="comment">//在下拉菜单里显示的名称</span></span><br><span class="line">            <span class="attr">"tabTitle"</span> : <span class="string">"Windows PowerShell"</span>, <span class="comment">//在选项卡上显示的名称</span></span><br><span class="line">            <span class="attr">"padding"</span> : <span class="string">"0, 0, 0, 0"</span>, <span class="comment">//内容的边框距，默认填充全部空间</span></span><br><span class="line">            <span class="attr">"snapOnInput"</span> : <span class="literal">true</span>, <span class="comment">//输入的时候自动滚动到输入位置</span></span><br><span class="line">            <span class="attr">"startingDirectory"</span> : <span class="string">"%USERPROFILE%"</span>, <span class="comment">//初始工作目录，默认为用户目录</span></span><br><span class="line">            <span class="attr">"useAcrylic"</span> : <span class="literal">true</span> <span class="comment">//使用亚克力效果</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
+<p>这里贴一下我自己用的修改项，各个参数的效果我都用比较易懂的语言写在后面了</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"foreground" : "#ffffff",         //字体颜色</span><br><span class="line"><span class="comment">//"cursorColor" : "#fbff00",        //光标颜色</span></span><br><span class="line">"cursorShape" : "bar",              //光标类型</span><br><span class="line">"startingDirectory" : "%USERPROFILE%", //初始工作目录，默认为用户目录</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置背景</span></span><br><span class="line">"acrylicOpacity": 0.6,  //背景毛玻璃不透明度</span><br><span class="line">"useAcrylic": true,     //背景使用毛玻璃效果</span><br><span class="line">"background": "#0c0c0c"    //背景颜色</span><br></pre></td></tr></table></figure>
+<h3 id="下载个性化字体支持特殊符号">下载个性化字体，支持特殊符号</h3>
+<p>因为这个主题有一些特殊符号，比如闪电，叉号等，默认字体不支持，就会放几个框框在哪里，比较难看，所以下载一个支持特殊符号的字体并应用，字体链接如下：<a href="https://github.com/adam7/delugia-code/releases/download/v1910.04.1/Delugia.Nerd.Font.Complete.ttf" target="_blank" rel="noopener" class="uri">https://github.com/adam7/delugia-code/releases/download/v1910.04.1/Delugia.Nerd.Font.Complete.ttf</a></p>
+<p>下载完以后点击安装即可，然后在power shell的json设置项，将字体改为 &quot;Delugia Nerd Font&quot;，即</p>
+<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"fontFace": "Delugia Nerd Font",</span><br></pre></td></tr></table></figure>
+<h2 id="增加一个新的终端以bash为例">增加一个新的终端（以bash为例）</h2>
+<p>打开Windows terminal的配置文件（Win+,)</p>
+<h3 id="新增一个-profile">新增一个 profile</h3>
+<p>我们把原来的一个 profile 复制一份出来，这样我们就能够写一份自己的终端配置了。然后在下面粘贴一下，并进行一些修改，就比如我这样。</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-23_21-52-52.png" /></p>
+<h3 id="修改参数">修改参数</h3>
+<p>其中你粘贴下去的文件有一些项必须要修改</p>
 <ul>
-<li>首先打开QQ邮箱，滑到底部，找到<strong>添加账户</strong>选项，点击</li>
+<li><code>guid</code> 必须使用新的跟其他终端不重复的 guid，可以使用下面的guid的工具来生成：<a href="https://www.uuidgenerator.net/guid" target="_blank" rel="noopener">在线guid生成工具</a></li>
+<li><code>commandline</code> 你需要改成你的新的终端的路径，如果你是通过安装 Git for Windows 而安装的 Git Bash，那么默认路径就是 <code>C:\Program Files\Git\bin\bash.exe</code>，否则请修改为你自己定义的路径</li>
+<li><code>name</code> 改为终端的名称，这个大家可以自定义</li>
 </ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-01-24.png" /></p>
+<p>下面这些参数根据自己需要来修改</p>
 <ul>
-<li>然后在跳出的页面选择<strong>Gmail</strong></li>
+<li><code>useAcrylic</code> 使用毛玻璃效果</li>
+<li><code>acrylicOpacity</code> 毛玻璃效果透明度</li>
+<li><code>fontFace</code> 字体名称</li>
+<li><code>fontSize</code> 字号大小</li>
+<li><code>icon</code> 图标，路径修改为你自己图标的路径</li>
+<li><code>startingDirectory</code> 初始路径</li>
 </ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-01-50.png" /></p>
-<ul>
-<li>点击<strong>创建账号</strong></li>
-</ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-02-10.png" /></p>
-<ul>
-<li>在接下来跳出的窗口中填入自己的各项信息以后点击<strong>下一步</strong></li>
-</ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-03-50.png" /></p>
-<ul>
-<li>之后会跳转到填写手机号的界面，在国家那里拉到最后，选择<strong>中国 +86</strong>，然后直接填写手机号即可，然后点击<strong>下一步</strong></li>
-</ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-21-05.png" /></p>
-<ul>
-<li>跳转到验证界面以后输入你刚刚输入的手机号收到的验证码，点击<strong>下一步</strong></li>
-</ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-21-45.png" /></p>
-<ul>
-<li>之后完善一下个人信息，填写一下生日，性别什么的就好了，辅助邮箱这个可填可不填，填写好以后点击<strong>下一步</strong>即可</li>
-</ul>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-23-23.png" /></p>
-<ul>
-<li>最后就是一些政策性的东西，自己看一看，根据自己的需求选择同意还是拒绝就好，操作完成以后账号就注册完成了</li>
-</ul>
-<h2 id="后记">后记</h2>
-<p>整个过程比较简单，这里就是提供一个方法，如果还有其他方式，也欢迎留言交流。</p>
+<p>这里提供一个git-bash的图标，有需要的可以自取</p>
+<p><img data-src="http://figure.cruisetian.top/img/git-bash.jpg" /></p>
+<p>最后保存这个配置文件，再点击Windows terminal的向下箭头，就可以看到你自己自定义的配置了。</p>
 ]]></content>
       <categories>
-        <category>技术分享</category>
+        <category>软件分享</category>
       </categories>
       <tags>
-        <tag>Gmail</tag>
-        <tag>谷歌账户</tag>
-        <tag>国内注册</tag>
+        <tag>windows terminal</tag>
+        <tag>设置</tag>
+        <tag>终端</tag>
       </tags>
   </entry>
   <entry>
@@ -372,10 +465,139 @@
         <category>日常学习</category>
       </categories>
       <tags>
-        <tag>Win</tag>
         <tag>Ubuntu</tag>
-        <tag>双系统</tag>
         <tag>Linux</tag>
+        <tag>Win</tag>
+        <tag>双系统</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>conda安装虚拟环境</title>
+    <url>/post/7615c371.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>不同的代码往往需要特定的运行环境。比如说有些代码需要在python3.6的环境下运行，有些代码需要在python2.7的环境下运行。这时就可以通过创建虚拟环境来营造代码运行适合的环境，而不会影响到自己本来的生产环境，所以就记录以下<code>conda</code>安装虚拟环境的命令，方便查阅。</p>
+<p><code>conda</code>的安装就不在这里详述，自行安装。</p>
+<a id="more"></a>
+<h2 id="conda安装虚拟环境">conda安装虚拟环境</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create -n your_env_name python=version（2.7、3.6等)</span><br></pre></td></tr></table></figure>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create -n py3.7.3 python=3.7.3</span><br></pre></td></tr></table></figure>
+<p>会出现以下结果：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Collecting package metadata (current_repodata.json): <span class="keyword">done</span></span><br><span class="line">Solving environment: failed with repodata from current_repodata.json, will retry with next repodata <span class="built_in">source</span>.</span><br><span class="line">Collecting package metadata (repodata.json): <span class="keyword">done</span></span><br><span class="line">Solving environment: <span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Package Plan ##</span></span><br><span class="line"></span><br><span class="line">  environment location: /root/anaconda3/envs/py3.7.3</span><br><span class="line"></span><br><span class="line">  added / updated specs:</span><br><span class="line">    - python=3.7.3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">The following packages will be downloaded:</span><br><span class="line"></span><br><span class="line">    package                    |            build</span><br><span class="line">    ---------------------------|-----------------</span><br><span class="line">    _libgcc_mutex-0.1          |             main           3 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    ca-certificates-2020.6.24  |                0         125 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    certifi-2020.6.20          |           py37_0         156 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    libedit-3.1.20191231       |       h7b6447c_0         167 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    libffi-3.2.1               |       hd88cf55_4          40 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    libgcc-ng-9.1.0            |       hdf63c60_0         5.1 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    libstdcxx-ng-9.1.0         |       hdf63c60_0         3.1 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    ncurses-6.2                |       he6710b0_1         817 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    openssl-1.1.1g             |       h7b6447c_0         2.5 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    pip-20.1.1                 |           py37_1         1.7 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    python-3.7.3               |       h0371630_0        32.1 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    readline-7.0               |       h7b6447c_5         324 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    setuptools-47.3.1          |           py37_0         514 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    sqlite-3.32.3              |       h62c20be_0         1.1 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    tk-8.6.10                  |       hbc83047_0         3.0 MB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    wheel-0.34.2               |           py37_0          51 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    xz-5.2.5                   |       h7b6447c_0         341 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    zlib-1.2.11                |       h7b6447c_3         103 KB  https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">    ------------------------------------------------------------</span><br><span class="line">                                           Total:        51.2 MB</span><br><span class="line"></span><br><span class="line">The following NEW packages will be INSTALLED:</span><br><span class="line"></span><br><span class="line">  _libgcc_mutex      anaconda/pkgs/main/linux-64::_libgcc_mutex-0.1-main</span><br><span class="line">  ca-certificates    anaconda/pkgs/main/linux-64::ca-certificates-2020.6.24-0</span><br><span class="line">  certifi            anaconda/pkgs/main/linux-64::certifi-2020.6.20-py37_0</span><br><span class="line">  libedit            anaconda/pkgs/main/linux-64::libedit-3.1.20191231-h7b6447c_0</span><br><span class="line">  libffi             anaconda/pkgs/main/linux-64::libffi-3.2.1-hd88cf55_4</span><br><span class="line">  libgcc-ng          anaconda/pkgs/main/linux-64::libgcc-ng-9.1.0-hdf63c60_0</span><br><span class="line">  libstdcxx-ng       anaconda/pkgs/main/linux-64::libstdcxx-ng-9.1.0-hdf63c60_0</span><br><span class="line">  ncurses            anaconda/pkgs/main/linux-64::ncurses-6.2-he6710b0_1</span><br><span class="line">  openssl            anaconda/pkgs/main/linux-64::openssl-1.1.1g-h7b6447c_0</span><br><span class="line">  pip                anaconda/pkgs/main/linux-64::pip-20.1.1-py37_1</span><br><span class="line">  python             anaconda/pkgs/main/linux-64::python-3.7.3-h0371630_0</span><br><span class="line">  readline           anaconda/pkgs/main/linux-64::readline-7.0-h7b6447c_5</span><br><span class="line">  setuptools         anaconda/pkgs/main/linux-64::setuptools-47.3.1-py37_0</span><br><span class="line">  sqlite             anaconda/pkgs/main/linux-64::sqlite-3.32.3-h62c20be_0</span><br><span class="line">  tk                 anaconda/pkgs/main/linux-64::tk-8.6.10-hbc83047_0</span><br><span class="line">  wheel              anaconda/pkgs/main/linux-64::wheel-0.34.2-py37_0</span><br><span class="line">  xz                 anaconda/pkgs/main/linux-64::xz-5.2.5-h7b6447c_0</span><br><span class="line">  zlib               anaconda/pkgs/main/linux-64::zlib-1.2.11-h7b6447c_3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Proceed ([y]/n)? y</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Downloading and Extracting Packages</span><br><span class="line">libedit-3.1.20191231 | 167 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">xz-5.2.5             | 341 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">wheel-0.34.2         | 51 KB     | <span class="comment">################################### | 100%</span></span><br><span class="line">pip-20.1.1           | 1.7 MB    | <span class="comment">################################### | 100%</span></span><br><span class="line">openssl-1.1.1g       | 2.5 MB    | <span class="comment">################################### | 100%</span></span><br><span class="line">python-3.7.3         | 32.1 MB   | <span class="comment">################################### | 100%</span></span><br><span class="line">libstdcxx-ng-9.1.0   | 3.1 MB    | <span class="comment">################################### | 100%</span></span><br><span class="line">ca-certificates-2020 | 125 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">libffi-3.2.1         | 40 KB     | <span class="comment">################################### | 100%</span></span><br><span class="line">ncurses-6.2          | 817 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">certifi-2020.6.20    | 156 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">libgcc-ng-9.1.0      | 5.1 MB    | <span class="comment">################################### | 100%</span></span><br><span class="line">_libgcc_mutex-0.1    | 3 KB      | <span class="comment">################################### | 100%</span></span><br><span class="line">zlib-1.2.11          | 103 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">tk-8.6.10            | 3.0 MB    | <span class="comment">################################### | 100%</span></span><br><span class="line">setuptools-47.3.1    | 514 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">readline-7.0         | 324 KB    | <span class="comment">################################### | 100%</span></span><br><span class="line">sqlite-3.32.3        | 1.1 MB    | <span class="comment">################################### | 100%</span></span><br><span class="line">Preparing transaction: <span class="keyword">done</span></span><br><span class="line">Verifying transaction: <span class="keyword">done</span></span><br><span class="line">Executing transaction: <span class="keyword">done</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To activate this environment, use</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     $ conda activate py3.7.3</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># To deactivate an active environment, use</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment">#     $ conda deactivate</span></span><br></pre></td></tr></table></figure>
+<p>激活虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda activate my_env_name</span><br></pre></td></tr></table></figure>
+<p>激活之后，命令行的最前面就会出现虚拟环境的名字如下：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">(py3.7.3) root@debian:~<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+<p>退出虚拟环境</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda deactivate</span><br></pre></td></tr></table></figure>
+<h2 id="查看conda环境下所有的虚拟环境">查看Conda环境下所有的虚拟环境</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda info --envs</span><br></pre></td></tr></table></figure>
+<h2 id="删除conda虚拟环境">删除Conda虚拟环境</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda remove -n my_env_name --all</span><br></pre></td></tr></table></figure>
+<p><code>my_env_name</code>对应的就是要删除的虚拟环境名称</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>Anaconda</tag>
+        <tag>虚拟环境</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Windows terminal安装使用及美化(3)</title>
+    <url>/post/f2e80ec0.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>之前两个part写了一些关于Windows terminal的基础和进阶配置，配置好以后用了两天感觉不错，所以就准备把它作为Windows下主要使用的命令行工具，所以决定把它加到右键菜单里去，在这里记录一下过程，也算是有关Windows terminal的高阶分享吧。</p>
+<a id="more"></a>
+<h2 id="添加过程">添加过程</h2>
+<h3 id="测试变量">测试变量</h3>
+<p>下面的两个变量后面的操作需要使用到。所以，先测试下是否正常。用 <code>cmd</code> 分别输入这 2 句命令(使用<code>gitbash</code>无效的)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> %USERPROFILE%</span><br><span class="line"><span class="built_in">echo</span> %LOCALAPPDATA%</span><br></pre></td></tr></table></figure>
+<p>如果有报错，接下来的操作，请把对应的部分进行替换。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%USERPROFILE% =&gt; C:\Users\&#123;username&#125;</span><br><span class="line">%LOCALAPPDATA% =&gt; C:\Users\&#123;userName&#125;\AppData\Local</span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong> <code>{userName}</code>为自己的用户名</p>
+<h3 id="获取图标">获取图标</h3>
+<p>创建 Terminal 文件夹，用来存放图标。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir <span class="string">"%USERPROFILE%\AppData\Local\Terminal"</span></span><br></pre></td></tr></table></figure>
+<p>从微软的Github上下载Windows Terminal的图标，地址如下:<a href="https://github.com/microsoft/terminal/blob/master/res/terminal.ico" target="_blank" rel="noopener" class="uri">https://github.com/microsoft/terminal/blob/master/res/terminal.ico</a> 然后将图标保存到<code>%USERPROFILE%\AppData\Local\Terminal</code>目录中。</p>
+<h3 id="添加注册表文件">添加注册表文件</h3>
+<p>新建一个文件，文件名随意 比如<code>wt.reg</code>。记得保存为<code>.reg</code>文件(名称随意，后缀名不可以错)，并添加以下内容然后保存。</p>
+<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[<span class="meta">HKEY_CLASSES_ROOT\Directory\Background\shell\wt</span>]</span><br><span class="line">@=<span class="string">"Windows Terminal Here"</span></span><br><span class="line"><span class="string">"Icon"</span>=<span class="string">"%USERPROFILE%\\AppData\\Local\\Terminal\\terminal.ico"</span></span><br><span class="line"></span><br><span class="line">[<span class="meta">HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command</span>]</span><br><span class="line">@=<span class="string">"C:\\Users\\&#123;username&#125;\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong> 上面的<code>{userName}</code>为自己的用户名</p>
+<p>然后双击执行这个<code>.reg</code>文件就可以了。这时候就会发现右键菜单里面有了Windows Terminal Here选项。</p>
+<h3 id="真正的windows-terminal-here">真正的Windows terminal &quot;Here&quot;</h3>
+<p>执行完上面的操作你会发现虽然右键可以打开Windows terminal，但是在任何文件夹打开的 Windows terminal 都不是当前的目录，这还怎么叫做<code>here</code>呢。继续配置</p>
+<p>打开Windows terminal的配置文件（在Windows terminal向下箭头的设置中），找到 <code>startingDirectory</code>改为：<code>./</code> 即：<code>&quot;startingDirectory&quot;: &quot;./&quot;</code>，就可以做到在当前目录打开啦。</p>
+<h2 id="后记">后记</h2>
+<p>到这里，Windows terminal的配置就基本结束啦，如果想要更多其它的效果，大家可以自己折腾，有什么不理解的或者更好的想法也可以在评论区里说出来，大家一起交流。</p>
+]]></content>
+      <categories>
+        <category>软件分享</category>
+      </categories>
+      <tags>
+        <tag>windows terminal</tag>
+        <tag>设置</tag>
+        <tag>终端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Gmail邮箱注册，谷歌账号注册</title>
+    <url>/post/b02ca219.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p>由于谷歌的政策原因，如今注册一个谷歌账户可以说是难上加难了，但是有时候又会有用谷歌服务的需求，所以这里就来分享一下如何快速地注册一个谷歌账户。</p>
+<h2 id="说明">说明</h2>
+<ul>
+<li>一定要用【手机】注册（亲测电脑注册不上）</li>
+<li>该方法不需要科学上网</li>
+<li>在这篇文章发布时是可以注册的，但是也有可能以后谷歌政策的修改导致注册不上的情况，所以该方法有效期不定，但是目前看来还是很稳定的</li>
+</ul>
+<a id="more"></a>
+<h2 id="注册过程">注册过程</h2>
+<h3 id="下载手机版qq邮箱或者网易邮箱大师">下载手机版QQ邮箱或者网易邮箱大师</h3>
+<p>这两款软件都可以在各大应用商店找到，二者选其一下载即可，因为这两款邮箱工具都自带谷歌邮箱服务加速，无需我们自己准备梯子！本文使用<strong>QQ邮箱</strong>演示。</p>
+<h2 id="开始注册">开始注册</h2>
+<ul>
+<li>首先打开QQ邮箱，滑到底部，找到<strong>添加账户</strong>选项，点击</li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-01-24.png" /></p>
+<ul>
+<li>然后在跳出的页面选择<strong>Gmail</strong></li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-01-50.png" /></p>
+<ul>
+<li>点击<strong>创建账号</strong></li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-02-10.png" /></p>
+<ul>
+<li>在接下来跳出的窗口中填入自己的各项信息以后点击<strong>下一步</strong></li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-03-50.png" /></p>
+<ul>
+<li>之后会跳转到填写手机号的界面，在国家那里拉到最后，选择<strong>中国 +86</strong>，然后直接填写手机号即可，然后点击<strong>下一步</strong></li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-21-05.png" /></p>
+<ul>
+<li>跳转到验证界面以后输入你刚刚输入的手机号收到的验证码，点击<strong>下一步</strong></li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-21-45.png" /></p>
+<ul>
+<li>之后完善一下个人信息，填写一下生日，性别什么的就好了，辅助邮箱这个可填可不填，填写好以后点击<strong>下一步</strong>即可</li>
+</ul>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-06-13_13-23-23.png" /></p>
+<ul>
+<li>最后就是一些政策性的东西，自己看一看，根据自己的需求选择同意还是拒绝就好，操作完成以后账号就注册完成了</li>
+</ul>
+<h2 id="后记">后记</h2>
+<p>整个过程比较简单，这里就是提供一个方法，如果还有其他方式，也欢迎留言交流。</p>
+]]></content>
+      <categories>
+        <category>技术分享</category>
+      </categories>
+      <tags>
+        <tag>Gmail</tag>
+        <tag>谷歌账户</tag>
+        <tag>国内注册</tag>
       </tags>
   </entry>
   <entry>
@@ -434,85 +656,110 @@
       </tags>
   </entry>
   <entry>
-    <title>Windows terminal安装使用及美化(2)</title>
-    <url>/post/ebf33f81.html</url>
+    <title>Docker设置HTTP/HTTPS代理</title>
+    <url>/post/4315e63f.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>上一个part只写了一些基础配置，这个part就写一写进阶的配置。主要包括power shell的美化，以及添加新的terminal，比如<code>git-bash</code>等。</p>
-<h2 id="美化power-shell">美化Power shell</h2>
-<p>本文我们用 <code>oh-my-posh</code> 在 PowerShell 中实现Linux中<code>oh-my-zsh</code> 的样子，部分效果如下：</p>
-<figure>
-<img data-src="http://figure.cruisetian.top/img/indications.png" alt="来自oh-my-posh官方主页" /><figcaption>来自oh-my-posh官方主页</figcaption>
-</figure>
-<blockquote>
-<p>上一次失败命令（×）、管理员权限指示（⚡）、显示所登录的用户名和域名、所在工作目录指示（蓝色领带）、posh-git模块提供的Git状态指示器（黄色领带）</p>
-</blockquote>
+<p>最近刚刚开始学习docker，抽了两天的空余时间了解了一下docker，今天正式在我的电脑上安装并使用docker，因为众所周知的原因，Docker在国内的使用比较艰难，虽然很多组织在国内提供了<code>mirror</code>，可以拉取各种官方镜像,但是大量的组织或个人的镜像都在docker hub，这一部分并没有被镜像同步。所以就需要给docker设置代理，帮助我们更好的使用docker。</p>
 <a id="more"></a>
-<h3 id="安装oh-my-posh和posh-git">安装oh-my-posh（和posh-git）</h3>
-<p>首先需要以管理员权限启动 PowerShell，以便执行安装操作。(windows10快捷键为<code>Windows+X</code>,然后按A，选择管理员运行power shell)</p>
-<p>首先安装Chocolatey</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Set-ExecutionPolicy</span> Bypass <span class="literal">-Scope</span> <span class="keyword">Process</span> <span class="literal">-Force</span>; iex ((<span class="built_in">New-Object</span> System.Net.WebClient).DownloadString(<span class="string">'https://chocolatey.org/install.ps1'</span>))</span><br></pre></td></tr></table></figure>
-<p>用 Chocolatey安装 ConEmu</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">choco install ConEmu</span><br></pre></td></tr></table></figure>
-<p>然后，运行命令以安装 posh-git，这是 oh-my-posh 的依赖</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> posh<span class="literal">-git</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
-<p>接下来，运行命令以安装 oh-my-posh 本身</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Install-Module</span> oh<span class="literal">-my</span><span class="literal">-posh</span> <span class="literal">-Scope</span> CurrentUser</span><br></pre></td></tr></table></figure>
-<h3 id="基本设置">基本设置</h3>
-<p>安装完成后，输入</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Import-Module</span> posh<span class="literal">-git</span></span><br><span class="line"><span class="built_in">Import-Module</span> oh<span class="literal">-my</span><span class="literal">-posh</span></span><br><span class="line"><span class="built_in">Set-Theme</span> PowerLine</span><br></pre></td></tr></table></figure>
-<p><strong>如果你的电脑里没有安装Git，在输入<code>Import-Module posh-git</code>会报错，解决方法是<a href="https://git-scm.com/" target="_blank" rel="noopener">安装Git</a>或者把这一行去掉，相应的下面的配置文件也要删除这一句</strong></p>
-<p>但是这次使用<code>Import-Module</code>的指令，再次启动PowerShell就会发现没有效果，这是因为这些指令仅限于本次会话的PowerShell有效，因此，若要使这一效果在每次启动的时候都有效，那就要将其添加到启动脚本中。</p>
-<p>使用记事本打开PS配置文件（如无则创建该文件）</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> (!(<span class="built_in">Test-Path</span> <span class="literal">-Path</span> <span class="variable">$PROFILE</span> )) &#123; <span class="built_in">New-Item</span> <span class="literal">-Type</span> File <span class="literal">-Path</span> <span class="variable">$PROFILE</span> <span class="literal">-Force</span> &#125;</span><br><span class="line">notepad <span class="variable">$PROFILE</span></span><br></pre></td></tr></table></figure>
-<p>随后，在打开的记事本窗口里，在文末加入下面内容，以让Powershell在启动之时应用主题，然后保存。（仅对当前用户生效）</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Import-Module posh-git</span><br><span class="line">Import-Module oh-my-posh</span><br><span class="line">Set-Theme Paradox</span><br></pre></td></tr></table></figure>
-<p>关闭脚本禁用：允许Powershell运行脚本</p>
-<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">set-executionpolicy</span> remotesigned</span><br></pre></td></tr></table></figure>
-<p>再度打开Powershell之时，你就会发现power shell变成了下面这副样子</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-23_21-21-05.png" /></p>
-<p>还是很丑，所以我们使用Windows terminal进行配置</p>
-<h3 id="windows-terminal配置">Windows terminal配置</h3>
-<p>打开Windows terminal，然后在下箭头处展开列表，选中设置打开JSON配置文件（也可使用默认的“Ctrl+,”组合键）后定位到profiles区域，可单独对不同终端进行配置。</p>
-<p>其中各个参数的注释如下，可以选择自行修改</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">"profiles" :</span><br><span class="line">    [</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="attr">"acrylicOpacity"</span> : <span class="number">0.70</span>, <span class="comment">//亚克力背景透明度（需启用useAcrylic）</span></span><br><span class="line">            <span class="attr">"background"</span> : <span class="string">"#012456"</span>, <span class="comment">//背景颜色，PS默认为蓝色</span></span><br><span class="line">            <span class="attr">"closeOnExit"</span> : <span class="literal">true</span>, <span class="comment">//关闭窗口的时候退出所有挂载的程序</span></span><br><span class="line">            <span class="attr">"colorScheme"</span> : <span class="string">"Dracula"</span>, <span class="comment">//配色方案（Dracula需导入）</span></span><br><span class="line">            <span class="attr">"commandline"</span> : <span class="string">"powershell.exe"</span>, <span class="comment">//此处终端打开PS</span></span><br><span class="line">            <span class="attr">"cursorColor"</span> : <span class="string">"#FFFFFF"</span>, <span class="comment">//光标颜色</span></span><br><span class="line">            <span class="attr">"cursorShape"</span> : <span class="string">"bar"</span>, <span class="comment">//光标形状（默认为bar，即条状）</span></span><br><span class="line">            <span class="attr">"fontFace"</span> : <span class="string">"Consolas"</span>, <span class="comment">//所用字体</span></span><br><span class="line">            <span class="attr">"fontSize"</span> : <span class="number">14</span>, <span class="comment">//字体大小</span></span><br><span class="line">            <span class="attr">"guid"</span> : <span class="string">"&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;"</span>, <span class="comment">//唯一标识符，随机生成</span></span><br><span class="line">            <span class="attr">"historySize"</span> : <span class="number">9001</span>, <span class="comment">//缓存大小</span></span><br><span class="line">            <span class="attr">"icon"</span> : <span class="string">"ms-appx:///ProfileIcons/&#123;61c54bbd-c2c6-5271-96e7-009a87ff44bf&#125;.png"</span>, <span class="comment">//图标</span></span><br><span class="line">            <span class="attr">"name"</span> : <span class="string">"Windows PowerShell"</span>, <span class="comment">//在下拉菜单里显示的名称</span></span><br><span class="line">            <span class="attr">"tabTitle"</span> : <span class="string">"Windows PowerShell"</span>, <span class="comment">//在选项卡上显示的名称</span></span><br><span class="line">            <span class="attr">"padding"</span> : <span class="string">"0, 0, 0, 0"</span>, <span class="comment">//内容的边框距，默认填充全部空间</span></span><br><span class="line">            <span class="attr">"snapOnInput"</span> : <span class="literal">true</span>, <span class="comment">//输入的时候自动滚动到输入位置</span></span><br><span class="line">            <span class="attr">"startingDirectory"</span> : <span class="string">"%USERPROFILE%"</span>, <span class="comment">//初始工作目录，默认为用户目录</span></span><br><span class="line">            <span class="attr">"useAcrylic"</span> : <span class="literal">true</span> <span class="comment">//使用亚克力效果</span></span><br><span class="line">        &#125;</span><br><span class="line">    ]</span><br></pre></td></tr></table></figure>
-<p>这里贴一下我自己用的修改项，各个参数的效果我都用比较易懂的语言写在后面了</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"foreground" : "#ffffff",         //字体颜色</span><br><span class="line"><span class="comment">//"cursorColor" : "#fbff00",        //光标颜色</span></span><br><span class="line">"cursorShape" : "bar",              //光标类型</span><br><span class="line">"startingDirectory" : "%USERPROFILE%", //初始工作目录，默认为用户目录</span><br><span class="line"></span><br><span class="line"><span class="comment">//设置背景</span></span><br><span class="line">"acrylicOpacity": 0.6,  //背景毛玻璃不透明度</span><br><span class="line">"useAcrylic": true,     //背景使用毛玻璃效果</span><br><span class="line">"background": "#0c0c0c"    //背景颜色</span><br></pre></td></tr></table></figure>
-<h3 id="下载个性化字体支持特殊符号">下载个性化字体，支持特殊符号</h3>
-<p>因为这个主题有一些特殊符号，比如闪电，叉号等，默认字体不支持，就会放几个框框在哪里，比较难看，所以下载一个支持特殊符号的字体并应用，字体链接如下：<a href="https://github.com/adam7/delugia-code/releases/download/v1910.04.1/Delugia.Nerd.Font.Complete.ttf" target="_blank" rel="noopener" class="uri">https://github.com/adam7/delugia-code/releases/download/v1910.04.1/Delugia.Nerd.Font.Complete.ttf</a></p>
-<p>下载完以后点击安装即可，然后在power shell的json设置项，将字体改为 &quot;Delugia Nerd Font&quot;，即</p>
-<figure class="highlight"><table><tr><td class="code"><pre><span class="line">"fontFace": "Delugia Nerd Font",</span><br></pre></td></tr></table></figure>
-<h2 id="增加一个新的终端以bash为例">增加一个新的终端（以bash为例）</h2>
-<p>打开Windows terminal的配置文件（Win+,)</p>
-<h3 id="新增一个-profile">新增一个 profile</h3>
-<p>我们把原来的一个 profile 复制一份出来，这样我们就能够写一份自己的终端配置了。然后在下面粘贴一下，并进行一些修改，就比如我这样。</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-23_21-52-52.png" /></p>
-<h3 id="修改参数">修改参数</h3>
-<p>其中你粘贴下去的文件有一些项必须要修改</p>
+<h2 id="docker简介">Docker简介</h2>
+<p>Docker容器与虚拟机类似，但原理上，容器是将操作系统层虚拟化，虚拟机则是虚拟化硬件，因此容器更具有便携性、高效地利用服务器。 容器更多的用于表示 软件的一个标准化单元。由于容器的标准化，因此它可以无视基础设施（Infrastructure）的差异，部署到任何一个地方。另外，Docker也为容器提供更强的业界的隔离兼容。</p>
+<h2 id="前提条件">前提条件</h2>
 <ul>
-<li><code>guid</code> 必须使用新的跟其他终端不重复的 guid，可以使用下面的guid的工具来生成：<a href="https://www.uuidgenerator.net/guid" target="_blank" rel="noopener">在线guid生成工具</a></li>
-<li><code>commandline</code> 你需要改成你的新的终端的路径，如果你是通过安装 Git for Windows 而安装的 Git Bash，那么默认路径就是 <code>C:\Program Files\Git\bin\bash.exe</code>，否则请修改为你自己定义的路径</li>
-<li><code>name</code> 改为终端的名称，这个大家可以自定义</li>
+<li>拥有一个HTTP代理</li>
+<li>Linux发行版的服务管理器使用的是systemd</li>
+<li>我的系统是Ubuntu18.04，docker版本是19.03，能够正常设置</li>
 </ul>
-<p>下面这些参数根据自己需要来修改</p>
+<h2 id="httphttps-proxy">HTTP/HTTPS proxy</h2>
+<p>好了从这里开始就开始配置代理了。</p>
+<h3 id="为docker服务创建docker.service.d-目录">为docker服务创建docker.service.d 目录：</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mkdir -p /etc/systemd/system/docker.service.d</span><br></pre></td></tr></table></figure>
+<h3 id="创建http-或者https-代理文件并修改">创建HTTP 或者HTTPS 代理文件并修改:</h3>
 <ul>
-<li><code>useAcrylic</code> 使用毛玻璃效果</li>
-<li><code>acrylicOpacity</code> 毛玻璃效果透明度</li>
-<li><code>fontFace</code> 字体名称</li>
-<li><code>fontSize</code> 字号大小</li>
-<li><code>icon</code> 图标，路径修改为你自己图标的路径</li>
-<li><code>startingDirectory</code> 初始路径</li>
+<li>HTTP:</li>
 </ul>
-<p>这里提供一个git-bash的图标，有需要的可以自取</p>
-<p><img data-src="http://figure.cruisetian.top/img/git-bash.jpg" /></p>
-<p>最后保存这个配置文件，再点击Windows terminal的向下箭头，就可以看到你自己自定义的配置了。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/docker.service.d/http-proxy.conf</span><br></pre></td></tr></table></figure>
+<p>然后按 'i'切换到输入模式，将以下配置填入，其中代理IP和端口根据你自己的情况来定。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTP_PROXY=http://proxy.example.com:80/"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>HTTPS:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/systemd/system/docker.service.d/https-proxy.conf</span><br></pre></td></tr></table></figure>
+<p>同样的，按 'i'切换到输入模式，将以下配置填入，其中代理IP和端口根据你自己的情况来定。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTPS_PROXY=https://proxy.example.com:443/"</span></span><br></pre></td></tr></table></figure>
+<h3 id="局域网或者国内的registry不使用代理">局域网或者国内的registry不使用代理</h3>
+<p>如果有局域网或者国内的registry，我们还需要使用 NO_PROXY 变量声明一下，比如你可以能国内的daocloud.io放有镜像:</p>
+<ul>
+<li>HTTP:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTP_PROXY=http://proxy.example.com:80/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1,daocloud.io"</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>HTTPS:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[Service]</span><br><span class="line">Environment=<span class="string">"HTTPS_PROXY=https://proxy.example.com:443/"</span> <span class="string">"NO_PROXY=localhost,127.0.0.1,daocloud.io"</span></span><br></pre></td></tr></table></figure>
+<h3 id="完成修改后刷新systemd配置">完成修改后刷新systemd配置</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br></pre></td></tr></table></figure>
+<h3 id="重启docker">重启Docker</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+<h3 id="验证配置是否已加载">验证配置是否已加载</h3>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">systemctl show --property=Environment docker</span><br></pre></td></tr></table></figure>
+<p>输出应类似于以下语句：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Environment=HTTP_PROXY=http://proxy.example.com:80/</span><br><span class="line">or</span><br><span class="line">Environment=HTTPS_PROXY=https://proxy.example.com:443/</span><br></pre></td></tr></table></figure>
+<p>好了，现在就可以愉快的使用Docker了。</p>
+<h2 id="参考文档">参考文档：</h2>
+<p><a href="https://docs.docker.com/config/daemon/systemd/" target="_blank" rel="noopener" class="uri">https://docs.docker.com/config/daemon/systemd/</a></p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>代理</tag>
+        <tag>Docker</tag>
+        <tag>proxy</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>proxifier-让你实现真正的全局代理</title>
+    <url>/post/64808312.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>目前很多人都使用上了Shadowsocks，V2ray，Trojan这类的socks5代理来实现科学上网，虽然这些代理通常有所谓的<em>全局代理</em>模式，但是我们在日常使用中就会发现，我们并不能利用这些代理来打游戏，从GitHub上clone项目依然慢的离谱，这是因为由于socks5代理模式原理的限制，使得这些socks5代理的<em>全局模式</em>并不能真正意义上实现全局代理，只能使网页浏览器，邮件服务器，文件传输这些服务实现代理。下面通过OSI模型来解释原理。</p>
+<a id="more"></a>
+<p><img data-src="http://figure.cruisetian.top/img/7541336-b87f3c6f5235b56d.png" /></p>
+<p>因为上面提到的这些服务在网络层级中处于最上层应用层，上面提到的这些socks5类型的代理则处于第五层会话层，所以可以代理上边层级的数据，而游戏数据是直接通过传输层的协议TCP和UDP进行通讯的，所以不经过会话层也不需要表示层来解释，所以正常情况下你就算开了这些socks5代理的<em>全局模式</em>，也不能加速游戏因为代理不了跑在传输层的游戏通讯数据，而借助proxifier这类工具则可以实现真正意义上的全局代理。</p>
+<h2 id="proxifier介绍">Proxifier介绍</h2>
+<p>Proxifier是一款功能非常强大的代理客户端，支持Windows XP/Vista/Win7/Win10 和 MacOS，支持http/https、socks4/5、TCP、UDP等协议，可以指定端口，指定IP，指定域名、指定程序、指定用户名密码授权等运行模式，兼容性非常好，有点类似SOCKSCAP。</p>
+<h2 id="安装">安装</h2>
+<h3 id="proxifier下载">Proxifier下载</h3>
+<p>官网发布多个版本，需要付费使用，同时也提供了 31 天的免费试用，其中<a href="https://www.baidu.com/s?wd=便携版&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">便携版</a>不需要安装，直接双击运行，安装版则直接安装即可。<br>   Windows便携版：<a href="https://www.proxifier.com/distr/ProxifierPE.zip" target="_blank" rel="noopener">官网地址</a><br>   Windows安装版：<a href="https://www.proxifier.com/distr/ProxifierSetup.exe" target="_blank" rel="noopener">官网地址</a><br>   Mac版：<a href="https://www.proxifier.com/distr/ProxifierMac.zip" target="_blank" rel="noopener">官网地址</a></p>
+<p>但由于Proxifier 官网下载地址国内无法访问，且是商业收费版，推荐下面的链接中下载汉化破解版 <a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener">Proxifier汉化注册版</a></p>
+<h3 id="proxifier安装">Proxifier安装</h3>
+<p>将下载下来的安装包解压以后，双击<strong>setup.exe</strong>，根据提示一步步安装，这里不再赘述。</p>
+<h2 id="proxifier设置">Proxifier设置</h2>
+<h3 id="代理服务器配置">代理服务器配置</h3>
+<p>打开proxifier以后，点击菜单栏的<strong>配置文件-&gt;代理服务器</strong>,点击<strong>添加</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_13-59-07.png" /></p>
+<p>然后填入你的代理服务器地址和端口，如果本地有ss,v2ray,trojan服务的话可以在你对应的客户端的设置中找到本地监听地址和监听端口，填入即可，协议我选择socks5协议</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-00-56.png" /></p>
+<p>点击检查，查看是否可用，如果如下显示“代理可在proxifier中使用”则说明设置正确</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-05-51.png" /></p>
+<p>然后点击<strong>确定</strong>，返回到设置界面，点击<strong>确定</strong>即可，接着会弹出一个窗口，提示你是否要把这个代理服务器作为默认代理，点击<strong>是</strong></p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-07-35.png" /></p>
+<p>没什么问题的话，Proxifier 就可以正常使用了，它会将本机所有的联网全部通过配置的代理服务器发送和接收，此外你还会在程序主界面看到不少的日志信息</p>
+<h3 id="代理规则设置">代理规则设置</h3>
+<p>Proxifier 还可以自定义规则，进行个性化配置，点击菜单栏的<strong>配置文件-&gt;代理规则</strong>,点击添加即可增加新的规则<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-16-41.png" /></p>
+<p>名称随意，应用程序那一栏选择<strong>浏览</strong>即可选择你想要自定义设置的应用，在最后的动作那一栏选择直连或是走代理，根据个人情况进行选择，最后点击确定即可生效</p>
+<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-18-00.png" /></p>
+<h2 id="后记">后记</h2>
+<p>proxifier更多的个性化配置就根据自己的情况进行配置就好，这里就不再演示，比较每个人的需求不同。</p>
+<p>文中示范所用的汉化破解版下载地址：<a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icpyx6f</a></p>
 ]]></content>
       <categories>
         <category>软件分享</category>
       </categories>
       <tags>
-        <tag>windows terminal</tag>
-        <tag>设置</tag>
-        <tag>终端</tag>
+        <tag>代理</tag>
+        <tag>proxifier</tag>
+        <tag>全局代理</tag>
+        <tag>游戏加速</tag>
       </tags>
   </entry>
   <entry>
@@ -563,6 +810,72 @@
       </tags>
   </entry>
   <entry>
+    <title>为npm设置代理</title>
+    <url>/post/603b46.html</url>
+    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
+<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
+<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
+<p>下面简要介绍下npm的配置以及如何设置代理。</p>
+<a id="more"></a>
+<h2 id="为npm设置代理">为npm设置代理</h2>
+<h3 id="设置http代理">设置http代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>如果代理需要认证的话可以这样来设置。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<h3 id="查看代理">查看代理</h3>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
+<h3 id="socks5-代理">socks5 代理</h3>
+<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
+<p>相当于又加了一个中间层，将 http 转成 socks。</p>
+<h2 id="取消代理">取消代理</h2>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
+<h2 id="后记">后记</h2>
+<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
+]]></content>
+      <categories>
+        <category>系统设置</category>
+      </categories>
+      <tags>
+        <tag>代理</tag>
+        <tag>proxy</tag>
+        <tag>npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>给你的hexo博客绑定域名</title>
+    <url>/post/26a7e178.html</url>
+    <content><![CDATA[<h2 id="前言">前言</h2>
+<p>最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更<del>有个人特色</del>有逼格。</p>
+<h2 id="搭建hexo博客并推送到github页面">搭建Hexo博客并推送到github页面</h2>
+<p>这一步就不再多讲，大家可以自己去网上找相关教程，有很多。</p>
+<p>这里给几个推荐链接：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>, <a href="https://zhuanlan.zhihu.com/p/60578464" target="_blank" rel="noopener">使用 Hexo+GitHub 搭建个人免费博客教程（小白向）</a></p>
+<p>差不多够用了。</p>
+<a id="more"></a>
+<h2 id="注册域名">注册域名</h2>
+<p>可以去阿里云，腾讯云，狗爹，namesilo去购买一个域名，也可以到 <a href="%5Bhttps://www.freenom.com%5D(https://www.freenom.com/zh/index.html?lang=zh)">Freenom</a> 去申请一个免费的域名。</p>
+<h2 id="解析域名">解析域名</h2>
+<p>到你注册域名的地方，增加给你的域名做DNS解析，增加一条CNAME解析，指向你的博客，这里我以cloudflare为例：</p>
+<p><img data-src="http://figure.cruisetian.top/img/6.png" /></p>
+<h2 id="创建cname文件">创建CNAME文件</h2>
+<p>在hexo项目下 source 文件下创建CNAME 文件（没有后缀名的），在里面写上购买的域名，如</p>
+<p><img data-src="http://figure.cruisetian.top/img/3.png" /></p>
+<h2 id="到github中填入自己的域名">到GitHub中填入自己的域名</h2>
+<p>到你创建的页面repo中，找到setting→options，往下翻，找到Custom domain，然后在其中填入你解析的域名，点击Save保存。如，</p>
+<p><img data-src="http://figure.cruisetian.top/img/4.png" /></p>
+<p><img data-src="http://figure.cruisetian.top/img/5.png" /></p>
+<p>然后在浏览器的地址栏输入自己的域名，就可以访问啦。</p>
+]]></content>
+      <categories>
+        <category>日常学习</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>博客</tag>
+        <tag>域名绑定</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>亿寻-百度云极速下载神器</title>
     <url>/post/2982de5b.html</url>
     <content><![CDATA[<h2 id="前言">前言</h2>
@@ -602,149 +915,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Centos7安装OpenJDK14</title>
-    <url>/post/584b409a.html</url>
-    <content><![CDATA[<h2 id="检查并卸载原本有的java版本">检查并卸载原本有的java版本</h2>
-<h3 id="查看centos7自带的jdk是否已安装">查看Centos7自带的JDK是否已安装</h3>
-<p>在命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java -version</span><br></pre></td></tr></table></figure>
-<p>如果出现以下结果，则说明已安装，需要先卸载，否则的话直接跳过这一步。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">openjdk version <span class="string">"1.8.0 102"</span></span><br><span class="line">OpenJDK Runtime Environment (build 1.8.0_102-b14)</span><br><span class="line">OpenJDK 64-Bit Server VM(build 25.102-bi4, mixed mode)</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
-<h3 id="查看已安装文件">查看已安装文件</h3>
-<p>首先查看文件，在命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
-<p>会出现如下信息：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">java-1.7.0-openjdk-1.7.0.I11-2.6.7.8.el7.x86_64</span><br><span class="line">python-javapackages-3.4.1-11.el7.noarch</span><br><span class="line">tzdata-java-2016g-2.el7.noarch</span><br><span class="line">javapackages-tools-3.4.1-11.el7.noarch</span><br><span class="line">java-1.8.0-openjdk-1.8.0.102-4.b14.el7.x86_64</span><br><span class="line">java-1.8.0-openjdk-headless-1.8.0.102-4.b14.el7.x86_64</span><br><span class="line">java-1.7.0-openjdk-headless-1.7.0.111-2.6.7.8.el7.x86_64</span><br></pre></td></tr></table></figure>
-<h3 id="删除相关的文件">删除相关的文件</h3>
-<p>在命令行输入（把上面出现的全部删除，把命令中的 * 替换成文件名）：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yum -y remove java-*.*.*</span><br></pre></td></tr></table></figure>
-<h3 id="判断是否全部删除">判断是否全部删除</h3>
-<p>在命令行输入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">rpm -qa | grep java</span><br></pre></td></tr></table></figure>
-<p>无文件，表示删除成功！</p>
-<h2 id="安装openjdk-14">安装OpenJDK 14</h2>
-<h3 id="下载解压">下载解压</h3>
-<p>安装相关软件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo yum -y install curl</span><br></pre></td></tr></table></figure>
-<p>下载二进制包:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl -O https://download.java.net/java/GA/jdk14/076bab302c7b4508975440c56f6cc26a/36/GPL/openjdk-14_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
-<p>使用tar命令解压缩下载的OpenJDK 14归档文件。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar xvf openjdk-14_linux-x64_bin.tar.gz</span><br></pre></td></tr></table></figure>
-<p>将结果文件夹移动到<em>/ opt</em>目录。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo mv jdk-14 /opt/</span><br></pre></td></tr></table></figure>
-<h3 id="环境配置">环境配置</h3>
-<p>配置Java环境：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo tee /etc/profile.d/jdk14.sh &lt;&lt;EOF</span><br><span class="line"><span class="built_in">export</span> JAVA_HOME=/opt/jdk-14</span><br><span class="line"><span class="built_in">export</span> PATH=\<span class="variable">$PATH</span>:\<span class="variable">$JAVA_HOME</span>/bin</span><br><span class="line">EOF</span><br></pre></td></tr></table></figure>
-<p>获取您的配置文件并检查 <code>java</code> 命令</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">source</span> /etc/profile.d/jdk14.sh</span><br></pre></td></tr></table></figure>
-<p>确认Java版本：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ <span class="built_in">echo</span> <span class="variable">$JAVA_HOME</span></span><br><span class="line">/opt/jdk-14</span><br><span class="line"></span><br><span class="line">$ java -version</span><br><span class="line">openjdk version <span class="string">"14"</span> 2020-03-17</span><br><span class="line">OpenJDK Runtime Environment (build 14+36-1461)</span><br><span class="line">OpenJDK 64-Bit Server VM (build 14+36-1461, mixed mode, sharing)</span><br></pre></td></tr></table></figure>
-<h2 id="测试java安装">测试Java安装</h2>
-<p>顺便来编写第一个Java程序。</p>
-<p>打开文本编辑器，输入以下代码：</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"Hello, world!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>把代码保存为文件，文件名必须是<code>Hello.java</code>，而且文件名也要注意大小写，因为要和定义的类名<code>Hello</code>完全保持一致。</p>
-<p>编译Java代码:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ javac Hello.java</span><br></pre></td></tr></table></figure>
-<p>如果源代码无误，上述命令不会有任何输出，而当前目录下会产生一个<code>Hello.class</code>文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ ls</span><br><span class="line">Hello.class	Hello.java</span><br></pre></td></tr></table></figure>
-<p>执行<code>Hello.class</code>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ java Hello</span><br><span class="line">Hello, World!</span><br></pre></td></tr></table></figure>
-<p>测试成功，环境配置完成。</p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>centos7</tag>
-        <tag>java</tag>
-        <tag>openJDK</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>proxifier-让你实现真正的全局代理</title>
-    <url>/post/64808312.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>目前很多人都使用上了Shadowsocks，V2ray，Trojan这类的socks5代理来实现科学上网，虽然这些代理通常有所谓的<em>全局代理</em>模式，但是我们在日常使用中就会发现，我们并不能利用这些代理来打游戏，从GitHub上clone项目依然慢的离谱，这是因为由于socks5代理模式原理的限制，使得这些socks5代理的<em>全局模式</em>并不能真正意义上实现全局代理，只能使网页浏览器，邮件服务器，文件传输这些服务实现代理。下面通过OSI模型来解释原理。</p>
-<a id="more"></a>
-<p><img data-src="http://figure.cruisetian.top/img/7541336-b87f3c6f5235b56d.png" /></p>
-<p>因为上面提到的这些服务在网络层级中处于最上层应用层，上面提到的这些socks5类型的代理则处于第五层会话层，所以可以代理上边层级的数据，而游戏数据是直接通过传输层的协议TCP和UDP进行通讯的，所以不经过会话层也不需要表示层来解释，所以正常情况下你就算开了这些socks5代理的<em>全局模式</em>，也不能加速游戏因为代理不了跑在传输层的游戏通讯数据，而借助proxifier这类工具则可以实现真正意义上的全局代理。</p>
-<h2 id="proxifier介绍">Proxifier介绍</h2>
-<p>Proxifier是一款功能非常强大的代理客户端，支持Windows XP/Vista/Win7/Win10 和 MacOS，支持http/https、socks4/5、TCP、UDP等协议，可以指定端口，指定IP，指定域名、指定程序、指定用户名密码授权等运行模式，兼容性非常好，有点类似SOCKSCAP。</p>
-<h2 id="安装">安装</h2>
-<h3 id="proxifier下载">Proxifier下载</h3>
-<p>官网发布多个版本，需要付费使用，同时也提供了 31 天的免费试用，其中<a href="https://www.baidu.com/s?wd=便携版&amp;tn=24004469_oem_dg&amp;rsv_dl=gh_pl_sl_csd" target="_blank" rel="noopener">便携版</a>不需要安装，直接双击运行，安装版则直接安装即可。<br>   Windows便携版：<a href="https://www.proxifier.com/distr/ProxifierPE.zip" target="_blank" rel="noopener">官网地址</a><br>   Windows安装版：<a href="https://www.proxifier.com/distr/ProxifierSetup.exe" target="_blank" rel="noopener">官网地址</a><br>   Mac版：<a href="https://www.proxifier.com/distr/ProxifierMac.zip" target="_blank" rel="noopener">官网地址</a></p>
-<p>但由于Proxifier 官网下载地址国内无法访问，且是商业收费版，推荐下面的链接中下载汉化破解版 <a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener">Proxifier汉化注册版</a></p>
-<h3 id="proxifier安装">Proxifier安装</h3>
-<p>将下载下来的安装包解压以后，双击<strong>setup.exe</strong>，根据提示一步步安装，这里不再赘述。</p>
-<h2 id="proxifier设置">Proxifier设置</h2>
-<h3 id="代理服务器配置">代理服务器配置</h3>
-<p>打开proxifier以后，点击菜单栏的<strong>配置文件-&gt;代理服务器</strong>,点击<strong>添加</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_13-59-07.png" /></p>
-<p>然后填入你的代理服务器地址和端口，如果本地有ss,v2ray,trojan服务的话可以在你对应的客户端的设置中找到本地监听地址和监听端口，填入即可，协议我选择socks5协议</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-00-56.png" /></p>
-<p>点击检查，查看是否可用，如果如下显示“代理可在proxifier中使用”则说明设置正确</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-05-51.png" /></p>
-<p>然后点击<strong>确定</strong>，返回到设置界面，点击<strong>确定</strong>即可，接着会弹出一个窗口，提示你是否要把这个代理服务器作为默认代理，点击<strong>是</strong></p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-07-35.png" /></p>
-<p>没什么问题的话，Proxifier 就可以正常使用了，它会将本机所有的联网全部通过配置的代理服务器发送和接收，此外你还会在程序主界面看到不少的日志信息</p>
-<h3 id="代理规则设置">代理规则设置</h3>
-<p>Proxifier 还可以自定义规则，进行个性化配置，点击菜单栏的<strong>配置文件-&gt;代理规则</strong>,点击添加即可增加新的规则<img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-16-41.png" /></p>
-<p>名称随意，应用程序那一栏选择<strong>浏览</strong>即可选择你想要自定义设置的应用，在最后的动作那一栏选择直连或是走代理，根据个人情况进行选择，最后点击确定即可生效</p>
-<p><img data-src="http://figure.cruisetian.top/img/Snipaste_2020-05-17_14-18-00.png" /></p>
-<h2 id="后记">后记</h2>
-<p>proxifier更多的个性化配置就根据自己的情况进行配置就好，这里就不再演示，比较每个人的需求不同。</p>
-<p>文中示范所用的汉化破解版下载地址：<a href="https://cruisetian.lanzous.com/icpyx6f" target="_blank" rel="noopener" class="uri">https://cruisetian.lanzous.com/icpyx6f</a></p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>代理</tag>
-        <tag>proxifier</tag>
-        <tag>全局代理</tag>
-        <tag>游戏加速</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Windows terminal安装使用及美化(3)</title>
-    <url>/post/f2e80ec0.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>之前两个part写了一些关于Windows terminal的基础和进阶配置，配置好以后用了两天感觉不错，所以就准备把它作为Windows下主要使用的命令行工具，所以决定把它加到右键菜单里去，在这里记录一下过程，也算是有关Windows terminal的高阶分享吧。</p>
-<a id="more"></a>
-<h2 id="添加过程">添加过程</h2>
-<h3 id="测试变量">测试变量</h3>
-<p>下面的两个变量后面的操作需要使用到。所以，先测试下是否正常。用 <code>cmd</code> 分别输入这 2 句命令(使用<code>gitbash</code>无效的)</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">echo</span> %USERPROFILE%</span><br><span class="line"><span class="built_in">echo</span> %LOCALAPPDATA%</span><br></pre></td></tr></table></figure>
-<p>如果有报错，接下来的操作，请把对应的部分进行替换。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">%USERPROFILE% =&gt; C:\Users\&#123;username&#125;</span><br><span class="line">%LOCALAPPDATA% =&gt; C:\Users\&#123;userName&#125;\AppData\Local</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong> <code>{userName}</code>为自己的用户名</p>
-<h3 id="获取图标">获取图标</h3>
-<p>创建 Terminal 文件夹，用来存放图标。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">mkdir <span class="string">"%USERPROFILE%\AppData\Local\Terminal"</span></span><br></pre></td></tr></table></figure>
-<p>从微软的Github上下载Windows Terminal的图标，地址如下:<a href="https://github.com/microsoft/terminal/blob/master/res/terminal.ico" target="_blank" rel="noopener" class="uri">https://github.com/microsoft/terminal/blob/master/res/terminal.ico</a> 然后将图标保存到<code>%USERPROFILE%\AppData\Local\Terminal</code>目录中。</p>
-<h3 id="添加注册表文件">添加注册表文件</h3>
-<p>新建一个文件，文件名随意 比如<code>wt.reg</code>。记得保存为<code>.reg</code>文件(名称随意，后缀名不可以错)，并添加以下内容然后保存。</p>
-<figure class="highlight csharp"><table><tr><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5.00</span></span><br><span class="line"></span><br><span class="line">[<span class="meta">HKEY_CLASSES_ROOT\Directory\Background\shell\wt</span>]</span><br><span class="line">@=<span class="string">"Windows Terminal Here"</span></span><br><span class="line"><span class="string">"Icon"</span>=<span class="string">"%USERPROFILE%\\AppData\\Local\\Terminal\\terminal.ico"</span></span><br><span class="line"></span><br><span class="line">[<span class="meta">HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command</span>]</span><br><span class="line">@=<span class="string">"C:\\Users\\&#123;username&#125;\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe"</span></span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong> 上面的<code>{userName}</code>为自己的用户名</p>
-<p>然后双击执行这个<code>.reg</code>文件就可以了。这时候就会发现右键菜单里面有了Windows Terminal Here选项。</p>
-<h3 id="真正的windows-terminal-here">真正的Windows terminal &quot;Here&quot;</h3>
-<p>执行完上面的操作你会发现虽然右键可以打开Windows terminal，但是在任何文件夹打开的 Windows terminal 都不是当前的目录，这还怎么叫做<code>here</code>呢。继续配置</p>
-<p>打开Windows terminal的配置文件（在Windows terminal向下箭头的设置中），找到 <code>startingDirectory</code>改为：<code>./</code> 即：<code>&quot;startingDirectory&quot;: &quot;./&quot;</code>，就可以做到在当前目录打开啦。</p>
-<h2 id="后记">后记</h2>
-<p>到这里，Windows terminal的配置就基本结束啦，如果想要更多其它的效果，大家可以自己折腾，有什么不理解的或者更好的想法也可以在评论区里说出来，大家一起交流。</p>
-]]></content>
-      <categories>
-        <category>软件分享</category>
-      </categories>
-      <tags>
-        <tag>windows terminal</tag>
-        <tag>设置</tag>
-        <tag>终端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>为git配置代理</title>
     <url>/post/30b83ef0.html</url>
     <content><![CDATA[<h2 id="写在前面">写在前面</h2>
@@ -773,143 +943,6 @@
         <tag>proxy</tag>
         <tag>git</tag>
         <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>为npm设置代理</title>
-    <url>/post/603b46.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p><strong>npm</strong>（全称 Node Package Manager，即“node包管理器”）是<a href="https://zh.wikipedia.org/wiki/Node.js" target="_blank" rel="noopener">Node.js</a>默认的、用<a href="https://zh.wikipedia.org/wiki/JavaScript" target="_blank" rel="noopener">JavaScript</a>编写的<a href="https://zh.wikipedia.org/wiki/軟體套件管理系統" target="_blank" rel="noopener">软件包管理系统</a>。</p>
-<p>由于我们的开发环境由于安全因素在访问一些网站时需要使用代理，其中就包括npm的repositories网站，所以就需要修改npm的配置来加入代理。</p>
-<p>下面简要介绍下npm的配置以及如何设置代理。</p>
-<a id="more"></a>
-<h2 id="为npm设置代理">为npm设置代理</h2>
-<h3 id="设置http代理">设置http代理</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地代理端口为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<p>如果代理需要认证的话可以这样来设置。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 有用户密码的代理</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br><span class="line">npm confit set https-proxy &quot;http:&#x2F;&#x2F;username:password@localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<h3 id="查看代理">查看代理</h3>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config get #或者使用下面这个，二者选一个</span><br><span class="line">npm config list</span><br></pre></td></tr></table></figure>
-<h3 id="socks5-代理">socks5 代理</h3>
-<p>npm 不支持 socks 代理，但是我们可以用一个工具将 http 代理转成 socks 代理，然后将 npm 代理地址设置到这个工具的地址。</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># 假设本地socks5代理端口为8081</span><br><span class="line"># 首先安装转换工具</span><br><span class="line">npm install -g http-proxy-to-socks</span><br><span class="line"># 然后使用这个工具监听8080端口,支持http代理，然后所有8080的http代理数据都将转换成socks的代理数据发送到8081上</span><br><span class="line">hpts -s localhost:8081 -p 8080</span><br><span class="line"># 最后设置npm代理为8080</span><br><span class="line">npm config set proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br><span class="line">npm config set https-proxy &quot;http:&#x2F;&#x2F;localhost:8080&quot;</span><br></pre></td></tr></table></figure>
-<p>相当于又加了一个中间层，将 http 转成 socks。</p>
-<h2 id="取消代理">取消代理</h2>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
-<h2 id="后记">后记</h2>
-<p>一般设置完代理的npm下载软件包就很快啦，但是还是跟代理的速度有关系，所以要选择质量较好的代理。</p>
-]]></content>
-      <categories>
-        <category>系统设置</category>
-      </categories>
-      <tags>
-        <tag>proxy</tag>
-        <tag>代理</tag>
-        <tag>npm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>给你的hexo博客绑定域名</title>
-    <url>/post/26a7e178.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>最近比较闲，利用hexo在GitHub上搭建了一个静态博客，那么既然是个人博客，当然要上自己的域名了，这样才能更<del>有个人特色</del>有逼格。</p>
-<h2 id="搭建hexo博客并推送到github页面">搭建Hexo博客并推送到github页面</h2>
-<p>这一步就不再多讲，大家可以自己去网上找相关教程，有很多。</p>
-<p>这里给几个推荐链接：<a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a>, <a href="https://zhuanlan.zhihu.com/p/60578464" target="_blank" rel="noopener">使用 Hexo+GitHub 搭建个人免费博客教程（小白向）</a></p>
-<p>差不多够用了。</p>
-<a id="more"></a>
-<h2 id="注册域名">注册域名</h2>
-<p>可以去阿里云，腾讯云，狗爹，namesilo去购买一个域名，也可以到 <a href="%5Bhttps://www.freenom.com%5D(https://www.freenom.com/zh/index.html?lang=zh)">Freenom</a> 去申请一个免费的域名。</p>
-<h2 id="解析域名">解析域名</h2>
-<p>到你注册域名的地方，增加给你的域名做DNS解析，增加一条CNAME解析，指向你的博客，这里我以cloudflare为例：</p>
-<p><img data-src="http://figure.cruisetian.top/img/6.png" /></p>
-<h2 id="创建cname文件">创建CNAME文件</h2>
-<p>在hexo项目下 source 文件下创建CNAME 文件（没有后缀名的），在里面写上购买的域名，如</p>
-<p><img data-src="http://figure.cruisetian.top/img/3.png" /></p>
-<h2 id="到github中填入自己的域名">到GitHub中填入自己的域名</h2>
-<p>到你创建的页面repo中，找到setting→options，往下翻，找到Custom domain，然后在其中填入你解析的域名，点击Save保存。如，</p>
-<p><img data-src="http://figure.cruisetian.top/img/4.png" /></p>
-<p><img data-src="http://figure.cruisetian.top/img/5.png" /></p>
-<p>然后在浏览器的地址栏输入自己的域名，就可以访问啦。</p>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>博客</tag>
-        <tag>域名绑定</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Debian&amp;Ubuntu设置静态ip</title>
-    <url>/post/8c930c05.html</url>
-    <content><![CDATA[<h2 id="写在前面">写在前面</h2>
-<p>最近开了几个虚拟机做实验，通过<code>ssh</code>连接上去，为了避免IP更换带来麻烦，所以设置一下静态IP,这里记录一下，方便查阅。</p>
-<h2 id="环境">环境</h2>
-<ul>
-<li>Debian10系统</li>
-<li>NAT模式</li>
-</ul>
-<a id="more"></a>
-<h2 id="配置静态ip">配置静态IP</h2>
-<h3 id="备份原有配置文件">备份原有配置文件</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">cp /etc/network/interfaces /etc/network/interfacesbak <span class="comment">#备份原有配置文件</span></span><br></pre></td></tr></table></figure>
-<h3 id="配置静态ip-1">配置静态IP</h3>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim  /etc/network/interfaces <span class="comment">#编辑网卡配置文件</span></span><br></pre></td></tr></table></figure>
-<p>将内容修改为以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># The loopback network interface</span></span><br><span class="line">auto lo</span><br><span class="line"><span class="comment">#iface lo inet loopback</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># The primary network interface</span></span><br><span class="line">allow-hotplug ens33</span><br><span class="line"><span class="comment">#iface ens33 inet dhcp</span></span><br><span class="line"></span><br><span class="line">auto ens33</span><br><span class="line">iface ens33 inet static</span><br><span class="line">address 192.168.162.136</span><br><span class="line">gateway 192.168.162.2</span><br><span class="line">netmask 255.255.255.0</span><br></pre></td></tr></table></figure>
-<h2 id="配置dns服务">配置DNS服务</h2>
-<p>Debian的DNS配置保存在文件<code>/etc/resolv.conf</code>里面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">vim /etc/resolv.conf</span><br></pre></td></tr></table></figure>
-<p>将以下内容填入：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">nameserver 8.8.8.8</span><br><span class="line">nameserver 114.114.114.114</span><br></pre></td></tr></table></figure>
-<h2 id="重启网络">重启网络</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/etc/init.d/networking restart</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>系统设置</category>
-      </categories>
-      <tags>
-        <tag>Ubuntu</tag>
-        <tag>Linux</tag>
-        <tag>Debian</tag>
-        <tag>静态IP</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Anaconda设置镜像源</title>
-    <url>/post/c3fd64c3.html</url>
-    <content><![CDATA[<h2 id="前言">前言</h2>
-<p>在使用安装<code>conda</code> 安装某些包会出现慢或安装失败问题，所以可以修改镜像源为国内镜像源来解决这个问题，这里记录一下。主要有两个方面的内容：</p>
-<ul>
-<li>显示所有channel</li>
-<li>更换channel</li>
-<li>移除镜像源</li>
-</ul>
-<a id="more"></a>
-<h2 id="显示所有channel">显示所有channel</h2>
-<p>首先，<code>conda config --show</code>能够显示出所有<code>conda</code>的config信息。 如果我们只想看channels的信息，输入<code>conda config --show channels</code>即可</p>
-<h2 id="添加镜像源">添加镜像源</h2>
-<p>这里添加的是清华源</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br><span class="line">conda config --<span class="built_in">set</span> show_channel_urls yes</span><br></pre></td></tr></table></figure>
-<p>其中<code>conda config --set show_channel_urls yes</code>的意思是从channel中安装包时显示channel的url，这样就可以知道包的安装来源了。</p>
-<p>执行<code>conda config --show channels</code>，得到的结果如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main</span><br><span class="line">  - defaults</span><br></pre></td></tr></table></figure>
-<h2 id="移除镜像源">移除镜像源</h2>
-<p>使用<code>conda config --remove channels url地址</code>可以删除对应的镜像，如</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda config --remove channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/</span><br></pre></td></tr></table></figure>
-<p>就可以删除刚刚添加的清华镜像源，这时执行<code>conda config --show channels</code>，得到的结果如下：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">channels:</span><br><span class="line">  - defaults</span><br></pre></td></tr></table></figure>
-<h2 id="一些其他的conda指令">一些其他的conda指令</h2>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda install &lt;包名&gt; <span class="comment">#安装指定包</span></span><br><span class="line">conda remove &lt;包名&gt;  <span class="comment">#移除指定包</span></span><br><span class="line">conda update &lt;包名&gt;  <span class="comment">#更新指定包</span></span><br><span class="line"></span><br><span class="line">conda update conda <span class="comment">#更新conda,当提示你确认更新时，键入y继续。</span></span><br><span class="line"><span class="comment">#更新conda后，继续进行Anaconda更新</span></span><br><span class="line">conda update anaconda <span class="comment">#出现提示时，键入y继续。</span></span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>日常学习</category>
-      </categories>
-      <tags>
-        <tag>Anaconda</tag>
-        <tag>镜像源</tag>
       </tags>
   </entry>
 </search>
