@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-07-07T05:43:18.673Z</updated>
+  <updated>2020-07-15T17:01:50.700Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,45 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>python虚拟环境再探索(virtualenv,virtualenvwrapper)</title>
+    <link href="https://www.cruisetian.tk/post/f9c8ed6.html"/>
+    <id>https://www.cruisetian.tk/post/f9c8ed6.html</id>
+    <published>2020-07-15T16:59:44.000Z</published>
+    <updated>2020-07-15T17:01:50.700Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近在本地做实验的时候，要启动一个服务，需要配置一个虚拟环境，防止本地环境的混乱，由于没有安装&lt;code&gt;conda&lt;/code&gt;，所以就采用&lt;code&gt;virtualenv&lt;/code&gt;和&lt;code&gt;virtualenvwrapper&lt;/code&gt;来尝试搭建虚拟环境，这里记录一下过程，方便查阅。&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian10系统&lt;/li&gt;
+&lt;li&gt;python 3.7.3&lt;/li&gt;
+&lt;li&gt;pip3 18.1&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="python" scheme="https://www.cruisetian.tk/tags/python/"/>
+    
+      <category term="virtuanenv" scheme="https://www.cruisetian.tk/tags/virtuanenv/"/>
+    
+      <category term="virtuanenvwrapper" scheme="https://www.cruisetian.tk/tags/virtuanenvwrapper/"/>
+    
+      <category term="虚拟环境" scheme="https://www.cruisetian.tk/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
     <title>conda安装虚拟环境</title>
     <link href="https://www.cruisetian.tk/post/7615c371.html"/>
     <id>https://www.cruisetian.tk/post/7615c371.html</id>
     <published>2020-07-07T05:40:55.000Z</published>
-    <updated>2020-07-07T05:43:18.673Z</updated>
+    <updated>2020-07-07T05:44:53.089Z</updated>
     
     <summary type="html">
     
