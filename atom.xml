@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.cruisetian.tk/"/>
-  <updated>2020-07-15T17:01:50.700Z</updated>
+  <updated>2020-07-29T16:25:58.107Z</updated>
   <id>https://www.cruisetian.tk/</id>
   
   <author>
@@ -17,11 +17,40 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>pytorch搭建CNN网络实现MNIST数据集的图像分类</title>
+    <link href="https://www.cruisetian.tk/post/28e069b6.html"/>
+    <id>https://www.cruisetian.tk/post/28e069b6.html</id>
+    <published>2020-07-29T16:15:15.000Z</published>
+    <updated>2020-07-29T16:25:58.107Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近趁着学校暑期实验室实践进了实验室，跟着导师参与一些简单的项目，学习一些知识，积累一点经验，由于参与的项目是与深度学习有关的，所以也算入了深度学习的坑，开始学一点基础知识，这篇文章就算是深度学习之旅的开端吧，搭建了第一个CNN网络，做出了第一个图像分类器，最然只是最简单的东西，但是也算是入了门，相信以后会学到更多的更深入的东西，特意在此记录一下做出的成果。&lt;/p&gt;
+&lt;p&gt;顺便一提，我在GitHub上新建了一个repo，会陆陆续续把自己学习深度学习过程中做的一些东西和一些经验分享上去（虽然现在还很空荡），欢迎大家star和fork。链接在此：&lt;a href=&quot;https://github.com/CruiseTian/begin-deep-learning&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;begin-deep-learning&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="pytorch" scheme="https://www.cruisetian.tk/tags/pytorch/"/>
+    
+      <category term="图像分类" scheme="https://www.cruisetian.tk/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
+    
+      <category term="CNN" scheme="https://www.cruisetian.tk/tags/CNN/"/>
+    
+      <category term="MNIST" scheme="https://www.cruisetian.tk/tags/MNIST/"/>
+    
+  </entry>
+  
+  <entry>
     <title>python虚拟环境再探索(virtualenv,virtualenvwrapper)</title>
     <link href="https://www.cruisetian.tk/post/f9c8ed6.html"/>
     <id>https://www.cruisetian.tk/post/f9c8ed6.html</id>
     <published>2020-07-15T16:59:44.000Z</published>
-    <updated>2020-07-15T17:01:50.700Z</updated>
+    <updated>2020-07-15T17:02:15.861Z</updated>
     
     <summary type="html">
     
@@ -570,35 +599,6 @@
       <category term="git" scheme="https://www.cruisetian.tk/tags/git/"/>
     
       <category term="github" scheme="https://www.cruisetian.tk/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows10安装Ubuntu双系统</title>
-    <link href="https://www.cruisetian.tk/post/ce0e1ebb.html"/>
-    <id>https://www.cruisetian.tk/post/ce0e1ebb.html</id>
-    <published>2020-05-10T04:27:14.000Z</published>
-    <updated>2020-05-11T04:47:34.713Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;windows10安装ubuntu双系统教程&quot;&gt;Windows10安装Ubuntu双系统教程&lt;/h2&gt;
-&lt;h3 id=&quot;写在前面&quot;&gt;写在前面&lt;/h3&gt;
-&lt;p&gt;之前一直用的Windows10系统，由于最近大作业要进行项目开发，而Linux系统对项目开发比较友好，所以准备学习一下Linux系统的基本操作。由于之前学习中接触过Ubuntu，而且Ubuntu生态较完善，出了问题网上比较好找解决办法，所以我选择在我原来电脑上再装一个Ubuntu。本人刚刚入门，也是个小白菜鸡，还望网上的各位大佬发现问题及时指出。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="日常学习" scheme="https://www.cruisetian.tk/categories/%E6%97%A5%E5%B8%B8%E5%AD%A6%E4%B9%A0/"/>
-    
-    
-      <category term="Ubuntu" scheme="https://www.cruisetian.tk/tags/Ubuntu/"/>
-    
-      <category term="Linux" scheme="https://www.cruisetian.tk/tags/Linux/"/>
-    
-      <category term="Win" scheme="https://www.cruisetian.tk/tags/Win/"/>
-    
-      <category term="双系统" scheme="https://www.cruisetian.tk/tags/%E5%8F%8C%E7%B3%BB%E7%BB%9F/"/>
     
   </entry>
   
