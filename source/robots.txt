@@ -10,5 +10,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://www.chenjunxin.com/sitemap.xml
-Sitemap: https://www.chenjunxin.com/baidusitemap.xml
+Sitemap: https://www.cruisetian.club/sitemap.xml
+Sitemap: https://www.cruisetian.club/baidusitemap.xml
