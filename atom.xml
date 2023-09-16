@@ -1,0 +1,619 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Cruise学习小站</title>
+  <icon>https://www.cruisetian.top/icon.png</icon>
+  <subtitle>Life is real, life is earnest.</subtitle>
+  <link href="https://www.cruisetian.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.cruisetian.top/"/>
+  <updated>2022-06-16T09:21:36.000Z</updated>
+  <id>https://www.cruisetian.top/</id>
+  
+  <author>
+    <name>CruiseTian</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh禁止特定用户密码登录</title>
+    <link href="https://www.cruisetian.top/post/316d67c.html"/>
+    <id>https://www.cruisetian.top/post/316d67c.html</id>
+    <published>2022-06-16T09:21:36.000Z</published>
+    <updated>2022-06-16T09:21:36.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;ssh-禁止特定用户使用密码登录&quot;&gt;SSH</summary>
+        
+      
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Linux" scheme="https://www.cruisetian.top/tags/Linux/"/>
+    
+    <category term="Ubuntu" scheme="https://www.cruisetian.top/tags/Ubuntu/"/>
+    
+    <category term="ssh" scheme="https://www.cruisetian.top/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>wsl安装debian并升级至debian11</title>
+    <link href="https://www.cruisetian.top/post/4448a665.html"/>
+    <id>https://www.cruisetian.top/post/4448a665.html</id>
+    <published>2022-05-12T06:25:30.000Z</published>
+    <updated>2022-05-12T06:25:30.000Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;原文地址 &lt;a href=&quot;https://mokch.info/post/36&quot;&gt;mokch.info&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;安装-wsl&quot;&gt;安装 wsl&lt;/h2&gt;
+&lt;p&gt;powershell 管理员身份运行&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wsl --install -d Debian&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;该命令自动下载最新 Linux 内核、设置 wsl2 版本&lt;br /&gt;
+此时安装的是 debian9，需要手动升级到 11&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Docker" scheme="https://www.cruisetian.top/tags/Docker/"/>
+    
+    <category term="Debian" scheme="https://www.cruisetian.top/tags/Debian/"/>
+    
+    <category term="wsl" scheme="https://www.cruisetian.top/tags/wsl/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>debian换源</title>
+    <link href="https://www.cruisetian.top/post/be5bfb1b.html"/>
+    <id>https://www.cruisetian.top/post/be5bfb1b.html</id>
+    <published>2021-08-15T11:17:47.000Z</published>
+    <updated>2021-08-15T11:17:47.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;debian更换国内软件源&quot;&gt;debian更换国内软件源&lt;/h2&gt;
+&lt;h3 id=&quot;备份原软件源&quot;&gt;备份原软件源&lt;/h3&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;mv /etc/apt/sources.list /etc/apt/sources.list.bak&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;主要域名&quot;&gt;主要域名&lt;/h3&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;http://mirrors.163.com/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://mirrors.aliyun.com/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://mirrors.ustc.edu.cn/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://mirrors.huaweicloud.com/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://mirrors.cloud.tencent.com/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://mirrors.tuna.tsinghua.edu.cn/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;--------------------------------------------&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://ftp.cn.debian.org/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;http://ftp2.cn.debian.org/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://mirror.sjtu.edu.cn/debian/&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;https://mirrors.bfsu.edu.cn/debian/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="镜像源" scheme="https://www.cruisetian.top/tags/%E9%95%9C%E5%83%8F%E6%BA%90/"/>
+    
+    <category term="Debian" scheme="https://www.cruisetian.top/tags/Debian/"/>
+    
+    <category term="国内源" scheme="https://www.cruisetian.top/tags/%E5%9B%BD%E5%86%85%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux统计文件夹下文件数目</title>
+    <link href="https://www.cruisetian.top/post/eb44878c.html"/>
+    <id>https://www.cruisetian.top/post/eb44878c.html</id>
+    <published>2021-08-07T06:10:01.000Z</published>
+    <updated>2021-08-07T06:10:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;Linux下有三个命令：&lt;code&gt;ls&lt;/code&gt;、&lt;code&gt;grep&lt;/code&gt;、&lt;code&gt;wc&lt;/code&gt;。通过这三个命令的组合可以统计目录下文件及文件夹的个数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;统计当前目录下文件的个数（不包括目录）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls -l | grep &lt;span class=&quot;string&quot;&gt;&amp;quot;^-&amp;quot;&lt;/span&gt; | wc -l&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;统计当前目录下文件的个数（包括子目录）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls -lR| grep &lt;span class=&quot;string&quot;&gt;&amp;quot;^-&amp;quot;&lt;/span&gt; | wc -l&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;ul&gt;
+&lt;li&gt;查看某目录下文件夹(目录)的个数（包括子目录）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ ls -lR | grep &lt;span class=&quot;string&quot;&gt;&amp;quot;^d&amp;quot;&lt;/span&gt; | wc -l&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="常用" scheme="https://www.cruisetian.top/categories/%E5%B8%B8%E7%94%A8/"/>
+    
+    
+    <category term="Linux" scheme="https://www.cruisetian.top/tags/Linux/"/>
+    
+    <category term="命令" scheme="https://www.cruisetian.top/tags/%E5%91%BD%E4%BB%A4/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jupyter lab配置</title>
+    <link href="https://www.cruisetian.top/post/6d3a688c.html"/>
+    <id>https://www.cruisetian.top/post/6d3a688c.html</id>
+    <published>2021-07-23T16:44:31.000Z</published>
+    <updated>2021-07-23T16:44:31.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;Jupyter lab是以前 Jupyter
+Notebook的升级版，功能更多，配置起来也和Jupyter
+Notebook很相似，但也有一些不同。在这里记录一下。&lt;/p&gt;
+&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
+&lt;h3 id=&quot;conda-安装&quot;&gt;conda 安装&lt;/h3&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;conda install -c conda-forge jupyterlab&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;pip-安装&quot;&gt;pip 安装&lt;/h3&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip3 install jupyterlab&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Anaconda" scheme="https://www.cruisetian.top/tags/Anaconda/"/>
+    
+    <category term="python" scheme="https://www.cruisetian.top/tags/python/"/>
+    
+    <category term="jupyter lab" scheme="https://www.cruisetian.top/tags/jupyter-lab/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>jupyter notebook设置</title>
+    <link href="https://www.cruisetian.top/post/9e7f59f2.html"/>
+    <id>https://www.cruisetian.top/post/9e7f59f2.html</id>
+    <published>2021-05-13T05:44:57.000Z</published>
+    <updated>2021-05-13T05:44:57.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
+&lt;h3 id=&quot;conda-安装&quot;&gt;conda 安装&lt;/h3&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;conda install jupyter notebook&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h3 id=&quot;pip-安装&quot;&gt;pip 安装&lt;/h3&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;pip3 install jupyter&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Anaconda" scheme="https://www.cruisetian.top/tags/Anaconda/"/>
+    
+    <category term="python" scheme="https://www.cruisetian.top/tags/python/"/>
+    
+    <category term="jupyter notebook" scheme="https://www.cruisetian.top/tags/jupyter-notebook/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows potplayer设置</title>
+    <link href="https://www.cruisetian.top/post/4050cd22.html"/>
+    <id>https://www.cruisetian.top/post/4050cd22.html</id>
+    <published>2021-04-30T09:36:54.000Z</published>
+    <updated>2021-04-30T09:36:54.000Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;几个参考链接&quot;&gt;几个参考链接：&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://vcb-s.com/archives/7228&quot;&gt;基础软件安装及配置&lt;/a&gt; ,</summary>
+        
+      
+    
+    
+    
+    <category term="软件分享" scheme="https://www.cruisetian.top/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="设置" scheme="https://www.cruisetian.top/tags/%E8%AE%BE%E7%BD%AE/"/>
+    
+    <category term="potplayer" scheme="https://www.cruisetian.top/tags/potplayer/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pytorch搭建VGG并训练花分类数据集</title>
+    <link href="https://www.cruisetian.top/post/eedc6243.html"/>
+    <id>https://www.cruisetian.top/post/eedc6243.html</id>
+    <published>2020-08-12T19:17:01.000Z</published>
+    <updated>2020-08-12T19:17:01.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是&lt;code&gt;pytorch&lt;/code&gt;深度学习的第三篇，第一篇为&lt;a
+href=&quot;https://cruisetian.top/post/28e069b6.html&quot;&gt;pytorch搭建CNN网络实现MNIST数据集的图像分类&lt;/a&gt;
+，第二篇为&lt;a
+href=&quot;https://cruisetian.top/post/39d19253.html&quot;&gt;pytorch搭建AlexNet并训练花分类数据集&lt;/a&gt;,本篇将继续深入深度学习，介绍深度学习领域的经典神经网络——VGGNet，并利用&lt;code&gt;pytorch&lt;/code&gt;自己动手搭建一个VGG-16网络来训练一个花分类的数据集。同时，本篇文章所有的代码都已上传github，欢迎大家star和fork。链接在此：&lt;a
+href=&quot;https://github.com/CruiseTian/begin-deep-learning&quot;&gt;begin-deep-learning&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;vgg简介&quot;&gt;VGG简介&lt;/h2&gt;
+&lt;p&gt;VGG 在2014年由牛津大学著名研究组 &lt;strong&gt;VGG&lt;/strong&gt;（&lt;strong&gt;Visual
+Geometry Group&lt;/strong&gt;）提出，斩获该年 ImageNet 竞赛中 Localization
+Task（定位任务）第一名和 Classification
+Task（分类任务）第二名。该模型的主要工作是证明了增加网络的深度能够在一定程度上影响网络最终的性能。VGG有常见的两种结构，分别是VGG16和VGG19，两者除了网络深度不一样，其本质并没有什么区别。其中VGG16包含了13个卷积层和3个全连层；VGG19包含了16个卷积层和3个全连层。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="深度学习" scheme="https://www.cruisetian.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="pytorch" scheme="https://www.cruisetian.top/tags/pytorch/"/>
+    
+    <category term="深度学习" scheme="https://www.cruisetian.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CNN" scheme="https://www.cruisetian.top/tags/CNN/"/>
+    
+    <category term="VGG" scheme="https://www.cruisetian.top/tags/VGG/"/>
+    
+    <category term="图像处理" scheme="https://www.cruisetian.top/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pytorch搭建AlexNet并训练花分类数据集</title>
+    <link href="https://www.cruisetian.top/post/39d19253.html"/>
+    <id>https://www.cruisetian.top/post/39d19253.html</id>
+    <published>2020-08-07T17:06:36.000Z</published>
+    <updated>2020-08-07T17:06:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;这是&lt;code&gt;pytorch&lt;/code&gt;深度学习的第二篇，第一篇为&lt;strong&gt;&lt;a
+href=&quot;https://cruisetian.top/post/28e069b6.html&quot;&gt;pytorch搭建CNN网络实现MNIST数据集的图像分类&lt;/a&gt;&lt;/strong&gt;
+，本篇将继续深入深度学习，介绍深度学习领域的经典神经网络——AlexNet，并利用&lt;code&gt;pytorch&lt;/code&gt;自己动手搭建一个AlexNet来训练一个花分类的数据集。同时，本篇文章所有的代码都已上传github，欢迎大家star和fork。链接在此：&lt;a
+href=&quot;https://github.com/CruiseTian/begin-deep-learning&quot;&gt;begin-deep-learning&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&quot;alexnet简介&quot;&gt;AlexNet简介&lt;/h2&gt;
+&lt;p&gt;AlexNet是一个卷积神经网络，是2012年的ISLVRC
+2012竞赛的冠军网络，由亚历克斯·克里泽夫斯基（Alex
+Krizhevsky）设计（这也是AlexNet名字的来源），也是自2012年以后，深度学习开始迅速发展。&lt;/p&gt;
+&lt;h3 id=&quot;特点&quot;&gt;特点&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;由于AlexNet的计算成本很高，所以AlexNet使用了GPU来加速训练，使得计算具有可行性&lt;/li&gt;
+&lt;li&gt;使用了&lt;code&gt;ReLU&lt;/code&gt;激活函数，而之前大多使用的是&lt;code&gt;sigmoid&lt;/code&gt;或者&lt;code&gt;tanh&lt;/code&gt;函数作为激活函数，所以具有更好的训练性能，能更快速地收敛&lt;/li&gt;
+&lt;li&gt;使用了LRN局部响应归一化（这个目前还不太了解）&lt;/li&gt;
+&lt;li&gt;使用dropout随机失活神经元，减少过拟合&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="深度学习" scheme="https://www.cruisetian.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="pytorch" scheme="https://www.cruisetian.top/tags/pytorch/"/>
+    
+    <category term="深度学习" scheme="https://www.cruisetian.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="CNN" scheme="https://www.cruisetian.top/tags/CNN/"/>
+    
+    <category term="图像处理" scheme="https://www.cruisetian.top/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/"/>
+    
+    <category term="AlexNet" scheme="https://www.cruisetian.top/tags/AlexNet/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>pytorch搭建CNN网络实现MNIST数据集的图像分类</title>
+    <link href="https://www.cruisetian.top/post/28e069b6.html"/>
+    <id>https://www.cruisetian.top/post/28e069b6.html</id>
+    <published>2020-07-29T16:15:15.000Z</published>
+    <updated>2020-07-29T16:15:15.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近趁着学校暑期实验室实践进了实验室，跟着导师参与一些简单的项目，学习一些知识，积累一点经验，由于参与的项目是与深度学习有关的，所以也算入了深度学习的坑，开始学一点基础知识，这篇文章就算是深度学习之旅的开端吧，搭建了第一个CNN网络，做出了第一个图像分类器，最然只是最简单的东西，但是也算是入了门，相信以后会学到更多的更深入的东西，特意在此记录一下做出的成果。&lt;/p&gt;
+&lt;p&gt;顺便一提，我在GitHub上新建了一个repo，会陆陆续续把自己学习深度学习过程中做的一些东西和一些经验分享上去（虽然现在还很空荡），欢迎大家star和fork。链接在此：&lt;a
+href=&quot;https://github.com/CruiseTian/begin-deep-learning&quot;&gt;begin-deep-learning&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="深度学习" scheme="https://www.cruisetian.top/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+    <category term="pytorch" scheme="https://www.cruisetian.top/tags/pytorch/"/>
+    
+    <category term="深度学习" scheme="https://www.cruisetian.top/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+    
+    <category term="图像分类" scheme="https://www.cruisetian.top/tags/%E5%9B%BE%E5%83%8F%E5%88%86%E7%B1%BB/"/>
+    
+    <category term="CNN" scheme="https://www.cruisetian.top/tags/CNN/"/>
+    
+    <category term="MNIST" scheme="https://www.cruisetian.top/tags/MNIST/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python虚拟环境再探索(virtualenv,virtualenvwrapper)</title>
+    <link href="https://www.cruisetian.top/post/f9c8ed6.html"/>
+    <id>https://www.cruisetian.top/post/f9c8ed6.html</id>
+    <published>2020-07-15T16:59:44.000Z</published>
+    <updated>2020-07-15T16:59:44.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;最近在本地做实验的时候，要启动一个服务，需要配置一个虚拟环境，防止本地环境的混乱，由于没有安装&lt;code&gt;conda&lt;/code&gt;，所以就采用&lt;code&gt;virtualenv&lt;/code&gt;和&lt;code&gt;virtualenvwrapper&lt;/code&gt;来尝试搭建虚拟环境，这里记录一下过程，方便查阅。&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian10系统&lt;/li&gt;
+&lt;li&gt;python 3.7.3&lt;/li&gt;
+&lt;li&gt;pip3 18.1&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="python" scheme="https://www.cruisetian.top/tags/python/"/>
+    
+    <category term="虚拟环境" scheme="https://www.cruisetian.top/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    
+    <category term="virtuanenv" scheme="https://www.cruisetian.top/tags/virtuanenv/"/>
+    
+    <category term="virtuanenvwrapper" scheme="https://www.cruisetian.top/tags/virtuanenvwrapper/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>conda安装虚拟环境</title>
+    <link href="https://www.cruisetian.top/post/7615c371.html"/>
+    <id>https://www.cruisetian.top/post/7615c371.html</id>
+    <published>2020-07-07T05:40:55.000Z</published>
+    <updated>2020-07-07T05:40:55.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;不同的代码往往需要特定的运行环境。比如说有些代码需要在python3.6的环境下运行，有些代码需要在python2.7的环境下运行。这时就可以通过创建虚拟环境来营造代码运行适合的环境，而不会影响到自己本来的生产环境，所以就记录以下&lt;code&gt;conda&lt;/code&gt;安装虚拟环境的命令，方便查阅。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;conda&lt;/code&gt;的安装就不在这里详述，自行安装。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Anaconda" scheme="https://www.cruisetian.top/tags/Anaconda/"/>
+    
+    <category term="虚拟环境" scheme="https://www.cruisetian.top/tags/%E8%99%9A%E6%8B%9F%E7%8E%AF%E5%A2%83/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Anaconda设置镜像源</title>
+    <link href="https://www.cruisetian.top/post/c3fd64c3.html"/>
+    <id>https://www.cruisetian.top/post/c3fd64c3.html</id>
+    <published>2020-07-07T04:56:58.000Z</published>
+    <updated>2020-07-07T04:56:58.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;前言&lt;/h2&gt;
+&lt;p&gt;在使用安装&lt;code&gt;conda&lt;/code&gt;
+安装某些包会出现慢或安装失败问题，所以可以修改镜像源为国内镜像源来解决这个问题，这里记录一下。主要有两个方面的内容：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;显示所有channel&lt;/li&gt;
+&lt;li&gt;更换channel&lt;/li&gt;
+&lt;li&gt;移除镜像源&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Anaconda" scheme="https://www.cruisetian.top/tags/Anaconda/"/>
+    
+    <category term="镜像源" scheme="https://www.cruisetian.top/tags/%E9%95%9C%E5%83%8F%E6%BA%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Debian&amp;Ubuntu设置静态ip</title>
+    <link href="https://www.cruisetian.top/post/8c930c05.html"/>
+    <id>https://www.cruisetian.top/post/8c930c05.html</id>
+    <published>2020-07-06T17:00:36.000Z</published>
+    <updated>2020-07-06T17:00:36.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;最近开了几个虚拟机做实验，通过&lt;code&gt;ssh&lt;/code&gt;连接上去，为了避免IP更换带来麻烦，所以设置一下静态IP,这里记录一下，方便查阅。&lt;/p&gt;
+&lt;h2 id=&quot;环境&quot;&gt;环境&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Debian10系统&lt;/li&gt;
+&lt;li&gt;NAT模式&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="Linux" scheme="https://www.cruisetian.top/tags/Linux/"/>
+    
+    <category term="Debian" scheme="https://www.cruisetian.top/tags/Debian/"/>
+    
+    <category term="Ubuntu" scheme="https://www.cruisetian.top/tags/Ubuntu/"/>
+    
+    <category term="静态IP" scheme="https://www.cruisetian.top/tags/%E9%9D%99%E6%80%81IP/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>rclone挂载谷歌云盘-为你的VPS扩容</title>
+    <link href="https://www.cruisetian.top/post/c3c257f2.html"/>
+    <id>https://www.cruisetian.top/post/c3c257f2.html</id>
+    <published>2020-06-24T07:48:04.000Z</published>
+    <updated>2020-06-24T07:48:04.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Rclone&lt;/code&gt;是一个 &lt;code&gt;Github&lt;/code&gt;
+上面的一个开源项目，专门开发用来在 Linux
+上面同步文件/文件夹，上传的一个命令行工具，利用&lt;code&gt;rclone&lt;/code&gt;能将全世界多个热门的网盘挂载为系统本地磁盘，实现方便快捷的云盘文件管理效果。搭配无限空间的Google
+Drive网盘，相当于在电脑上或服务器上安装了一个无比巨大的磁盘，以此来实现扩容。&lt;/p&gt;
+&lt;p&gt;最近我就在我自己的服务器上试了一下，果然可以，所以就来记录一下，方便以后查看。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术分享" scheme="https://www.cruisetian.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="Google Drive" scheme="https://www.cruisetian.top/tags/Google-Drive/"/>
+    
+    <category term="rclone" scheme="https://www.cruisetian.top/tags/rclone/"/>
+    
+    <category term="VPS扩容" scheme="https://www.cruisetian.top/tags/VPS%E6%89%A9%E5%AE%B9/"/>
+    
+    <category term="云盘挂载" scheme="https://www.cruisetian.top/tags/%E4%BA%91%E7%9B%98%E6%8C%82%E8%BD%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>goindex-在国内使用你的谷歌网盘</title>
+    <link href="https://www.cruisetian.top/post/1d96ecd4.html"/>
+    <id>https://www.cruisetian.top/post/1d96ecd4.html</id>
+    <published>2020-06-13T06:01:06.000Z</published>
+    <updated>2020-06-13T06:01:06.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;谷歌云盘是一款极其好用的网盘，使用体验吊打百度网盘，不限速，而且甚至还可以获得无限空间，至于如何获得无限空间，这里就不说明了，有兴趣的可以自行谷歌。但是这么好用的一款网盘，由于大家都知道的原因，在国内并不能使用，只能科学上网使用，有时候需要下载文件时就需要浪费宝贵的代理流量，毕竟都是钱啊，所以今天就在这里分享一下通过Cloudflare来实现在国内访问并下载你谷歌网盘中的文件，不用消耗代理流量。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术分享" scheme="https://www.cruisetian.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="goindex" scheme="https://www.cruisetian.top/tags/goindex/"/>
+    
+    <category term="谷歌云盘" scheme="https://www.cruisetian.top/tags/%E8%B0%B7%E6%AD%8C%E4%BA%91%E7%9B%98/"/>
+    
+    <category term="Google Drive" scheme="https://www.cruisetian.top/tags/Google-Drive/"/>
+    
+    <category term="国内使用" scheme="https://www.cruisetian.top/tags/%E5%9B%BD%E5%86%85%E4%BD%BF%E7%94%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Gmail邮箱注册，谷歌账号注册</title>
+    <link href="https://www.cruisetian.top/post/b02ca219.html"/>
+    <id>https://www.cruisetian.top/post/b02ca219.html</id>
+    <published>2020-06-13T05:53:56.000Z</published>
+    <updated>2020-06-13T05:53:56.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;由于谷歌的政策原因，如今注册一个谷歌账户可以说是难上加难了，但是有时候又会有用谷歌服务的需求，所以这里就来分享一下如何快速地注册一个谷歌账户。&lt;/p&gt;
+&lt;h2 id=&quot;说明&quot;&gt;说明&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;一定要用【手机】注册（亲测电脑注册不上）&lt;/li&gt;
+&lt;li&gt;该方法不需要科学上网&lt;/li&gt;
+&lt;li&gt;在这篇文章发布时是可以注册的，但是也有可能以后谷歌政策的修改导致注册不上的情况，所以该方法有效期不定，但是目前看来还是很稳定的&lt;/li&gt;
+&lt;/ul&gt;</summary>
+    
+    
+    
+    <category term="技术分享" scheme="https://www.cruisetian.top/categories/%E6%8A%80%E6%9C%AF%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="Gmail" scheme="https://www.cruisetian.top/tags/Gmail/"/>
+    
+    <category term="谷歌账户" scheme="https://www.cruisetian.top/tags/%E8%B0%B7%E6%AD%8C%E8%B4%A6%E6%88%B7/"/>
+    
+    <category term="国内注册" scheme="https://www.cruisetian.top/tags/%E5%9B%BD%E5%86%85%E6%B3%A8%E5%86%8C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7安装OpenJDK14</title>
+    <link href="https://www.cruisetian.top/post/584b409a.html"/>
+    <id>https://www.cruisetian.top/post/584b409a.html</id>
+    <published>2020-05-31T03:23:29.000Z</published>
+    <updated>2020-05-31T03:23:29.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;检查并卸载原本有的java版本&quot;&gt;检查并卸载原本有的java版本&lt;/h2&gt;
+&lt;h3
+id=&quot;查看centos7自带的jdk是否已安装&quot;&gt;查看Centos7自带的JDK是否已安装&lt;/h3&gt;
+&lt;p&gt;在命令行输入：&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;java -version&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;如果出现以下结果，则说明已安装，需要先卸载，否则的话直接跳过这一步。&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;openjdk version &lt;span class=&quot;string&quot;&gt;&amp;quot;1.8.0 102&amp;quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OpenJDK Runtime Environment (build 1.8.0_102-b14)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;OpenJDK 64-Bit Server VM(build 25.102-bi4, mixed mode)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="java" scheme="https://www.cruisetian.top/tags/java/"/>
+    
+    <category term="openJDK" scheme="https://www.cruisetian.top/tags/openJDK/"/>
+    
+    <category term="centos7" scheme="https://www.cruisetian.top/tags/centos7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Centos7安装python3.8.1</title>
+    <link href="https://www.cruisetian.top/post/2f518ecf.html"/>
+    <id>https://www.cruisetian.top/post/2f518ecf.html</id>
+    <published>2020-05-27T11:08:26.000Z</published>
+    <updated>2020-05-27T11:08:26.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;最近又在学习CentOS，需要安装一下python，但是CentOS7上默认自带了Python
+2，没有Python 3。所以就决定安装一个，这里记录一下。&lt;/p&gt;
+&lt;h2 id=&quot;查看-python-版本号&quot;&gt;查看 Python 版本号&lt;/h2&gt;
+&lt;p&gt;如果Linux 上安装有 Python
+（一般为默认安装），只需要输入简单的命令，就可以查看 Python
+的版本号：&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/categories/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+    
+    <category term="centos7" scheme="https://www.cruisetian.top/tags/centos7/"/>
+    
+    <category term="Linux" scheme="https://www.cruisetian.top/tags/Linux/"/>
+    
+    <category term="python" scheme="https://www.cruisetian.top/tags/python/"/>
+    
+    <category term="环境配置" scheme="https://www.cruisetian.top/tags/%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Windows terminal安装使用及美化(3)</title>
+    <link href="https://www.cruisetian.top/post/f2e80ec0.html"/>
+    <id>https://www.cruisetian.top/post/f2e80ec0.html</id>
+    <published>2020-05-26T17:30:23.000Z</published>
+    <updated>2020-05-26T17:30:23.000Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;写在前面&quot;&gt;写在前面&lt;/h2&gt;
+&lt;p&gt;之前两个part写了一些关于Windows
+terminal的基础和进阶配置，配置好以后用了两天感觉不错，所以就准备把它作为Windows下主要使用的命令行工具，所以决定把它加到右键菜单里去，在这里记录一下过程，也算是有关Windows
+terminal的高阶分享吧。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="软件分享" scheme="https://www.cruisetian.top/categories/%E8%BD%AF%E4%BB%B6%E5%88%86%E4%BA%AB/"/>
+    
+    
+    <category term="windows terminal" scheme="https://www.cruisetian.top/tags/windows-terminal/"/>
+    
+    <category term="设置" scheme="https://www.cruisetian.top/tags/%E8%AE%BE%E7%BD%AE/"/>
+    
+    <category term="终端" scheme="https://www.cruisetian.top/tags/%E7%BB%88%E7%AB%AF/"/>
+    
+  </entry>
+  
+</feed>
